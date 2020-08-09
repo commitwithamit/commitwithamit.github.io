@@ -756,7 +756,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     padding: 15px 10px 15px 10px;
 }
 
-.ads img {}
+/* .ads img {} */
 
 .hide_ad {
     display: none;
@@ -976,10 +976,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 /* footer */
 
 .footer-bg{
-    background: rgb(73,71,71);
     background: linear-gradient(45deg,#3ab490,#196a8c, #1c297c);
     display: flex;
-    height: 300px;
+    height: max-content;
     width: 100%;
     flex-wrap: wrap;
     align-items: baseline;
@@ -989,7 +988,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     flex:1;
     padding: 4px 12px;
     flex-basis: 100%;
-    height: 0;
+    height: max-content;
 }
 .foot-logo a{
     text-decoration: none;
@@ -1005,6 +1004,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     flex: 1;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5px;
 }
 .foot-media{      
     flex: 0.5;
@@ -1055,6 +1056,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 .help{
     flex: 1.6;
+    flex-basis: 100%;
+    padding-left: 20px;
 }
 .help h5{
     color: #ffffffab;
@@ -1081,7 +1084,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .copyright p{
     margin:0px;
 }
-
+@media (min-width:411px){
+    .help{
+        flex-basis: 0%;
+        padding-left: 0px;
+    }
+}
 @media (min-width:992px){
     .footer-bg, .cta-txt2{
         font-size: 15px;
