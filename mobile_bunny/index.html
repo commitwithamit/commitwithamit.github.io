@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- poppins font from google  -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/fbf0851f30.js" crossorigin="anonymous"></script>
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.css">
+    <!-- Bootstrap & external CSS -->
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <!-- external css -->
+    <link rel="stylesheet" href="index.css">
+    <title>Mobile Bunny</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo_container">
+            <a href="index.html">
+                <img src="bunny-img-logo11.png" alt="Logo" title="mobilebunny.com" class="logo-img img-fluid vibrate-2">
+                <img src="bunny-text-logo1.png" alt="Logo" title="mobilebunny.com" class="logo-text img-fluid">
+            </a>
+        </div>
+
+        <div class="sbar_container">
+            <div class="search_border">
+                <input class="s_box" type="text" placeholder="Search for Phone, Brand and Accessories"
+                    name="searchbar" />
+                <button class="s_icon"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+        </div>
+
+        <div class="sign-in align-self-center">
+            <a href="login.html" class="border-ani hov-si">Sign In <i class="fa fa-user-circle"
+                    aria-hidden="true"></i></a>
+            <!-- below is a dropdown will only appear on hover of .sign-in -->
+            <div class="drop-signin">
+                New to Mobile Bunny?<br>
+                <a href="registration-page.html" class="reg-btn">
+                    Register Here
+                </a>
+            </div>
+        </div>
+
+        <div class="more align-self-center">
+            <a href="#" class="border-ani hov-mo">More
+                <!-- hov-mo is for jquery -->
+                <img src="down-chevron.png" id="down-arrow">
+                <img src="up-chevron.png" id="up-arrow">
+            </a>
+            <!-- below is a dropdown will only appear on hover of .more -->
+            <div class="drop-more">
+                <div class="content-more">
+                    <a href="#" id="wla"><i class="fa fa-heart" aria-hidden="true" id="wli"></i> Wishlist</a>
+                    <a href="#" id="toa"><i class="fa fa-map-marker" aria-hidden="true" id="toi"></i> Track Order</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart align-self-center">
+            <a href="cart.html" id="cart" class="border-ani">Cart <i class="fa fa-shopping-cart"
+                    aria-hidden="true"></i></a>
+        </div>
+
+        <!-- hamburger menu -->
+
+        <div class="sidebar">
+            <ul style="margin-top: 20px;">
+                <li class="hide1">
+                    <div id="sign">
+                        <i class="fa fa-user-circle"> </i> Sign in
+                        <span>
+                            <svg width="1em" height="1em" class="caret_down" viewBox="0 0 16 16"
+                                class="bi bi-caret-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                            </svg>
+                            <svg width="1em" height="1em" class="caret_up" viewBox="0 0 16 16" class="bi bi-caret-up"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 11L8 5.519 12.796 11H3.204zm-.753-.659l4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <ul id="mini-list">
+                        <li><a href="login.html">Sign In</a></li>
+                        <li><a href="registration-page.html">Create account</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+
+                <li class="hide2">
+                    <div id="more">
+                        <i class="fas fa-cube"> </i> More
+                        <span>
+                            <svg width="1em" height="1em" class="caret_down" viewBox="0 0 16 16"
+                                class="bi bi-caret-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                            </svg>
+                            <svg width="1em" height="1em" class="caret_up" viewBox="0 0 16 16" class="bi bi-caret-up"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 11L8 5.519 12.796 11H3.204zm-.753-.659l4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <ul id="mini-list2">
+                        <li><a href="#">Track order</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div id="category">
+                        <i class="far fa-list-alt"></i> Categories
+                        <span>
+                            <svg width="1em" height="1em" class="caret_down" viewBox="0 0 16 16"
+                                class="bi bi-caret-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                            </svg>
+                            <svg width="1em" height="1em" class="caret_up" viewBox="0 0 16 16" class="bi bi-caret-up"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 11L8 5.519 12.796 11H3.204zm-.753-.659l4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <ul id="mini-list3">
+                        <li id="li_brand">Brands</li>
+                        <li id="li_pprice">Phone by price</li>
+                        <li id="li_launch">New launches</li>
+                        <li id="li_access">Accessories</li>
+                        <li id="li_sale"><a href="#">Sale</a></li>
+                        <li id="li_fphones"><a href="#">Featured phones</a></li>
+                    </ul>
+
+                    <div id="b_list">
+                        <div class="bback"><i class="fas fa-angle-left"></i> back</div>
+                        <ul>
+                            <li><a href="#">Samsung</a></li>
+                            <li><a href="productlist.html">Apple</a></li>
+                            <li><a href="#">Motorola</a></li>
+                            <li><a href="#">Oneplus</a></li>
+                            <li><a href="#">Huawei</a></li>
+                            <li><a href="#">Lg</a></li>
+                            <li><a href="#">Mi</a></li>
+                            <li><a href="#">Oppo</a></li>
+                            <li><a href="#">Vivo</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="p_list">
+                        <div class="pback"><i class="fas fa-angle-left"></i> back</div>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 5,000 &nbsp;to&nbsp; <i
+                                        class="fa fa-inr" id="rupee"></i> 8,999</a></li>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 9,000 &nbsp;to&nbsp; <i
+                                        class="fa fa-inr" id="rupee"></i> 12,999</a></li>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 13,000 &nbsp;to&nbsp; <i
+                                        class="fa fa-inr" id="rupee"></i> 15,999</a></li>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 16,000 &nbsp;to&nbsp; <i
+                                        class="fa fa-inr" id="rupee"></i> 24,999</a></li>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 25,000 &nbsp;to&nbsp; <i
+                                        class="fa fa-inr" id="rupee"></i> 49,999</a></li>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 50,000 and Above</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="l_list">
+                        <div class="lback"><i class="fas fa-angle-left"></i> back</div>
+                        <ul>
+                            <li><a href="#">Oneplus 7T pro (McLaren Edition)</a></li>
+                            <li><a href="#">Oneplus 7T pro</a></li>
+                            <li><a href="#">Vivo V17</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="a_list">
+                        <div class="aback"><i class="fas fa-angle-left"></i> back</div>
+                        <ul>
+                            <li><a href="#">Headphones</a></li>
+                            <li><a href="#">Power Bank</a></li>
+                            <li><a href="#">Chargers & cabels</a></li>
+                            <li><a href="#">Memory card</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="ham_button">
+            <button class="sidebarbtn">
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- this category nav will appear @(min-width:1200px) -->
+
+    <div class="category">
+        <ul class="category-grid text-center">
+            <li><a href="#" class="brand">Brand</a></li>
+            <li><a href="#" class="price">Phones by Price</a></li>
+            <li><a href="#" class="launches">New Launches</a></li>
+            <li><a href="#" class="accessories">Accessories</a></li>
+            <li><a href="#" class="sale">Sale</a></li>
+            <li><a href="#" class="featured">Featured phones</a></li>
+        </ul>
+    </div>
+
+    <div class="drop-brand">
+        <div class="content-brand">
+            <a href="#"><img src="samsung.png" class="img-fluid" title="samsung"></a>
+            <a href="productlist.html"><img src="apple.png" class="img-fluid" title="apple"></a>
+            <a href="#"><img src="motorola.png" class="img-fluid" title="motorola"></a>
+            <a href="#"><img src="oneplus.png" class="img-fluid" title="oneplus"></a>
+            <a href="#"><img src="huawei.png" class="img-fluid" title="huawei"></a>
+            <a href="#"><img src="lg.png" class="img-fluid" title="lg"></a>
+            <a href="#"><img src="mi.png" class="img-fluid" title="mi"></a>
+            <a href="#"><img src="oppo.png" class="img-fluid" title="oppo"></a>
+            <a href="#"><img src="vivo.png" class="img-fluid" title="vivo"></a>
+        </div>
+    </div>
+
+    <div class="drop-price">
+        <div class="content-price">
+            <a href="#">Less than <i class="fa fa-inr" id="rupee"></i>4,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>5,000 to <i class="fa fa-inr" id="rupee"></i>8,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>9,000 to <i class="fa fa-inr" id="rupee"></i>12,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>13,000 to <i class="fa fa-inr" id="rupee"></i>15,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>16,000 to <i class="fa fa-inr" id="rupee"></i>24,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>25,000 to <i class="fa fa-inr" id="rupee"></i>49,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>50,000 and Above</a>
+        </div>
+    </div>
+
+    <div class="drop-launches">
+        <div class="content-launches">
+            <a href="#"><img src="launch-1.png"></a>
+            <a href="#"><img src="launch-2.png"></a>
+            <a href="#"><img src="launch-3.png"></a>
+        </div>
+    </div>
+
+    <div class="drop-accessories">
+        <div class="content-accessories">
+            <a href="#"><img src="icon-headphone.png" alt=""><br>Headphones</a>
+            <a href="#"><img src="icon-powerbank.png" alt=""><br>Power Bank</a>
+            <a href="#"><img src="icon-cabels.png" alt=""><br>Chargers & cabels</a>
+            <a href="#"><img src="icon-memorycard.png" alt=""><br>Memory card</a>
+        </div>
+    </div>
+
+    <!-- carousel -->
+    <div id="myslideshow" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li class="active" data-target="#myslideshow" data-slide-to="0"></li>
+            <li data-target="#myslideshow" data-slide-to="1"></li>
+            <li data-target="#myslideshow" data-slide-to="2"></li>
+            <li data-target="#myslideshow" data-slide-to="3"></li>
+            <li data-target="#myslideshow" data-slide-to="4"></li>
+            <li data-target="#myslideshow" data-slide-to="5"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="#"> <img src="caro-1sam.png" class="d-block w-100"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="caro-2one.png" class="d-block w-100"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="caro-3app.png" class="d-block w-100"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="caro-4sam.png" class="d-block w-100"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="caro-5one.png" class="d-block w-100"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="caro-6vivo.png" class="d-block w-100"></a>
+            </div>
+        </div>
+        <a href="#myslideshow" class="carousel-control-prev" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#myslideshow" class="carousel-control-next" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+    <!--random ads -->
+    <div class="ads">
+        <a href="#"><img src="ad-1.png" class="img-fluid"></a>
+        <a href="#" class="hide_ad"><img src="ad-2.png" class="img-fluid hhh"></a>
+        <a href="#"><img src="ad-3.png" class="img-fluid"></a>
+    </div>
+
+
+    <!--latest phones row -->
+    <div class="container-fluid">
+
+        <h3 class="headings">Latest Phones</h3>
+        <hr class="hr_line">
+
+
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="1plus 7pro-almond1.png">
+                    <div class="p-name">OnePlus 7 Pro (Almond)</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 43,999
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="11pro.html">
+                    <img class="shadow-animation" src="App-11-pro1.jpg">
+                    <div class="p-name">Apple 11 Pro (Midnight Green)</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 98,999
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="Sam note1.png">
+                    <div class="p-name">Samsung Galaxy Note 10 plus (Aura Glow)</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 69,850
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="Op Reno2(lake-green)1.png">
+                    <div class="p-name">Oppo Reno 2 (Lake Green)</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 33,999
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="Vi v171.png">
+                    <div class="p-name">Vivo V17 (Midnight Ocean)</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 27,999
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--best selling phones row -->
+    <div class="container-fluid">
+
+        <h3 class="headings">Best Selling Phones</h3>
+        <hr class="hr_line">
+
+
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="App-xr-blue1.png">
+                    <div class="p-name">Apple iPhone XR (Blue)</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 44,999
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="Moto E6s(polished-graphite)1.png">
+                    <div class="p-name">Moto E6s (Polished Graphite)</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 7,499
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="Y91i1.png">
+                    <div class="p-name">Vivo Y91i (Ocean Blue)</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 6,599
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="MI A2(blue)1.png">
+                    <div class="p-name">MI A2 (Blue)</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 8,499
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="Sam-A50(blue)1.png">
+                    <div class="p-name">Samsung Galaxy A50 (Blue)</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 17,999
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--best battery phones row -->
+    <div class="container-fluid" id="battery-high">
+
+        <h3 class="headings">Best Battery Phones</h3>
+        <hr class="hr_line">
+
+
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="Sam-M30s-(opal-black)1.png" alt="">
+                    <div class="p-name-1">Samsung Galaxy M30s (Opal Black)</div>
+                    <div class="feature">6,000 mAh Battery</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 16,999
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="Vi v171.png" alt="">
+                    <div class="p-name-1">Vivo V17 (Midnight Ocean)</div>
+                    <div class="feature">4,500 mAh Battery</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 27,999
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="Sam note1.png" alt="">
+                    <div class="p-name-1">Samsung Galaxy Note 10 plus (Aura Glow)</div>
+                    <div class="feature">4,300 mAh Battery</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 69,850
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="MI A3(blue)1.png" alt="">
+                    <div class="p-name-1">Xiaomi Mi A3 (Blue)</div>
+                    <div class="feature">4,030 mAh Battery</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 17,999
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="Hu-p20problue1.png" alt="">
+                    <div class="p-name-1">Huawei P20 Pro (Blue)</div>
+                    <div class="feature">4,000 mAh Battery</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 45,999
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--triple camera phones row -->
+    <div class="container-fluid" id="battery-high">
+
+        <h3 class="headings">Triple Camera Phones</h3>
+        <hr class="hr_line">
+
+
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="Hu-p20problue1.png" alt="">
+                    <div class="p-name-1">Huawei P20 Pro (Blue)</div>
+                    <div class="feature">40+2+20MP Rear Camera</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 45,999
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="LG-G8s-ThinQ(Mirror-Black)1.png" alt="">
+                    <div class="p-name-1">LG G8s ThinQ(Mirror Black)</div>
+                    <div class="feature">12+13+12MP Rear Camera</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 34,999
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="1plus-7tpro-mac-laren1.png" alt="">
+                    <div class="p-name-1">OnePlus 7T Pro McLaren Limited Edition (Papaya Orange)</div>
+                    <div class="feature">48+8+16MP Rear Camera</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 58,000
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="11pro.html">
+                    <img class="shadow-animation" src="App-11-pro1.jpg" alt="">
+                    <div class="p-name-1">Apple iPhone 11 Pro (Midnight Green)</div>
+                    <div class="feature">12+12+12MP Rear Camera</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 98,999
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <img class="shadow-animation" src="MI A3(blue)1.png" alt="">
+                    <div class="p-name-1">Xiaomi Mi A3 (Blue)</div>
+                    <div class="feature">48+8+2MP Rear Camera</div>
+                    <div class="p-price">
+                        <i class="fa fa-inr" id="rupee"></i> 17,999
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- emi ads -->
+    <div class="emi-offer">
+        <img src="add.jpg" alt="">
+    </div>
+
+    <!-- cta for mobile view -->
+    <div class="cta">
+
+        <div class="cta-txt">
+            <h3>Tired of Searching?</h3>Join us for <b>Free</b> to know about
+            latest phone launches, great offers & discounts
+        </div>
+        <div class="cta-form">
+            <input type="text" placeholder="Enter your Email/Mobile..."><br>
+            <button class="cta-btn btn">Subscribe for Free</button>
+        </div>
+    </div>
+
+
+<!-- footer -->
+<div class="footer-bg">
+
+    <div class="foot-logo">
+      <a href="index.html">
+        <img src="bunny-img-logo11.png" alt="Logo" title="mobilebunny.com" class="foot-logo-img vibrate-2">
+        <img src="bunny-text-logo1.png" alt="Logo" title="mobilebunny.com" class="foot-logo-text">
+      </a>
+    </div>
+    <div class="foot-content">
+  
+      <div class="foot-media">
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+  
+      <div class="foot-about">
+        <ul>
+          <li><a href="#" class="border-ani">About Us</a></li>
+          <li><a href="#" class="border-ani">Return Policy</a></li>
+          <li><a href="#" class="border-ani">Privacy Policy</a></li>
+          <li><a href="#" class="border-ani">Terms of Services</a></li>
+        </ul>
+      </div>
+  
+      <div class="help">
+        <h5>Need Assistance?</h5>
+        <ul>
+          <li><a href="#" class="border-ani">FAQ</a></li>
+          <li><a href="#" class="border-ani">24x7 Support</a></li>
+          <li><a href="#" class="border-ani">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <div class="cta2">
+        <div class="cta-txt2">
+          <h3>Tired of Searching?</h3>Join us for <b>Free</b> to know about
+          latest phone launches, great offers & discounts
+        </div>
+        <div class="cta-form2">
+          <input type="text" placeholder="Enter your Email/Mobile..."><br>
+          <button class="cta-btn2 btn">Subscribe for Free</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="copyright">
+      <p>Mobilebunny.com © 2020</p>
+    </div>
+  
+  </div>
+
+
+    <script src="js\jquery.js"></script>
+    <script src="index.js"></script>
+    <script src="owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

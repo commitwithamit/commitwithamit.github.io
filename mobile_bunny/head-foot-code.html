@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- poppins font from google  -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/fbf0851f30.js" crossorigin="anonymous"></script>
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.css">
+    <!-- Bootstrap & external CSS -->
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <!-- external css -->
+    <link rel="stylesheet" href="index.css">
+    <title>Mobile Bunny</title>
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    background: #f1f1f1;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    background: linear-gradient(45deg, #3ab490, #196a8c, #1c297c);
+}
+
+/* logo */
+
+.logo_container {
+    flex: .4;
+    padding: 4px 0px 4px 6px;
+}
+
+.logo_container a {
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 20px;
+}
+
+.logo-text {
+    width: 45px;
+    margin: 10px 0 0 0;
+}
+
+/* logo */
+
+/* search bar */
+
+.sbar_container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_border {
+    border: 1px solid #cecece;
+    border-radius: 40px;
+    display: flex;
+    height: 30px;
+    /* height of the search bar */
+}
+
+.s_box {
+    width: 140px;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 10px;
+    color: white;
+    padding: 0 0 0 10px;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #e4e4e4;
+}
+
+.s_box::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #e4e4e4;
+    opacity: 1;
+    /* Firefox */
+    font-size: 8px;
+}
+
+.s_icon {
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #297996;
+    font-size: 12px;
+    border: none;
+    border-left: 1px solid #cecece;
+    border-radius: 0 40px 40px 0;
+}
+
+.s_icon:focus {
+    outline: 0;
+}
+
+/* search bar */
+
+/* hamburger menu */
+
+.sidebar {
+    flex: 1;
+    position: fixed;
+    top: 0px;
+    right: -250px;
+    background: linear-gradient(45deg, #3ab490, #196a8c, #1c297c);
+    width: 250px;
+    height: 100%;
+    transition: .3s;
+    z-index: 35;
+    overflow: auto;
+}
+
+.active {
+    right: 0;
+}
+
+/*css for scrollbar inside sidebar */
+
+.sidebar::-webkit-scrollbar {
+    width: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #d5d6d6;
+    width: 8px;
+    border-radius: 30px;
+}
+
+.sidebar ul {
+    margin: 0px;
+    padding: 20px 0px;
+    font-size: 14px;
+}
+
+.sidebar ul li {
+    text-align: left;
+    list-style: none;
+    padding: 10px 18px;
+    color: white;
+    border-bottom: 1px solid #00000033;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#sign span, #more span, #category span {
+    float: right;
+}
+
+.caret_up {
+    display: none;
+}
+
+.ham_button {
+    flex: .26;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.sidebarbtn {
+    width: 42px;
+    height: 29px;
+    position: absolute;
+    right: 7px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-top: 2px;
+    z-index: 60;
+}
+
+.sidebarbtn:focus {
+    outline: 0;
+}
+
+.sidebarbtn span {
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 8px;
+    width: 26px;
+    height: 3px;
+    background: #fff;
+    transition: .3s;
+}
+
+.sidebarbtn span:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    transition: .3s;
+}
+
+.sidebarbtn span:after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    transition: .3s;
+}
+
+.toggle {
+    position: fixed;
+}
+
+.sidebarbtn.toggle span {
+    background: transparent;
+}
+
+.sidebarbtn.toggle span:before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.sidebarbtn.toggle span:after {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+#sign, #more, #category {
+    cursor: pointer;
+}
+
+#mini-list li a, #mini-list2 li a, #mini-list3 li a, #mini-list3 li {
+    text-decoration: none;
+    color: #f7dba7;
+    font-size: 14px;
+}
+
+#mini-list, #mini-list2, #mini-list3 {
+    list-style: none;
+}
+
+#mini-list li::before, #mini-list2 li::before, #mini-list3 li::before {
+    content: "\2022";
+    /* bullets code */
+    color: wheat;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: .1em;
+}
+
+#mini-list, #mini-list2, #mini-list3 {
+    display: none;
+}
+
+.sidebar img {
+    width: 14px;
+    float: right;
+}
+
+#li_brand, #li_pprice, #li_launch, #li_access, .bback, .pback, .lback, .aback {
+    cursor: pointer;
+}
+
+#b_list, #p_list, #l_list, #a_list {
+    display: none;
+}
+
+.bback, .pback, .lback, .aback {
+    margin: 14px 0 0 9px;
+    text-align: left;
+}
+
+#b_list ul, #p_list ul, #l_list ul, #a_list ul {
+    padding: 5px 0 0;
+}
+
+#b_list li a, #p_list li a, #l_list li a, #a_list li a {
+    text-decoration: none;
+    color: wheat;
+    font-size: 14px;
+}
+
+#b_list, #p_list, #l_list, #a_list {
+    list-style: none;
+}
+
+#b_list li::before, #p_list li::before, #l_list li::before, #a_list li::before {
+    content: "\2022";
+    /* bullets code */
+    color: wheat;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: .1em;
+}
+
+#p_list>ul li a i.fa {
+    /* rupee fa icon */
+    font-size: 12px;
+}
+
+/* hamburger menu end */
+
+/* css of sign in icon @m-768px*/
+
+.sign-in {
+    display: none;
+    flex: .4;
+    height: 24px;
+    width: 1px;
+}
+
+.sign-in a {
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+}
+
+.drop-signin {
+    width: 166px;
+    height: 68px;
+    line-height: 2;
+    background: linear-gradient(45deg,#33578a,#428c88, #243a8a);
+    position: relative;
+    right: 10px;
+    top: 0px;
+    margin-top: -1px;
+    border-radius: 6px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    z-index: 5;
+    display: none;
+}
+.hov-si, .hov-mo{
+    margin: 0 0 0 30px;
+}
+.reg-btn {
+    color: white;
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid #cecece;
+    font-size: 15px!important;
+    padding: 5px;
+}
+
+.reg-btn:hover {
+    background: #ffffff;
+    color: #1a4e85;
+    font-weight: 500;
+}
+
+/* css of sign in icon @m-768px*/
+
+/* css for more in nav @m-992px */
+
+.more {
+    display: none;
+    flex: .4;
+    height: 24px;
+    width: 1px;
+}
+
+.more a {
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+}
+
+.more img {
+    width: 14px;
+}
+
+#up-arrow {
+    display: none;
+}
+
+.drop-more {
+    width: 103px;
+    height: 68px;
+    line-height: 2;
+    background: linear-gradient(45deg, #33578a, #428c88, #243a8a);
+    position: relative;
+    left: 11px;
+    top: 0px;
+    border-radius: 6px;
+    display: none;
+    margin-top: -2px;
+    z-index: 5;
+    text-align: left;
+}
+
+.content-more a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    padding: 3px 0px 0px 5px;
+}
+
+.content-more a:hover {
+    background: transparent;
+    text-decoration: underline;
+}
+
+/* css for more in nav @m-992px */
+
+/* css for cart in nav @m-1200px */
+
+.cart {
+    display: none;
+    flex: .25;
+}
+
+.cart a {
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    margin-left: 23px;
+}
+
+/* css for cart in nav @m-1200px */
+
+/* MQ for header */
+
+@media (min-width:360px) {
+    .logo_container {
+        flex: .35;
+    }
+    .s_box {
+        width: 176px;
+    }
+}
+
+@media (min-width: 411px) {
+    .s_box {
+        width: 210px;
+    }
+}
+
+@media (min-width: 500px) {
+    .s_box {
+        width: 270px;
+    }
+}
+
+@media (min-width: 576px) {
+    .logo-img {
+        width: 23px;
+    }
+    .logo-text {
+        width: 46px;
+        margin: 13px 0 0 0;
+    }
+    .s_box {
+        width: 350px;
+        font-size: 12px;
+    }
+    .s_box::placeholder {
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 768px) {
+    .logo_container {
+        flex: .3;
+    }
+    .logo-img {
+        width: 25px;
+    }
+    .logo-text {
+        width: 56px;
+    }
+    .search_border {
+        height: 32px;
+    }
+    .s_box {
+        width: 350px;
+        font-size: 12px;
+    }
+    .s_box::placeholder {
+        font-size: 11px;
+    }
+    .sign-in {
+        display: block;
+    }
+    .hide1 {
+        display: none;
+    }
+    .ham_button {
+        flex: .2;
+    }
+}
+
+@media (min-width: 900px) {
+    .s_box {
+        width: 400px;
+    }
+}
+@media (min-width: 992px) {
+    .logo-img{
+        width: 30px;
+    }
+    .logo-text{
+        width: 67px;
+        margin-top: 14px;
+    }
+    .sign-in{
+        flex:.25;
+    }
+    .more{
+        display: block;
+        flex:.25;
+    }
+    .hide2{
+        display: none;
+    }
+}
+
+@media (min-width:1200px){
+    .logo_container{
+        padding: 4px 12px;
+    }
+    .logo-img{
+        width: 43px;
+    }
+    .logo-text{
+        width: 95px;
+        margin-top: 21px;
+    }
+    .sbar_container {
+        flex: 1.3;
+    }
+    .search_border {
+        height: 40px;
+    }
+    .s_box {
+        width: 570px;
+        padding-top: 3px;
+        font-size: 16px;
+    }
+    .s_box::placeholder {
+        font-size: 16px;
+    }
+    .s_icon {
+        width: 42px;
+        font-size: 16px;
+    }
+    .ham_button{
+        display: none;
+    }
+    .cart{
+        display: block;
+    }
+}
+
+/* MQ for header */
+
+
+/* category nav display @min-width:1200px */
+
+.category{
+    background:linear-gradient(78deg,#17906c,#1480ad, #26379e);
+    width: 100%;
+    display: none;
+}
+
+@media (min-width:1200px){
+    .category{
+        display: block;
+    }
+}
+.category ul li{
+    list-style: none;
+    float: left;
+    padding: 8px 12px;
+}
+.category ul li a{
+    text-decoration: none;
+    color:white; 
+    padding: 9px 9px 6px 9px;
+}
+.category-grid{
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 850px;
+    margin: auto;
+} 
+/* end */
+/* start */
+
+.drop-brand{
+    background:linear-gradient(360deg,#ebebeb,#ffffff); ;
+	height: 94px;
+    width: 100%;/* can't give max-width with p:absolute */
+    position: absolute;
+    z-index: 5;
+    display: none;
+}
+.content-brand{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    line-height: 5.7;
+}
+.content-brand img{
+    width:115px;
+}
+.drop-price{
+    background:linear-gradient(360deg,#ebebeb,#ffffff); ;
+	height: 94px;
+    width: 100%;/* can't give max-width with p:absolute */
+    position: absolute;
+    z-index: 5;
+    display: none;
+}
+
+#rupee{
+    font-size: 14px;
+}
+.content-price{
+    text-align: center;
+    height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.content-price a{
+    color: #0d7fb5;
+    font-size: 16px;
+    font-weight: 500;
+    flex: 1;
+}
+
+.drop-launches{
+    background: linear-gradient(360deg,#ebebeb,#ffffff);
+    height: 177px;
+    width: 100%;/* can't give max-width with p:absolute */
+    position: absolute;
+    z-index: 5;
+    display: none;
+}
+.content-launches{
+    display: flex;
+    justify-content: space-around;
+}
+.content-launches a{
+    margin-top: 6px;
+}
+.content-launches img{
+    width: 247px;
+}
+
+.drop-accessories{
+    background:linear-gradient(360deg,#ebebeb,#ffffff); ;
+	height: 94px;
+    width: 100%;/* can't give max-width with p:absolute */
+    position: absolute;
+    z-index: 5;
+    display: none;
+}
+.content-accessories{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 94px;
+}
+.content-accessories a{
+    text-align: center;    
+}
+.content-accessories img{
+    width:43px;
+}
+.brand:hover, .price:hover, .launches:hover, .accessories:hover, .sale:hover, .featured:hover{
+    border-bottom: 4px solid #82c7c7;   
+}
+.drop-hov{
+    border-bottom: 4px solid #82c7c7; 
+}
+/* category nav @min-width:1200px */
+
+
+/* cta for mobile view & desktop */
+
+.cta{
+    display: flex;
+    width: 100%;
+    height: 220px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 13px;
+    justify-content: center;
+    background: darkcyan;
+    padding: 15px;
+    margin: 10px 0 10px 0;
+}
+
+.cta2{/* after 992px */
+    display: none;
+    flex: 2;
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+}
+
+@media (min-width:992px){
+    .cta{
+        display: none;
+    }
+    .cta2{
+        display: block;
+    }
+}
+
+.cta-txt, .cta-txt2{
+    color: white;
+    font-size: 13px;
+    flex-basis: 100%;
+    text-align: center;
+}
+.cta-txt2{
+    height: 120px;
+}
+.cta-txt b, .cta-txt2 b{
+    color:#d1fb7b;    
+}
+.cta-txt h3, .cta-txt2 h3{
+    color:#F4D03F;
+    margin-bottom: 20px;
+}
+.cta-form input::placeholder, .cta-form2 input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #8a8a8a;
+    opacity: 1; /* Firefox */
+}
+.cta-form input, .cta-form2 input{
+    width: 300px;
+    margin: 0px 0 10px 0;
+    border-radius: 5px;
+    border: none;
+    height: 33px;
+    padding: 8px;
+}
+.cta-form2 input:focus{
+    outline:0;
+}
+.cta-btn, .cta-btn2{
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    color: #1a4f86!important;
+    font-weight: 500;
+    width: 300px;
+    font-size: 15px;
+}
+/* cta for mobile view & desktop*/
+
+/* footer */
+
+.footer-bg{
+    background: rgb(73,71,71);
+    background: linear-gradient(45deg,#3ab490,#196a8c, #1c297c);
+    display: flex;
+    height: 300px;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: baseline;
+    font-size: 13px;
+}
+.foot-logo{
+    flex:1;
+    padding: 4px 12px;
+    flex-basis: 100%;
+    height: 0;
+}
+.foot-logo a{
+    text-decoration: none;
+}
+.foot-logo-img{
+    width:27px;
+}
+.foot-logo-text{
+    width: 58px;
+    margin: 13px 0 0 0;
+}
+.foot-content{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.foot-media{      
+    flex: 0.5;
+    font-size: 18px;
+    margin: 0px 0 0 15px;
+    border-left:4px solid #115f82;
+    height: 131px;
+}
+.foot-media ul{
+    padding: 0;
+    margin: 4px 0px 0px -4px;
+}
+.foot-media ul li{
+    list-style: none;
+    height: 34px;
+}
+.foot-media a i{
+    margin-left: 16px;
+    color: #fff;
+}
+.foot-media a i:hover{
+    border-radius: 40px;
+    background: white;
+    color:#428c88;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 1.4;
+    font-size: 22px;
+    transition:.35s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+.foot-about{
+    flex: 1.3;
+    width: 229px;
+}
+.foot-about ul{
+    padding: 0;
+    margin: -14px 0 0 14px;
+}
+.foot-about ul li{
+    list-style:none;
+    margin: 16px 0 0 0;
+}
+.foot-about ul li a{
+    color:white;
+    text-decoration: none;
+}
+
+.help{
+    flex: 1.6;
+}
+.help h5{
+    color: #ffffffab;
+    margin: 15px 0 0 0;
+}
+.help ul{
+    padding: 0px;
+}
+.help ul li{
+    list-style: none;
+    margin: 16px 0 0 0;
+}
+.help ul li a{
+    color:white;
+    text-decoration: none;
+}
+
+.copyright{
+    color: #eae9e9;
+    font-size: 14px;
+    flex-basis: 100%;
+    margin: 0 0 0 15px;
+}
+.copyright p{
+    margin:0px;
+}
+
+@media (min-width:992px){
+    .footer-bg, .cta-txt2{
+        font-size: 15px;
+    }
+    .foot-logo-img {
+        width: 35px;
+    }
+    .foot-logo-text {
+        width: 75px;
+        margin: 17px 0 0 0;
+    }
+}
+ @media (min-width:1200px){
+    .foot-media {flex: 0.3;}
+    .foot-about {flex: 1;}
+    .help {flex: 2;}
+    .cta2 {flex: 1.6;}
+    .ham_button{
+        display: none;
+    }
+ }
+
+/* footer */
+
+/* border-bottom animation */
+.border-ani{
+    display: inline-block;
+}
+.border-ani::after{
+    content:""    ;
+    display:block;
+    width:0;
+    height: 3px;
+    background:#82c7c7;
+    transition: width .3s;
+}
+.border-ani:hover::after{
+    width:100%;
+    transition: width .3s;
+}
+
+/* animations */
+
+/* logo animation */
+.vibrate-2{animation:vibrate-2 .6s linear infinite both}
+
+
+ @-webkit-keyframes vibrate-2{0%{
+    -webkit-transform:translate(0);
+    transform:translate(0)}20%{
+    -webkit-transform:translate(-2px,2px);
+    transform:translate(-2px,2px)}40%
+    {-webkit-transform:translate(-2px,-2px);
+    transform:translate(-2px,-2px)}60%{
+    -webkit-transform:translate(2px,2px);
+    transform:translate(2px,2px)}80%{
+    -webkit-transform:translate(2px,-2px);
+    transform:translate(2px,-2px)}100%{
+    -webkit-transform:translate(0);
+    transform:translate(0)}}
+@keyframes vibrate-2{0%{
+    -webkit-transform:translate(0);
+    transform:translate(0)}20%{
+    -webkit-transform:translate(-2px,2px);
+    transform:translate(-2px,2px)}40%{
+    -webkit-transform:translate(-2px,-2px);
+    transform:translate(-2px,-2px)}60%{
+    -webkit-transform:translate(2px,2px);
+     transform:translate(2px,2px)}80%{
+    -webkit-transform:translate(2px,-2px);
+    transform:translate(2px,-2px)}100%{
+    -webkit-transform:translate(0);
+    transform:translate(0)}
+}
+
+
+/* phones will shake on hover */
+
+.vibrate-1 {
+    animation: vibrate-1 .3s linear both
+}
+
+@keyframes vibrate-1 {
+    0% {
+        transform: translate(0)
+    }
+    20% {
+        transform: translate(-2px, 2px)
+    }
+    40% {
+        transform: translate(-2px, -2px)
+    }
+    60% {
+        transform: translate(2px, 2px)
+    }
+    80% {
+        transform: translate(2px, -2px)
+    }
+    100% {
+        transform: translate(0)
+    }
+}
+
+
+/*for cta button */
+.jello-horizontal {
+	-webkit-animation: jello-horizontal 0.9s both;
+	        animation: jello-horizontal 0.9s both;
+}
+ @-webkit-keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+  }
+  @keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+  }
+
+/* animations */
+</style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo_container">
+            <a href="index.html">
+                <img src="bunny-img-logo11.png" alt="Logo" title="mobilebunny.com" class="logo-img img-fluid vibrate-2">
+                <img src="bunny-text-logo1.png" alt="Logo" title="mobilebunny.com" class="logo-text img-fluid">
+            </a>
+        </div>
+
+        <div class="sbar_container">
+            <div class="search_border">
+                <input class="s_box" type="text" placeholder="Search for Phone, Brand and Accessories"
+                    name="searchbar" />
+                <button class="s_icon"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+        </div>
+
+        <div class="sign-in align-self-center">
+            <a href="login.html" class="border-ani hov-si">Sign In <i class="fa fa-user-circle"
+                    aria-hidden="true"></i></a>
+            <!-- below is a dropdown will only appear on hover of .sign-in -->
+            <div class="drop-signin">
+                New to Mobile Bunny?<br>
+                <a href="registration-page.html" class="reg-btn">
+                    Register Here
+                </a>
+            </div>
+        </div>
+
+        <div class="more align-self-center">
+            <a href="#" class="border-ani hov-mo">More
+                <!-- hov-mo is for jquery -->
+                <img src="down-chevron.png" id="down-arrow">
+                <img src="up-chevron.png" id="up-arrow">
+            </a>
+            <!-- below is a dropdown will only appear on hover of .more -->
+            <div class="drop-more">
+                <div class="content-more">
+                    <a href="#" id="wla"><i class="fa fa-heart" aria-hidden="true" id="wli"></i> Wishlist</a>
+                    <a href="#" id="toa"><i class="fa fa-map-marker" aria-hidden="true" id="toi"></i> Track Order</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart align-self-center">
+            <a href="cart.html" id="cart" class="border-ani">Cart <i class="fa fa-shopping-cart"
+                    aria-hidden="true"></i></a>
+        </div>
+
+        <!-- hamburger menu -->
+
+        <div class="sidebar">
+            <ul style="margin-top: 20px;">
+                <li class="hide1">
+                    <div id="sign">
+                        <i class="fa fa-user-circle"> </i> Sign in
+                        <span>
+                            <svg width="1em" height="1em" class="caret_down" viewBox="0 0 16 16"
+                                class="bi bi-caret-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                            </svg>
+                            <svg width="1em" height="1em" class="caret_up" viewBox="0 0 16 16" class="bi bi-caret-up"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 11L8 5.519 12.796 11H3.204zm-.753-.659l4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <ul id="mini-list">
+                        <li><a href="login.html">Sign In</a></li>
+                        <li><a href="registration-page.html">Create account</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+
+                <li class="hide2">
+                    <div id="more">
+                        <i class="fas fa-cube"> </i> More
+                        <span>
+                            <svg width="1em" height="1em" class="caret_down" viewBox="0 0 16 16"
+                                class="bi bi-caret-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                            </svg>
+                            <svg width="1em" height="1em" class="caret_up" viewBox="0 0 16 16" class="bi bi-caret-up"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 11L8 5.519 12.796 11H3.204zm-.753-.659l4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <ul id="mini-list2">
+                        <li><a href="#">Track order</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div id="category">
+                        <i class="far fa-list-alt"></i> Categories
+                        <span>
+                            <svg width="1em" height="1em" class="caret_down" viewBox="0 0 16 16"
+                                class="bi bi-caret-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                            </svg>
+                            <svg width="1em" height="1em" class="caret_up" viewBox="0 0 16 16" class="bi bi-caret-up"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 11L8 5.519 12.796 11H3.204zm-.753-.659l4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <ul id="mini-list3">
+                        <li id="li_brand">Brands</li>
+                        <li id="li_pprice">Phone by price</li>
+                        <li id="li_launch">New launches</li>
+                        <li id="li_access">Accessories</li>
+                        <li id="li_sale"><a href="#">Sale</a></li>
+                        <li id="li_fphones"><a href="#">Featured phones</a></li>
+                    </ul>
+
+                    <div id="b_list">
+                        <div class="bback"><i class="fas fa-angle-left"></i> back</div>
+                        <ul>
+                            <li><a href="#">Samsung</a></li>
+                            <li><a href="productlist.html">Apple</a></li>
+                            <li><a href="#">Motorola</a></li>
+                            <li><a href="#">Oneplus</a></li>
+                            <li><a href="#">Huawei</a></li>
+                            <li><a href="#">Lg</a></li>
+                            <li><a href="#">Mi</a></li>
+                            <li><a href="#">Oppo</a></li>
+                            <li><a href="#">Vivo</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="p_list">
+                        <div class="pback"><i class="fas fa-angle-left"></i> back</div>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 5,000 &nbsp;to&nbsp; <i
+                                        class="fa fa-inr" id="rupee"></i> 8,999</a></li>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 9,000 &nbsp;to&nbsp; <i
+                                        class="fa fa-inr" id="rupee"></i> 12,999</a></li>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 13,000 &nbsp;to&nbsp; <i
+                                        class="fa fa-inr" id="rupee"></i> 15,999</a></li>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 16,000 &nbsp;to&nbsp; <i
+                                        class="fa fa-inr" id="rupee"></i> 24,999</a></li>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 25,000 &nbsp;to&nbsp; <i
+                                        class="fa fa-inr" id="rupee"></i> 49,999</a></li>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 50,000 and Above</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="l_list">
+                        <div class="lback"><i class="fas fa-angle-left"></i> back</div>
+                        <ul>
+                            <li><a href="#">Oneplus 7T pro (McLaren Edition)</a></li>
+                            <li><a href="#">Oneplus 7T pro</a></li>
+                            <li><a href="#">Vivo V17</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="a_list">
+                        <div class="aback"><i class="fas fa-angle-left"></i> back</div>
+                        <ul>
+                            <li><a href="#">Headphones</a></li>
+                            <li><a href="#">Power Bank</a></li>
+                            <li><a href="#">Chargers & cabels</a></li>
+                            <li><a href="#">Memory card</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="ham_button">
+            <button class="sidebarbtn">
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- this category nav will appear @(min-width:1200px) -->
+
+    <div class="category">
+        <ul class="category-grid text-center">
+            <li><a href="#" class="brand">Brand</a></li>
+            <li><a href="#" class="price">Phones by Price</a></li>
+            <li><a href="#" class="launches">New Launches</a></li>
+            <li><a href="#" class="accessories">Accessories</a></li>
+            <li><a href="#" class="sale">Sale</a></li>
+            <li><a href="#" class="featured">Featured phones</a></li>
+        </ul>
+    </div>
+
+    <div class="drop-brand">
+        <div class="content-brand">
+            <a href="#"><img src="samsung.png" class="img-fluid" title="samsung"></a>
+            <a href="productlist.html"><img src="apple.png" class="img-fluid" title="apple"></a>
+            <a href="#"><img src="motorola.png" class="img-fluid" title="motorola"></a>
+            <a href="#"><img src="oneplus.png" class="img-fluid" title="oneplus"></a>
+            <a href="#"><img src="huawei.png" class="img-fluid" title="huawei"></a>
+            <a href="#"><img src="lg.png" class="img-fluid" title="lg"></a>
+            <a href="#"><img src="mi.png" class="img-fluid" title="mi"></a>
+            <a href="#"><img src="oppo.png" class="img-fluid" title="oppo"></a>
+            <a href="#"><img src="vivo.png" class="img-fluid" title="vivo"></a>
+        </div>
+    </div>
+
+    <div class="drop-price">
+        <div class="content-price">
+            <a href="#">Less than <i class="fa fa-inr" id="rupee"></i>4,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>5,000 to <i class="fa fa-inr" id="rupee"></i>8,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>9,000 to <i class="fa fa-inr" id="rupee"></i>12,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>13,000 to <i class="fa fa-inr" id="rupee"></i>15,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>16,000 to <i class="fa fa-inr" id="rupee"></i>24,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>25,000 to <i class="fa fa-inr" id="rupee"></i>49,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>50,000 and Above</a>
+        </div>
+    </div>
+
+    <div class="drop-launches">
+        <div class="content-launches">
+            <a href="#"><img src="launch-1.png"></a>
+            <a href="#"><img src="launch-2.png"></a>
+            <a href="#"><img src="launch-3.png"></a>
+        </div>
+    </div>
+
+    <div class="drop-accessories">
+        <div class="content-accessories">
+            <a href="#"><img src="icon-headphone.png" alt=""><br>Headphones</a>
+            <a href="#"><img src="icon-powerbank.png" alt=""><br>Power Bank</a>
+            <a href="#"><img src="icon-cabels.png" alt=""><br>Chargers & cabels</a>
+            <a href="#"><img src="icon-memorycard.png" alt=""><br>Memory card</a>
+        </div>
+    </div>
+
+
+
+
+    <!-- emi ads -->
+    <div class="emi-offer">
+        <img src="add.jpg" alt="">
+    </div>
+
+    <!-- cta for mobile view -->
+    <div class="cta">
+
+        <div class="cta-txt">
+            <h3>Tired of Searching?</h3>Join us for <b>Free</b> to know about
+            latest phone launches, great offers & discounts
+        </div>
+        <div class="cta-form">
+            <input type="text" placeholder="Enter your Email/Mobile..."><br>
+            <button class="cta-btn btn">Subscribe for Free</button>
+        </div>
+    </div>
+
+
+<!-- footer -->
+<div class="footer-bg">
+
+    <div class="foot-logo">
+      <a href="index.html">
+        <img src="bunny-img-logo11.png" alt="Logo" title="mobilebunny.com" class="foot-logo-img vibrate-2">
+        <img src="bunny-text-logo1.png" alt="Logo" title="mobilebunny.com" class="foot-logo-text">
+      </a>
+    </div>
+    <div class="foot-content">
+  
+      <div class="foot-media">
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+  
+      <div class="foot-about">
+        <ul>
+          <li><a href="#" class="border-ani">About Us</a></li>
+          <li><a href="#" class="border-ani">Return Policy</a></li>
+          <li><a href="#" class="border-ani">Privacy Policy</a></li>
+          <li><a href="#" class="border-ani">Terms of Services</a></li>
+        </ul>
+      </div>
+  
+      <div class="help">
+        <h5>Need Assistance?</h5>
+        <ul>
+          <li><a href="#" class="border-ani">FAQ</a></li>
+          <li><a href="#" class="border-ani">24x7 Support</a></li>
+          <li><a href="#" class="border-ani">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <div class="cta2">
+        <div class="cta-txt2">
+          <h3>Tired of Searching?</h3>Join us for <b>Free</b> to know about
+          latest phone launches, great offers & discounts
+        </div>
+        <div class="cta-form2">
+          <input type="text" placeholder="Enter your Email/Mobile..."><br>
+          <button class="cta-btn2 btn">Subscribe for Free</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="copyright">
+      <p>Mobilebunny.com © 2020</p>
+    </div>
+  
+  </div>
+
+    <script src="js\jquery.js"></script>
+    <script>
+
+$(document).ready(function () {
+    //h-burger menu open close
+    $(".sidebarbtn").click(function () {
+        $(".sidebar").toggleClass("active");
+        $(".sidebarbtn").toggleClass("toggle");
+    });
+
+    //categories inside of burger menu open close
+    $("#sign").click(function () {
+        $("#mini-list").slideToggle(1000);
+        $("#mini-list2, #mini-list3,#b_list,#p_list,#l_list,#a_list").slideUp();
+        $(this).find("svg").toggle();
+        $("#more .caret_up, #category .caret_up").hide();
+        $("#more .caret_down, #category .caret_down").show();
+    });
+
+    //dropdown on hover of sign in
+    //sign-in hover menu
+    $(".hov-si").hover(function () {
+        // over
+        $(".drop-signin").fadeIn();
+    }, function () {
+        // out
+        $(".drop-signin").hide();
+    });
+
+    $(".drop-signin").hover(function () {
+        // over
+        $(this).show();
+    }, function () {
+        // out
+        $(this).hide();
+    });
+
+
+    $("#more").click(function () {
+        $("#mini-list2").slideToggle(1000);
+        $("#mini-list, #mini-list3,#b_list,#p_list,#l_list,#a_list").slideUp();
+        $(this).find("svg").toggle();
+        $("#sign .caret_up, #category .caret_up").hide();
+        $("#sign .caret_down, #category .caret_down").show();
+    });
+
+    //more dropdown
+    $(".hov-mo").hover(function () {
+        // over
+        $(".drop-more").fadeIn();
+        $("#down-arrow").hide();
+        $("#up-arrow").show();
+    }, function () {
+        // out
+        $(".drop-more").hide();
+        $("#down-arrow").show();
+        $("#up-arrow").hide();
+    });
+
+    $(".drop-more").hover(function () {
+        // over
+        $(this).show();
+        $("#down-arrow").hide();
+        $("#up-arrow").show();
+    }, function () {
+        // out
+        $(this).hide();
+        $("#down-arrow").show();
+        $("#up-arrow").hide();
+    });
+
+    $("#category").click(function () {
+        $("#mini-list3").slideToggle(1000);
+        $("#mini-list, #mini-list2").slideUp();
+        $(this).find("svg").toggle();
+        $("#more .caret_up, #sign .caret_up").hide();
+        $("#more .caret_down, #sign .caret_down").show();
+    });
+
+
+    //list open close inside category (inside buger menu)
+    $("#li_brand").click(function () {
+        $("#mini-list3,#p_list,#l_list,#a_list").hide();
+        $("#b_list").show();
+    });
+
+    $(".bback").click(function () {
+        $("#mini-list3").show();
+        $("#b_list").hide();
+    });
+
+    $("#li_pprice").click(function () {
+        $("#mini-list3,#b_list,#l_list,#a_list").hide();
+        $("#p_list").show();
+        $("#b_list").hide();
+    });
+
+    $(".pback").click(function () {
+        $("#mini-list3").show();
+        $("#p_list").hide();
+    });
+
+    $("#li_launch").click(function () {
+        $("#mini-list3,#b_list,#p_list,#a_list").hide();
+        $("#l_list").show();
+    });
+
+    $(".lback").click(function () {
+        $("#mini-list3").show();
+        $("#l_list").hide();
+    });
+
+    $("#li_access").click(function () {
+        $("#mini-list3,#b_list,#p_list,#l_list").hide();
+        $("#a_list").show();
+    });
+
+    $(".aback").click(function () {
+        $("#mini-list3").show();
+        $("#a_list").hide();
+    });
+
+    //category nav dropdowns will appear only after @min-width:1200px
+
+    $(".brand").hover(function () {
+        // over 
+        $(".drop-brand").fadeIn(); 
+     }, function () {
+         // out
+         $(".drop-brand").hide();
+     });
+    $(".drop-brand").hover(function () {
+        // over    
+        $(this).show();            
+     }, function () {
+         // out
+         $(".drop-brand").hide();
+     });
+
+    $(".price").hover(function () {
+        // over
+        $(".drop-price").fadeIn();            
+    }, function () {
+        // out
+        $(".drop-price").hide();
+    });
+    $(".drop-price").hover(function () {
+        // over
+        $(this).show();     
+    }, function () {
+        // out
+        $(".drop-price").hide();
+    });
+
+    $(".launches").hover(function () {
+        // over
+        $(".drop-launches").fadeIn();
+    }, function () {
+        // out
+        $(".drop-launches").hide();
+    });
+    $(".drop-launches").hover(function () {
+        // over
+        $(this).show();
+    }, function () {
+        // out
+        $(this).hide();
+    });
+
+    $(".accessories").hover(function () {
+        // over
+        $(".drop-accessories").fadeIn();
+    }, function () {
+        // out
+        $(".drop-accessories").hide();
+    });
+    $(".drop-accessories").hover(function () {
+        // over
+        $(this).show(); 
+    }, function () {
+        // out
+        $(".drop-accessories").hide();
+    });
+
+    $(".drop-brand").hover(function () {
+        $(".brand").toggleClass("drop-hov");
+    });
+    $(".drop-price").hover(function () {
+        $(".price").toggleClass("drop-hov");
+    });
+    $(".drop-launches").hover(function () {
+        $(".launches").toggleClass("drop-hov");
+    });
+    $(".drop-accessories").hover(function () {
+        $(".accessories").toggleClass("drop-hov");
+    });
+    $(".drop-more").hover(function () {
+        $(".more").toggleClass("more-hov");
+    });
+
+     //phones will shake on hover
+     $(".shadow-animation").hover(function () {
+        // over
+        $(this).addClass("vibrate-1");
+    }, function () {
+        // out
+        $(this).removeClass("vibrate-1");
+    });
+
+    //jello animation on subscribe button
+    $(".cta-btn, .cta-btn2").mouseover(function () { 
+        $(this).addClass("jello-horizontal");
+    });
+
+});
+    </script>
+    
+</body>
+
+</html>
