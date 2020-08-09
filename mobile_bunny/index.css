@@ -979,6 +979,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     background: linear-gradient(45deg,#3ab490,#196a8c, #1c297c);
     display: flex;
     height: max-content;
+    /* max-content to fit */
     width: 100%;
     flex-wrap: wrap;
     align-items: baseline;
