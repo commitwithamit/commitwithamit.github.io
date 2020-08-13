@@ -1010,11 +1010,11 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     padding: 16px 0 0 17px;
 }
 .p-detail h5{
-    font-size: .6rem;
+    font-size: .7rem;
     font-weight: 600;
 }
 .p-price{
-    font-size: .7rem;
+    font-size: .8rem;
 }
 .p-detail h5:hover{
     text-decoration: underline;
@@ -1024,7 +1024,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     cursor: text;
 }
 .p-detail ul li{
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 400;
     padding: 6px 0 0 0;
 }
