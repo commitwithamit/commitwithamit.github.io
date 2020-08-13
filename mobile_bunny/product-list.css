@@ -718,10 +718,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 /* category nav @min-width:1200px */
 
-
 /* filter and sort */
 
-.filter_sort_container{
+.filter_sort_container {
     text-align: center;
     flex-basis: 100%;
     font-size: 14px;
@@ -733,37 +732,37 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     border-radius: 10px;
     margin: 10px auto;
     border: 1px solid #2a918e;
-    box-shadow: 18px -15px 15px rgba(255,255,255,0.2),
-                6px 10px 15px rgba(0,0,0,0.1),
-                inset -5px -5px 5px rgba(255,255,255,0.2),
-                inset 5px 5px 5px rgba(0,0,0,0.1);
+    box-shadow: 18px -15px 15px rgba(255, 255, 255, 0.2), 6px 10px 15px rgba(0, 0, 0, 0.1), inset -5px -5px 5px rgba(255, 255, 255, 0.2), inset 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
-.sort, .filter{
-    flex:1;
-    height: 26px; 
+.sort, .filter {
+    flex: 1;
+    height: 26px;
     line-height: 1.9;
     cursor: pointer;
 }
-.sort{
+
+.sort {
     border-right: 1px solid#2a918e;
     border-radius: 10px 0px 0px 10px;
 }
-.filter{
-    border-left : 1px solid #2a918e;
+
+.filter {
+    border-left: 1px solid #2a918e;
     border-radius: 0px 10px 10px 0px;
 }
-.sort:hover, .filter:hover{
+
+.sort:hover, .filter:hover {
     background: #2a918e;
     color: white;
     border: 1px solid #dddddd;
-    box-shadow: 18px -15px 15px rgba(255,255,255,0.2),
-                6px 10px 15px rgba(0,0,0,0.1),
-                inset -5px -5px 5px rgba(255,255,255,0.2),
-                inset 5px 5px 5px rgba(0,0,0,0.1);
+    box-shadow: 18px -15px 15px rgba(255, 255, 255, 0.2),
+                6px 10px 15px rgba(0, 0, 0, 0.1),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+                inset 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
-.sort_alert{
+.sort_alert {
     display: none;
     width: 250px;
     height: 186px;
@@ -772,22 +771,24 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     top: 50%;
     margin: -93px 0 0 -125px;
     border: 1px solid #2a918e;
-    box-shadow: -15px -15px 15px rgba(255,255,255,0.2),
-                15px 15px 15px rgba(0,0,0,0.1),
-                inset -5px -5px 5px rgba(255,255,255,0.2),
-                inset 5px 5px 5px rgba(0,0,0,0.1);
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+                15px 15px 15px rgba(0, 0, 0, 0.1),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+                inset 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
-.sort_alert ul, .filter_alert ul{
+
+.sort_alert ul, .filter_alert ul {
     padding: 14px 20px 10px 20px;
     margin-bottom: 0px;
 }
-.sort_close_icon, .filter_close_icon{
+
+.sort_close_icon, .filter_close_icon {
     font-size: 20px;
     font-weight: 600;
-    color:#375c92;
+    color: #375c92;
 }
 
-.sort_heading, .filter_heading{
+.sort_heading, .filter_heading {
     display: flex;
     justify-content: space-between;
     padding: 6px 4px 0 20px;
@@ -797,20 +798,24 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     margin: auto;
 }
 
-.sort_close_icon:hover{
-    color:#b60d0d;
+.sort_close_icon:hover, .filter_close_icon:hover {
+    color: #b60d0d;
     cursor: pointer;
 }
-.sort_alert ul li{
+
+.sort_alert ul li {
     list-style: none;
 }
-.sort_alert label{
+
+.sort_alert label {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
 }
+
 /*  */
-.filter_alert{
+
+.filter_alert {
     display: none;
     width: 260px;
     height: 410px;
@@ -819,12 +824,13 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     top: 50%;
     margin: -162px 0 0 -130px;
     border: 1px solid #2a918e;
-    box-shadow: -15px -15px 15px rgba(255,255,255,0.2),
-                15px 15px 15px rgba(0,0,0,0.1),
-                inset -5px -5px 5px rgba(255,255,255,0.2),
-                inset 5px 5px 5px rgba(0,0,0,0.1);
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+                15px 15px 15px rgba(0, 0, 0, 0.1),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+                inset 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
-.filter_heading{
+
+.filter_heading {
     font-weight: 600;
     margin-bottom: 5px;
     position: sticky;
@@ -833,39 +839,55 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     margin: 0 auto 4px;
     border-bottom: 1px solid #2a918e;
 }
-.filter_options{
-    overflow: scroll;
+
+.filter_options {
+    overflow-y: auto;
     height: 320px;
     font-size: 14px;
 }
-.filter_alert ul li{
+.filter_options input{
+    margin-top: 5px;
+}
+
+/* css for scrollbar inside filter */
+
+.filter_options::-webkit-scrollbar {
+    width: 3px;
+}
+
+.filter_options::-webkit-scrollbar-thumb {
+    background: #2a918e7d;
+    border-radius: 30px;
+    display: none;
+}
+
+.filter_options:hover::-webkit-scrollbar-thumb {
+    display: block;
+}
+
+.filter_alert ul li {
     list-style: none;
     margin-bottom: 15px;
 }
-.filter_alert label{
+
+.filter_alert label {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
 }
 
-.f-price, 
-.f-brand, 
-.f-cam, 
-.f-os, 
-.f-bt{
+.f-price, .f-brand, .f-cam, .f-os, .f-bt {
     margin: 0;
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 3px;
 }
-.p-drop label span,
-.b-drop label, 
-.c-drop label, 
-.o-drop label, 
-.bt-drop label{
+
+.p-drop label span, .b-drop label, .c-drop label, .o-drop label, .bt-drop label {
     margin-left: 22px;
 }
-.filter_btn_container{
+
+.filter_btn_container {
     width: 95%;
     margin: 4px auto;
     display: flex;
@@ -876,8 +898,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     height: max-content;
     border-top: 1px solid #2a918e;
 }
-.filter_btn_container p{margin: 0;}
-.filter_apply_btn{
+
+.filter_btn_container p {
+    margin: 0;
+}
+
+.filter_apply_btn {
     width: 90px;
     height: 33px;
     display: flex;
@@ -889,27 +915,119 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     border: 1px solid grey;
     border-radius: 2px;
 }
-.filter_apply_btn:hover{
-    background: linear-gradient(315deg,#3ab490,#196a8c, #1c297c);
-    border:1px solid white;
-}
-.filter_apply_btn:focus{
-    outline:none;   
+
+.filter_apply_btn:hover {
+    background: linear-gradient(315deg, #3ab490, #196a8c, #1c297c);
+    border: 1px solid white;
 }
 
-@media (min-width:576px){
-    .sort_alert{
+.filter_apply_btn:focus {
+    outline: none;
+}
+
+@media (min-width:576px) {
+    .filter_heading {
+        font-size: 17px;
+    }
+    .filter_alert {
+        height: 440px;
+        width: 274px;
+        margin: -168px 0 0 -137px;
+    }
+    .filter_options {
+        height: 350px;
+        font-size: 15px;
+    }
+    .sort_alert {
         width: 330px;
         margin-left: -165px;
         font-size: 17px;
     }
 }
-@media (min-width:768px){
-    .sort_alert{
+
+@media (min-width:768px) {
+    .sort, .filter {
+        height: 30px;
+        line-height: 2;
+    }
+    .sort_alert {
         width: 340px;
         height: 206px;
         margin: -103px 0 0 -170px;
         font-size: 20px;
     }
 }
+@media(min-width:992px){
+    .filter_sort_container{
+        display: none!important;
+    }
+}
+
 /* filter and sort */
+
+
+/* phone boxes */
+
+.phone_list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 3;
+    margin-top: 15px;
+}
+
+.phone-box{
+    display: flex;
+    width: 97%;
+    background: #f3f3f3;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #2a918e;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+                15px 15px 15px rgba(0, 0, 0, 0.1),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+                inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.phone-box a{
+    color: black;
+    display: flex;
+    align-items: center;
+    text-decoration:none;
+}
+
+.p-img{
+    flex:1;
+}
+.p-img img{
+    width: 91px;
+    margin: 9px 7px;  
+}
+.p-detail{
+    flex:3;
+    font-weight: 500;
+    padding: 16px 0 0 17px;
+}
+.p-detail h5{
+    font-size: .6rem;
+    font-weight: 600;
+}
+.p-price{
+    font-size: .7rem;
+}
+.p-detail h5:hover{
+    text-decoration: underline;
+}
+.p-detail ul{
+    padding: 0 0 0 22px;
+    cursor: text;
+}
+.p-detail ul li{
+    font-size: 9px;
+    font-weight: 400;
+    padding: 6px 0 0 0;
+}
+/* #p-rupee-icon{
+    font-size: .8rem;
+} */
+
+/* phone boxes */
