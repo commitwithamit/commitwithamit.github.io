@@ -20,12 +20,37 @@ $(document).ready(function () {
     //using the below method won't allow the filters and sort list
     //pop-up again when the screen width is <=992
     $(window).resize(function () { 
-        if($(window).width() >=992){
+        if($(window).width() >=900){
             $(".filter_alert").hide();
             $(".sort_alert").hide();
         }
     });
 
+
+    $("#d-price").slideDown(1000);
+    $("#f-price").click(function (e) { 
+        $("#d-price").slideToggle(1000);
+    });
+
+    $("#f-brand").click(function (e) { 
+        $("#d-brand").slideToggle(1000);
+    });
+
+    $("#f-cam").click(function (e) { 
+        $("#d-cam").slideToggle(1000);
+    });
+
+    $("#f-os").click(function (e) { 
+        $("#d-os").slideToggle(1000);
+    });
+    
+    $("#f-battery").click(function (e) { 
+        $("#d-battery").slideToggle(1000);
+    });
+
+    $(".filter-head").click(function () { 
+        $(this).find("img").toggle();        
+    });
 
    
 });

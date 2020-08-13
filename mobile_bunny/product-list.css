@@ -772,7 +772,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     margin: -93px 0 0 -125px;
     background: #f1f1f1;
     border: 1px solid #2a918e;
-    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+    box-shadow: -15px -15px 15px rgba(138 138 138 / 20%),
                 15px 15px 15px rgba(0, 0, 0, 0.1),
                 inset -5px -5px 5px rgba(255, 255, 255, 0.2),
                 inset 5px 5px 5px rgba(0, 0, 0, 0.1);
@@ -826,7 +826,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     margin: -162px 0 0 -130px;
     background: #f1f1f1;
     border: 1px solid #2a918e;
-    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+    box-shadow: -15px -15px 15px rgba(138 138 138 / 20%),
                 15px 15px 15px rgba(0, 0, 0, 0.1),
                 inset -5px -5px 5px rgba(255, 255, 255, 0.2),
                 inset 5px 5px 5px rgba(0, 0, 0, 0.1);
@@ -835,8 +835,6 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .filter_heading {
     font-weight: 600;
     margin-bottom: 5px;
-    position: sticky;
-    top: 1px;
     width: 95%;
     margin: 0 auto 4px;
     border-bottom: 1px solid #2a918e;
@@ -959,7 +957,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
         font-size: 20px;
     }
 }
-@media(min-width:992px){
+@media(min-width:900px){
     .filter_sort_container{
         display: none!important;
     }
@@ -969,6 +967,110 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 
 /* phone boxes */
+
+/* filter box 2 for desktop view */
+@media (min-width:900px){
+    .main_container{
+        display: flex;
+    }
+}
+
+.filter2{
+    display: none;
+    width: 250px;
+    border-radius: 10px;
+    margin: 15px;
+    background: #f1f1f1;
+    border: 1px solid #2a918e;
+    box-shadow: -15px -15px 15px rgba(138 138 138 / 20%),
+                15px 15px 15px rgba(0, 0, 0, 0.1),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+                inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+    height: max-content;
+}
+@media (min-width:900px){
+    .filter2{
+        display: block;
+    }
+}
+@media (min-width:1000px){
+    .filter2{
+        margin: 16px 16px 16px 35px;
+    }
+}
+.filter2 h4{
+    color: #5d5d5d;
+    padding: 4px 0 4px 10px;
+    border-bottom: 2px solid #2a918ebf;
+    display: inline-block;
+    width: 221px;
+    margin: 5px 0 0 13px;
+}
+.filter2 input{
+    margin-top: 5px;
+}
+.filter-drop{
+     display: none; 
+    padding: 14px 20px 10px 20px;
+    margin-bottom: 0px;
+}
+
+.filter-head{
+    padding: 5px 0 0 10px;
+    font-size: 18px;  
+    cursor: pointer;  
+}
+#filter-u-arrow{
+    margin-left: 152px;
+}
+
+.filter-drop a{
+    display: block;
+    padding: 0 0 0 30px;
+    text-decoration: none;
+    color: darkcyan;
+    margin: 0 0 4px 16px;
+}
+.filter-head img{
+    width: 14px;
+}
+
+.hl-line{
+    border-bottom: 1px solid #2a918ebf;
+    width: 198px;
+    margin: 5px 0 5px 24px;
+}
+#filter-d-arrow{
+    margin-left: 152px;
+}
+#brand-downarrow{
+    margin: 0 0 0 140px;
+}
+#cam-downarrow{
+    margin-left: 45px;
+}
+#os-downarrow{
+    margin-left: 169px;
+}
+#bat-downarrow{
+    margin-left: 129px;
+}
+#d-battery{
+    margin-bottom: 8px;
+}
+.check{
+    margin: 0 11px 0 0;
+}
+.filter-drop label{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+/* filter box 2 for desktop view */
+
+
 
 .phone_list{
     display: flex;
@@ -981,6 +1083,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .phone-box{
     display: flex;
     width: 97%;
+    height: max-content;
     background: #f3f3f3;
     border-radius: 10px;
     margin-bottom: 12px;
@@ -1020,7 +1123,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     text-decoration: underline;
 }
 .p-detail ul{
-    padding: 0 0 0 22px;
+    padding: 0 0 0 35px;
     cursor: text;
 }
 .p-detail ul li{
@@ -1028,9 +1131,44 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     font-weight: 400;
     padding: 6px 0 0 0;
 }
-/* #p-rupee-icon{
-    font-size: .8rem;
-} */
+
+@media (min-width:576px){
+    .phone-box{
+        width:90%;
+    }
+    .p-detail h5, .p-price {
+        font-size: .9rem;
+    }
+    .p-detail ul li {
+        font-size: 12px;    
+    }
+}
+@media (min-width:768px){
+    .p-detail h5, .p-price {
+        font-size: 1.2rem;
+    }
+    .p-detail ul li {
+        font-size: 14px;    
+    }
+    .p-img img{
+        width:98px;
+        margin: 9px 7px 9px 30px;
+    }
+}
+@media (min-width:1000px){
+    .phone-box {
+        width: 94%;
+    }
+    .p-img img{
+        width: 130px;
+    }
+    .p-detail h5, .p-price {
+        font-size: 1.5rem;
+    }
+    .p-detail ul li {
+        font-size: 17px;
+    }
+}
 
 /* phone boxes */
 
@@ -1210,7 +1348,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .copyright{
-    color: #eae9e9;
+    color: #eae9e9e3;
     font-size: 14px;
     flex-basis: 100%;
     margin: 0 0 0 15px;

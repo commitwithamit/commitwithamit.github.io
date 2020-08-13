@@ -288,20 +288,48 @@
                 <li>
                     <h6 class="f-price">Price</h6>
                     <div class="p-drop">
-                        <label><span>Less than <i class="icofont-rupee"></i>4,999</span> <input type="checkbox"
-                                value="below 5k"></label>
-                        <label><span><i class="icofont-rupee"></i>5,000 - <i class="icofont-rupee"></i>8,999</span>
-                            <input type="checkbox" value="5k-9k"></label>
-                        <label><span><i class="icofont-rupee"></i>9,000 - <i class="icofont-rupee"></i>12,999</span>
-                            <input type="checkbox" value="9k-13k"></label>
-                        <label><span><i class="icofont-rupee"></i>13,000 - <i class="icofont-rupee"></i>15,999</span>
-                            <input type="checkbox" value="13k-16k"></label>
-                        <label><span><i class="icofont-rupee"></i>16,000 - <i class="icofont-rupee"></i>24,999</span>
-                            <input type="checkbox" value="16k-25k"></label>
-                        <label><span><i class="icofont-rupee"></i>25,000 - <i class="icofont-rupee"></i>49,999</span>
-                            <input type="checkbox" value="25k-50k"></label>
-                        <label><span><i class="icofont-rupee"></i>50,000 and Above</span> <input type="checkbox"
-                                value="50k above"></label>
+                        <label>
+                            <span>
+                            Less than <i class="icofont-rupee"></i>4,999
+                            </span> 
+                            <input type="checkbox" value="below 5k">
+                        </label>
+                        <label>
+                            <span>
+                                <i class="icofont-rupee"></i>5,000 - <i class="icofont-rupee"></i>8,999
+                            </span>
+                            <input type="checkbox" value="5k-9k">
+                        </label>
+                        <label>
+                            <span>
+                                <i class="icofont-rupee"></i>9,000 - <i class="icofont-rupee"></i>12,999
+                            </span>
+                            <input type="checkbox" value="9k-13k">
+                        </label>
+                        <label>
+                            <span>
+                                <i class="icofont-rupee"></i>13,000 - <i class="icofont-rupee"></i>15,999
+                            </span>
+                            <input type="checkbox" value="13k-16k">
+                        </label>
+                        <label>
+                            <span>
+                                <i class="icofont-rupee"></i>16,000 - <i class="icofont-rupee"></i>24,999
+                            </span>
+                            <input type="checkbox" value="16k-25k">
+                        </label>
+                        <label>
+                            <span>
+                                <i class="icofont-rupee"></i>25,000 - <i class="icofont-rupee"></i>49,999
+                            </span>
+                            <input type="checkbox" value="25k-50k">
+                        </label>
+                        <label>
+                            <span>
+                                <i class="icofont-rupee"></i>50,000 and Above
+                            </span>
+                             <input type="checkbox" value="50k above">
+                        </label>
                     </div>
 
                 </li>
@@ -324,14 +352,12 @@
                 <li>
                     <h6 class="f-cam">Camera</h6>
                     <div class="c-drop">
-                        <label>Below - 2 MP <input type="checkbox" name="Below-2 MP" value="Below-2 MP"
-                                class="check"></label>
+                        <label>Below - 2 MP <input type="checkbox" name="Below-2 MP" value="Below-2 MP" class="check"></label>
                         <label>5-8 MP <input type="checkbox" name="5-8 MP" value="5-8 MP" class="check"></label>
                         <label>8-13 MP <input type="checkbox" name="8-13 MP" value="8-13 MP" class="check"></label>
                         <label>13-16 MP <input type="checkbox" name="13-16 MP" value="13-16 MP" class="check"></label>
                         <label>16-20 MP <input type="checkbox" name="16-20 MP" value="16-20 MP" class="check"></label>
-                        <label>20 MP - Above <input type="checkbox" name="20 MP-Above" value="20 MP-Above"
-                                class="check"></label>
+                        <label>20 MP - Above <input type="checkbox" name="20 MP-Above" value="20 MP-Above" class="check"></label>
                     </div>
                 </li>
 
@@ -347,11 +373,11 @@
                 <li>
                     <h6 class="f-bt">Battery</h6>
                     <div class="bt-drop">
-                        <label>0-1000 mAh <input type="checkbox" name="" value="" class="check"></label>
-                        <label>1000-2000 mAh <input type="checkbox" name="" value="" class="check"></label>
-                        <label>2000-3000 mAh <input type="checkbox" name="" value="" class="check"></label>
-                        <label>3000-4000 mAh <input type="checkbox" name="" value="" class="check"></label>
-                        <label>4000- Above <input type="checkbox" name="" value="" class="check"></label>
+                        <label>0-1000 mAh <input type="checkbox" name="below-1kmha" value="below-1kmha" class="check"></label>
+                        <label>1000-2000 mAh <input type="checkbox" name="1k-2kmha" value="1k-2kmha" class="check"></label>
+                        <label>2000-3000 mAh <input type="checkbox" name="2k-3kmha" value="2k-3kmha" class="check"></label>
+                        <label>3000-4000 mAh <input type="checkbox" name="3k-4kmha" value="3k-4kmha" class="check"></label>
+                        <label>4000- Above <input type="checkbox" name="4kmha-above" value="4kmha-above" class="check"></label>
                     </div>
                 </li>
             </ul>
@@ -366,9 +392,126 @@
     </div>
 
     <!-- products -->
+<div class="main_container">
 
-    <div class="phone_list">
-        <!-- this will be the direct child of .content -->
+    <div class="filter2" id="filter-lg"><!-- 1st child(flex-item) of main_container -->
+        <h4>Filters</h4>
+        <div class="filter-head" id="f-price">
+          Price
+          <img src="down-chevron-black.png" id="filter-d-arrow" style="display: none;">
+          <img src="up-chevron-black.png" id="filter-u-arrow">
+        </div>
+        <div class="filter-drop" id="d-price">
+            <label>
+                <span>
+                Less than <i class="icofont-rupee"></i>4,999
+                </span> 
+                <input type="checkbox" value="below 5k">
+            </label>
+            <label>
+                <span>
+                    <i class="icofont-rupee"></i>5,000 - <i class="icofont-rupee"></i>8,999
+                </span>
+                <input type="checkbox" value="5k-9k">
+            </label>
+            <label>
+                <span>
+                    <i class="icofont-rupee"></i>9,000 - <i class="icofont-rupee"></i>12,999
+                </span>
+                <input type="checkbox" value="9k-13k">
+            </label>
+            <label>
+                <span>
+                    <i class="icofont-rupee"></i>13,000 - <i class="icofont-rupee"></i>15,999
+                </span>
+                <input type="checkbox" value="13k-16k">
+            </label>
+            <label>
+                <span>
+                    <i class="icofont-rupee"></i>16,000 - <i class="icofont-rupee"></i>24,999
+                </span>
+                <input type="checkbox" value="16k-25k">
+            </label>
+            <label>
+                <span>
+                    <i class="icofont-rupee"></i>25,000 - <i class="icofont-rupee"></i>49,999
+                </span>
+                <input type="checkbox" value="25k-50k">
+            </label>
+            <label>
+                <span>
+                    <i class="icofont-rupee"></i>50,000 and Above
+                </span>
+                 <input type="checkbox" value="50k above">
+            </label>
+        </div>
+    
+        <div class="hl-line"></div><!-- line to create division -->
+    
+        <div class="filter-head" id="f-brand">
+          brand
+          <img src="down-chevron-black.png" id="brand-downarrow">
+          <img src="up-chevron-black.png" style="display:none; margin-left:140px;">
+        </div>
+        <div class="filter-drop" id="d-brand">
+            <label>Samsung <input type="checkbox" name="Samsung" value="Samsung" class="check"></label>
+            <label>Apple <input type="checkbox" name="Apple" value="Apple" class="check"></label>
+            <label>OnePlus <input type="checkbox" name="OnePlus" value="OnePlus" class="check"></label>
+            <label>Motorola <input type="checkbox" name="Motorola" value="Motorola" class="check"></label>
+            <label>Huawei <input type="checkbox" name="Huawei" value="Huawei" class="check"></label>
+            <label>Vivo <input type="checkbox" name="Vivo" value="Vivo" class="check"></label>
+            <label>Oppo <input type="checkbox" name="Oppo" value="Oppo" class="check"></label>
+            <label>LG <input type="checkbox" name="LG" value="LG" class="check"></label>
+            <label>MI <input type="checkbox" name="MI" value="MI" class="check"></label>
+        </div>
+    
+        <div class="hl-line"></div><!-- line to create division -->
+    
+        <div class="filter-head" id="f-cam">
+          Primary Camera
+          <img src="down-chevron-black.png" id="cam-downarrow">
+          <img src="up-chevron-black.png" style="display:none; margin-left:45px;">
+        </div>
+        <div class="filter-drop" id="d-cam">
+            <label>Below - 2 MP <input type="checkbox" name="Below-2 MP" value="Below-2 MP" class="check"></label>
+            <label>5-8 MP <input type="checkbox" name="5-8 MP" value="5-8 MP" class="check"></label>
+            <label>8-13 MP <input type="checkbox" name="8-13 MP" value="8-13 MP" class="check"></label>
+            <label>13-16 MP <input type="checkbox" name="13-16 MP" value="13-16 MP" class="check"></label>
+            <label>16-20 MP <input type="checkbox" name="16-20 MP" value="16-20 MP" class="check"></label>
+            <label>20 MP - Above <input type="checkbox" name="20 MP-Above" value="20 MP-Above" class="check"></label>
+        </div>
+    
+        <div class="hl-line"></div><!-- line to create division -->
+    
+        <div class="filter-head" id="f-os">
+          OS
+          <img src="down-chevron-black.png" id="os-downarrow">
+          <img src="up-chevron-black.png" style="display:none; margin-left: 169px;">
+        </div>
+        <div class="filter-drop" id="d-os">
+            <label>Android <input type="checkbox" name="Android" value="Android" class="check"> </label>
+            <label>iOS <input type="checkbox" name="iOS" value="iOS" class="check"></label>
+            <label>Others <input type="checkbox" name="Others" value="Others" class="check"></label>
+        </div>
+    
+        <div class="hl-line"></div><!-- line to create division -->
+    
+        <div class="filter-head" id="f-battery">
+          Battery
+          <img src="down-chevron-black.png" id="bat-downarrow">
+          <img src="up-chevron-black.png" style="display:none; margin-left:129px;">
+        </div>
+        <div class="filter-drop" id="d-battery">
+            <label>0-1000 mAh <input type="checkbox" name="below-1kmha" value="below-1kmha" class="check"></label>
+            <label>1000-2000 mAh <input type="checkbox" name="1k-2kmha" value="1k-2kmha" class="check"></label>
+            <label>2000-3000 mAh <input type="checkbox" name="2k-3kmha" value="2k-3kmha" class="check"></label>
+            <label>3000-4000 mAh <input type="checkbox" name="3k-4kmha" value="3k-4kmha" class="check"></label>
+            <label>4000- Above <input type="checkbox" name="4kmha-above" value="4kmha-above" class="check"></label> 
+        </div>
+      </div>
+
+
+      <div class="phone_list"> <!--2nd child (flex-item) of main_container-->
     
         <div class="phone-box">
           
@@ -379,7 +522,7 @@
             </div>
             <div class="p-detail">
               <a href="11pro.html"><h5>Apple iPhone 11 Pro (64GB) - Midnight Green</h5></a>
-              <div class="p-price"><i class="fa fa-inr" id="p-rupee-icon"></i> 98,999</div>
+              <div class="p-price"><i class="icofont-rupee"></i>98,999</div>
               <ul>
                 <li>64 GB ROM </li>
                 <li>14.73 cm (5.8 inch) Super Retina XDR Display</li>
@@ -399,7 +542,7 @@
         </div>
             <div class="p-detail">
               <a href="#"><h5>Apple iPhone 11 (64GB) - Black</h5></a>
-              <div class="p-price"><i class="fa fa-inr" id="p-rupee-icon"></i> 64,999</div>
+              <div class="p-price"><i class="icofont-rupee"></i>64,999</div>
               <ul>
                 <li>64 GB ROM </li>
                 <li>15.49 cm (6.1 inch) Liquid Retina HD Display</li>
@@ -418,7 +561,7 @@
             </div>
             <div class="p-detail">
               <a href="#"><h5>Apple iPhone XR (128GB) - Blue</h5></a>
-              <div class="p-price"><i class="fa fa-inr" id="p-rupee-icon"></i> 48,999</div>
+              <div class="p-price"><i class="icofont-rupee"></i>48,999</div>
               <ul>
                 <li>128 GB ROM </li>
                 <li>15.49 cm (6.1 inch) Display</li>
@@ -438,7 +581,7 @@
             </div>
             <div class="p-detail">
               <a href="#"><h5>Apple iPhone Xs (256GB) - Gold</h5></a>
-              <div class="p-price"><i class="fa fa-inr" id="p-rupee-icon"></i> 75,000</div>
+              <div class="p-price"><i class="icofont-rupee"></i>75,000</div>
               <ul>
                 <li>256 GB ROM </li>
                 <li>14.73 cm (5.8 inch) Super Retina HD Display</li>
@@ -451,6 +594,9 @@
     
       </div>
     </div>
+
+</div>
+    
 
     <!-- cta for mobile view -->
     <div class="cta">
