@@ -53,5 +53,14 @@ $(document).ready(function () {
         $(this).find("img").toggle();        
     });
 
+
+    //phones will shake on hover
+    $(".shadow-animation").hover(function () {
+        // over
+        $(this).addClass("vibrate-1");
+    }, function () {
+        // out
+        $(this).removeClass("vibrate-1");
+    });
    
 });
