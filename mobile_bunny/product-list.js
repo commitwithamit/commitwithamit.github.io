@@ -27,6 +27,7 @@ $(document).ready(function () {
     });
 
 
+    //sliding up and down filters for desktop view
     $("#d-price").slideDown(1000);
     $("#f-price").click(function (e) { 
         $("#d-price").slideToggle(1000);
