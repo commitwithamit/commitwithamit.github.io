@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    //jello animation on subscribe button
+    $(".cta-btn, .cta-btn2").mouseover(function () {
+        $(this).addClass("jello-horizontal");
+    });
+
+
     //h-burger menu open close
     $(".sidebarbtn").click(function () {
         $(".sidebar").toggleClass("active");
@@ -121,29 +127,29 @@ $(document).ready(function () {
 
     $(".brand").hover(function () {
         // over 
-        $(".drop-brand").fadeIn(); 
-     }, function () {
-         // out
-         $(".drop-brand").hide();
-     });
+        $(".drop-brand").fadeIn();
+    }, function () {
+        // out
+        $(".drop-brand").hide();
+    });
     $(".drop-brand").hover(function () {
         // over    
-        $(this).show();            
-     }, function () {
-         // out
-         $(".drop-brand").hide();
-     });
+        $(this).show();
+    }, function () {
+        // out
+        $(".drop-brand").hide();
+    });
 
     $(".price").hover(function () {
         // over
-        $(".drop-price").fadeIn();            
+        $(".drop-price").fadeIn();
     }, function () {
         // out
         $(".drop-price").hide();
     });
     $(".drop-price").hover(function () {
         // over
-        $(this).show();     
+        $(this).show();
     }, function () {
         // out
         $(".drop-price").hide();
@@ -173,7 +179,7 @@ $(document).ready(function () {
     });
     $(".drop-accessories").hover(function () {
         // over
-        $(this).show(); 
+        $(this).show();
     }, function () {
         // out
         $(".drop-accessories").hide();
@@ -198,32 +204,32 @@ $(document).ready(function () {
 
     //owl carousel
     $('.owl-carousel').owlCarousel({
-        loop:false,
-        rewind: true,   
-        margin:10,
-        nav:true,
-        responsive:{
-            0:{
-                items:1
+        loop: false,
+        rewind: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
             },
-            600:{
-                items:2
+            600: {
+                items: 2
             },
-            900:{
-                items:3
+            900: {
+                items: 3
             },
-            1100:{
-                items:4
+            1100: {
+                items: 4
             },
-            1200:{
-                items:5
+            1200: {
+                items: 5
             }
         }
     });
 
 
-     //phones will shake on hover
-     $(".shadow-animation").hover(function () {
+    //phones will shake on hover
+    $(".shadow-animation").hover(function () {
         // over
         $(this).addClass("vibrate-1");
     }, function () {
@@ -231,8 +237,5 @@ $(document).ready(function () {
         $(this).removeClass("vibrate-1");
     });
 
-    //jello animation on subscribe button
-    $(".cta-btn, .cta-btn2").mouseover(function () { 
-        $(this).addClass("jello-horizontal");
-    });
+
 });

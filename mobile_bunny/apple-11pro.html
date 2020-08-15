@@ -267,40 +267,83 @@
 
     <!-- main content -->
     <div class="main_container">
-        <!-- flex-container...on mq min-width 992 -->
+        <!-- flex-container...on mq min-width 950 -->
 
         <div class="phone_container">
-            <!-- flex-item 1 will be shown at mq min-width 992 -->
-            <!--  <ul class="multi_img">
-                <li><a href="#"><img src="pro-MG1.png" class="m_single"></a></li>
-                <li><a href="#"><img src="pro-MG2.png" class="m_double"></a></li>
-            </ul>
-
-            <div class="large_img">
-                <img src="pro-MG2.png">
-            </div> -->
+           <!--  flex-item 1 will be shown at mq min-width 950 -->
+           <ul class="multi-img">
+            <!--1st image will be displayed in .large-img -->
+      <!-- set one -->
+            <li>
+              <a href="pro-MG1.png" target="large-img">
+                <img src="pro-MG1.png" id="mg1" class="m-single">
+              </a>
+            </li>
+            <li>
+              <a href="pro-MG2.png" target="large-img">
+                <img src="pro-MG2.png" id="mg2" class="m-double">
+              </a>
+            </li>
+      <!-- set two -->
+            <li>
+              <a href="pro-G1.png" target="large-img">
+                <img src="pro-G1.png" id="g1" class="m-single">
+              </a>
+            </li>
+            <li>
+              <a href="pro-G2.png" target="large-img">
+                <img src="pro-G2.png" id="g2" class="m-double">
+              </a>
+            </li>
+      <!-- set three -->
+            <li>
+              <a href="pro-S1.png" target="large-img">
+                <img src="pro-S1.png" id="s1" class="m-single">
+              </a>
+            </li>
+            <li>
+              <a href="pro-S2.png" target="large-img">
+                <img src="pro-S2.png" id="s2" class="m-double">
+              </a>
+            </li>
+      <!-- set four -->
+            <li>
+              <a href="pro-SG1.png" target="large-img">
+                <img src="pro-SG1.png" id="sg1" class="m-single">
+              </a>
+            </li>
+            <li>
+              <a href="pro-SG2.png" target="large-img">
+                <img src="pro-SG2.png" id="sg2" class="m-double">
+              </a>
+            </li>
+          </ul>
+          
+          <div class="large-img">
+            <img src="pro-MG2.png" id="mg3">
+          </div>
         </div>
 
         <div class="mobile_container">
-            <!-- flex-item 2 only carousel will be hidden at mq min-width 992 -->
+            <!-- flex-item 2 only carousel will be hidden at mq min-width 950 -->
             <h5>Apple iPhone 11 Pro (64GB) - Midnight Green</h5>
 
             <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="pro-MG1.png" class="d-block caro_img" id="img1">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="pro-MG2.png" class="d-block caro_img" id="img2">
-                  </div>
+                    <div class="carousel-item active">
+                        <img src="pro-MG1.png" class="d-block caro_img" id="img1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="pro-MG2.png" class="d-block caro_img" id="img2">
+                    </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </a>
-              </div>
+            </div>
 
             <p>
                 <span class="fa fa-star checked"></span>
@@ -327,14 +370,14 @@
                 </div>
                 <div class="storage">
                     <span>Storage:</span>
-                    <div class="store">64 GB</div>
-                    <div class="store">256 GB</div>
-                    <div class="store">512 GB</div>
+                    <div class="store six_four_gb">64 GB</div>
+                    <div class="store two_fifty_six_gb">256 GB</div>
+                    <div class="store five_one_two_gb">512 GB</div>
                 </div>
             </div>
 
             <!-- add to cart & buy now buttons -->
-            <div class="add_buy">
+            <div class="add_buy"><!-- will be styled at 950 & above -->
                 <div class="quantity">
                     <span>Quantity:</span>
                     <select name="quantity" id="qnt">

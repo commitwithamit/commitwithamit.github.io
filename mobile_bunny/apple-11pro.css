@@ -10,11 +10,12 @@ body {
 }
 
 .main_container {
-    margin: 20px 0 0 0;
+    margin: 20px 0 20px 0;
+    display: flex;
 }
 
 .mobile_container {
-    width: 93%;
+    flex: 0.93;
     height: max-content;
     margin: auto;
     border: 1px solid #2a918e;
@@ -63,21 +64,26 @@ body {
 .color{ 
     margin: 10px 0 0 15px; 
 }
-.color span{
+.color span, .storage span, .quantity span{
    font-size: 17px;
    color: #343a40;
-   margin-right: 25px;
+}
+.color span{
+    margin-right: 25px;
 }
 .color img{
     width:35px;
+    cursor: pointer;
 }
-
+.select_color{/* on selecting effect */
+    box-shadow: 0px 7px 11px -6px #646464!important;
+    opacity: 1!important;
+}
+.select_non_color{
+    opacity: .4!important;
+}
 .storage{
     margin: 15px 0 15px 15px;
-}
-.storage span{
-    font-size: 17px;
-    color: #717171;
 }
 .store{
     display: inline-block;
@@ -85,19 +91,22 @@ body {
     width: 53px;
     height: 30px;
     font-size: 12px;
+    cursor: pointer;
     text-align: center;
-    align-items: center;
     line-height: 2.3;
     border: 2px solid #7d7676;
 }
+.select_storage{/* on selecting effect */
+    color: #025351;
+    font-weight: 600;
+    border: 2px solid #2a918e;
+    box-shadow: 0px 7px 11px -6px #646464;
+}
+
 
 /* quantity and add-buy buttons */
 .quantity{
     margin: 10px 0 15px 15px;
-}
-.quantity span{
-    font-size: 17px;
-    color: #717171;
 }
 .quantity_op{
     font-size: 12px;
@@ -130,11 +139,18 @@ body {
 }
 
 /* table */
+.specs{
+    width:95%;
+    margin: auto;
+}
 .table{
     margin: 1rem auto 1rem auto;
-    width: 95%;
+    width: auto;
     color: #212529;
     font-size: 14px;
+}
+.table th{
+    width:105px;
 }
 .no_padding{
     padding: 0px!important;/* background for heading specification is way thicker because of padding */
@@ -151,4 +167,150 @@ body {
 .show-btn{
     width: 95px;
     font-size: 13px;
+}
+
+/* this phone container will be displyed at 950px and above */
+.phone_container{
+    display: none;
+}
+.phone_container{
+    flex: 1;
+    position: sticky;
+    top: 3.5rem;
+    height: max-content;
+    background: #f3f3f3;
+    border-radius: 10px;
+    margin: 0px 0px 15px 15px;
+    border: 1px solid #2a918e;
+    border-radius: 10px;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+     15px 15px 15px rgba(0, 0, 0, 0.1),
+      inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+       inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.multi-img{
+    flex: .18;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: max-content;
+    background: #f3f3f3;
+    border-radius: 10px;
+    padding: 0px;
+    margin: 9px 0px 9px 9px;
+    border: 1px solid #2a918e;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+     6px 6px 9px rgba(0, 0, 0, 0.1),
+     inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+     inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+}
+.multi-img li{
+    list-style: none;
+    flex-basis: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.large-img{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.large-img img{
+    width: 95%;
+}
+.m-single{
+    width: 33px;
+    margin: 9px 0 0px 0;
+
+}
+.m-double{
+    width: 46px;
+    margin: 8px 0 8px 0;
+}
+
+#s1, #s2, #g1, #g2, #sg1, #sg2{
+    display:none;
+}
+
+
+/* media queries */
+@media (min-width:576px){
+    .caro_img {
+        width: 180px;
+    }
+    .mobile_container p {
+        font-size: 17px;
+    }
+    .table th {
+        width: 150px;
+    }
+}
+@media (min-width:768px){
+    .mobile_container h5 {
+        font-size: 1.5rem;
+    }
+    .caro_img {
+        width: 210px;
+    }
+    .mobile_container p,
+    .color span,
+    .storage span,
+    .quantity span {
+        font-size: 18px;
+    }
+    .color img {
+        width: 40px;
+    }
+    .store{
+        width: 56px;
+        height: 33px;
+        font-size: 14px;
+        line-height: 2.1;
+    }
+    .table th {
+        width: 180px;
+    }
+}
+
+@media (min-width:950px){
+
+    .carousel{
+        display: none;
+    }
+    .phone_container{
+        display: flex;
+    }
+    .mobile_container{
+        flex:1.6;
+        margin: 0px 15px 15px 15px;
+    }
+    .mobile_container h5 {
+        text-align: left;
+        margin: 15px 0 10px 15px;
+    }
+    .add_buy{
+        display: block;
+        width: 300px;
+        height: 165px;
+        background: #f3f3f3;
+        border-radius: 10px;
+        margin: 10px 0px 9px 44px;
+        border: 1px solid #2a918e;
+        box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+         15px 15px 15px rgba(0, 0, 0, 0.1),
+         inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+         inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+    }
+
+}
+
+@media (min-width:1200px){
+    .add_buy{
+        position: absolute;
+        top: 225px;
+        right: 90px;
+    }
 }
