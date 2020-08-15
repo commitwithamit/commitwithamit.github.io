@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- poppins font from google  -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/fbf0851f30.js"></script>
+
+    <!-- font awesome icons ink-->
+    <script src="https://kit.fontawesome.com/fbf0851f30.js"></script>
+    <!-- icofont icons link -->
+    <link rel="stylesheet" href="icofont/icofont.min.css">
+
+    <!-- Bootstrap & external CSS -->
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <!-- external css -->
+    <link rel="stylesheet" href="css-for-header-footer.css">
+    <link rel="stylesheet" href="apple-11pro.css">
+    <title>Apple 11 Pro</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo_container">
+            <a href="index.html">
+                <img src="bunny-img-logo11.png" alt="Logo" title="mobilebunny.com" class="logo-img img-fluid vibrate-2">
+                <img src="bunny-text-logo1.png" alt="Logo" title="mobilebunny.com" class="logo-text img-fluid">
+            </a>
+        </div>
+
+        <div class="sbar_container">
+            <div class="search_border">
+                <input class="s_box" type="text" placeholder="Search for Phone, Brand and Accessories"
+                    name="searchbar" />
+                <button class="s_icon"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+        </div>
+
+        <div class="sign-in align-self-center">
+            <a href="login.html" class="border-ani hov-si">Sign In <i class="fa fa-user-circle"
+                    aria-hidden="true"></i></a>
+            <!-- below is a dropdown will only appear on hover of .sign-in -->
+            <div class="drop-signin">
+                New to Mobile Bunny?<br>
+                <a href="registration-page.html" class="reg-btn">
+                    Register Here
+                </a>
+            </div>
+        </div>
+
+        <div class="more align-self-center">
+            <a href="#" class="border-ani hov-mo">More
+                <!-- hov-mo is for jquery -->
+                <img src="down-chevron.png" id="down-arrow">
+                <img src="up-chevron.png" id="up-arrow">
+            </a>
+            <!-- below is a dropdown will only appear on hover of .more -->
+            <div class="drop-more">
+                <div class="content-more">
+                    <a href="#" id="wla"><i class="fa fa-heart" aria-hidden="true" id="wli"></i> Wishlist</a>
+                    <a href="#" id="toa"><i class="fa fa-map-marker" aria-hidden="true" id="toi"></i> Track Order</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart align-self-center">
+            <a href="cart.html" id="cart" class="border-ani">Cart <i class="fa fa-shopping-cart"
+                    aria-hidden="true"></i></a>
+        </div>
+
+        <!-- hamburger menu -->
+
+        <div class="sidebar">
+            <ul style="margin-top: 20px;">
+                <li class="hide1">
+                    <div id="sign">
+                        <i class="fa fa-user-circle"> </i> Sign in
+                        <span>
+                            <svg width="1em" height="1em" class="caret_down" viewBox="0 0 16 16"
+                                class="bi bi-caret-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                            </svg>
+                            <svg width="1em" height="1em" class="caret_up" viewBox="0 0 16 16" class="bi bi-caret-up"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 11L8 5.519 12.796 11H3.204zm-.753-.659l4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <ul id="mini-list">
+                        <li><a href="login.html">Sign In</a></li>
+                        <li><a href="registration-page.html">Create account</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+
+                <li class="hide2">
+                    <div id="more">
+                        <i class="fas fa-cube"> </i> More
+                        <span>
+                            <svg width="1em" height="1em" class="caret_down" viewBox="0 0 16 16"
+                                class="bi bi-caret-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                            </svg>
+                            <svg width="1em" height="1em" class="caret_up" viewBox="0 0 16 16" class="bi bi-caret-up"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 11L8 5.519 12.796 11H3.204zm-.753-.659l4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <ul id="mini-list2">
+                        <li><a href="#">Track order</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div id="category">
+                        <i class="far fa-list-alt"></i> Categories
+                        <span>
+                            <svg width="1em" height="1em" class="caret_down" viewBox="0 0 16 16"
+                                class="bi bi-caret-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                            </svg>
+                            <svg width="1em" height="1em" class="caret_up" viewBox="0 0 16 16" class="bi bi-caret-up"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3.204 11L8 5.519 12.796 11H3.204zm-.753-.659l4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <ul id="mini-list3">
+                        <li id="li_brand">Brands</li>
+                        <li id="li_pprice">Phone by price</li>
+                        <li id="li_launch">New launches</li>
+                        <li id="li_access">Accessories</li>
+                        <li id="li_sale"><a href="#">Sale</a></li>
+                        <li id="li_fphones"><a href="#">Featured phones</a></li>
+                    </ul>
+
+                    <div id="b_list">
+                        <div class="bback"><i class="fas fa-angle-left"></i> back</div>
+                        <ul>
+                            <li><a href="#">Samsung</a></li>
+                            <li><a href="product-list.html">Apple</a></li>
+                            <li><a href="#">Motorola</a></li>
+                            <li><a href="#">Oneplus</a></li>
+                            <li><a href="#">Huawei</a></li>
+                            <li><a href="#">Lg</a></li>
+                            <li><a href="#">Mi</a></li>
+                            <li><a href="#">Oppo</a></li>
+                            <li><a href="#">Vivo</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="p_list">
+                        <div class="pback"><i class="fas fa-angle-left"></i> back</div>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 5,000 &nbsp;to&nbsp; <i
+                                        class="fa fa-inr" id="rupee"></i> 8,999</a></li>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 9,000 &nbsp;to&nbsp; <i
+                                        class="fa fa-inr" id="rupee"></i> 12,999</a></li>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 13,000 &nbsp;to&nbsp; <i
+                                        class="fa fa-inr" id="rupee"></i> 15,999</a></li>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 16,000 &nbsp;to&nbsp; <i
+                                        class="fa fa-inr" id="rupee"></i> 24,999</a></li>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 25,000 &nbsp;to&nbsp; <i
+                                        class="fa fa-inr" id="rupee"></i> 49,999</a></li>
+                            <li><a href="#"><i class="fa fa-inr" id="rupee"></i> 50,000 and Above</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="l_list">
+                        <div class="lback"><i class="fas fa-angle-left"></i> back</div>
+                        <ul>
+                            <li><a href="#">Oneplus 7T pro (McLaren Edition)</a></li>
+                            <li><a href="#">Oneplus 7T pro</a></li>
+                            <li><a href="#">Vivo V17</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="a_list">
+                        <div class="aback"><i class="fas fa-angle-left"></i> back</div>
+                        <ul>
+                            <li><a href="#">Headphones</a></li>
+                            <li><a href="#">Power Bank</a></li>
+                            <li><a href="#">Chargers & cabels</a></li>
+                            <li><a href="#">Memory card</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="ham_button">
+            <button class="sidebarbtn">
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- this category nav will appear @(min-width:1200px) -->
+
+    <div class="category">
+        <ul class="category-grid text-center">
+            <li><a href="#" class="brand">Brand</a></li>
+            <li><a href="#" class="price">Phones by Price</a></li>
+            <li><a href="#" class="launches">New Launches</a></li>
+            <li><a href="#" class="accessories">Accessories</a></li>
+            <li><a href="#" class="sale">Sale</a></li>
+            <li><a href="#" class="featured">Featured phones</a></li>
+        </ul>
+    </div>
+
+    <div class="drop-brand">
+        <div class="content-brand">
+            <a href="#"><img src="samsung.png" class="img-fluid" title="samsung"></a>
+            <a href="product-list.html"><img src="apple.png" class="img-fluid" title="apple"></a>
+            <a href="#"><img src="motorola.png" class="img-fluid" title="motorola"></a>
+            <a href="#"><img src="oneplus.png" class="img-fluid" title="oneplus"></a>
+            <a href="#"><img src="huawei.png" class="img-fluid" title="huawei"></a>
+            <a href="#"><img src="lg.png" class="img-fluid" title="lg"></a>
+            <a href="#"><img src="mi.png" class="img-fluid" title="mi"></a>
+            <a href="#"><img src="oppo.png" class="img-fluid" title="oppo"></a>
+            <a href="#"><img src="vivo.png" class="img-fluid" title="vivo"></a>
+        </div>
+    </div>
+
+    <div class="drop-price">
+        <div class="content-price">
+            <a href="#">Less than <i class="fa fa-inr" id="rupee"></i>4,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>5,000 to <i class="fa fa-inr" id="rupee"></i>8,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>9,000 to <i class="fa fa-inr" id="rupee"></i>12,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>13,000 to <i class="fa fa-inr" id="rupee"></i>15,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>16,000 to <i class="fa fa-inr" id="rupee"></i>24,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>25,000 to <i class="fa fa-inr" id="rupee"></i>49,999</a>
+            <a href="#"><i class="fa fa-inr" id="rupee"></i>50,000 and Above</a>
+        </div>
+    </div>
+
+    <div class="drop-launches">
+        <div class="content-launches">
+            <a href="#"><img src="launch-1.png"></a>
+            <a href="#"><img src="launch-2.png"></a>
+            <a href="#"><img src="launch-3.png"></a>
+        </div>
+    </div>
+
+    <div class="drop-accessories">
+        <div class="content-accessories">
+            <a href="#"><img src="icon-headphone.png" alt=""><br>Headphones</a>
+            <a href="#"><img src="icon-powerbank.png" alt=""><br>Power Bank</a>
+            <a href="#"><img src="icon-cabels.png" alt=""><br>Chargers & cabels</a>
+            <a href="#"><img src="icon-memorycard.png" alt=""><br>Memory card</a>
+        </div>
+    </div>
+
+    <!-- main content -->
+    <div class="main_container">
+        <!-- flex-container...on mq min-width 992 -->
+
+        <div class="phone_container">
+            <!-- flex-item 1 will be shown at mq min-width 992 -->
+            <!--  <ul class="multi_img">
+                <li><a href="#"><img src="pro-MG1.png" class="m_single"></a></li>
+                <li><a href="#"><img src="pro-MG2.png" class="m_double"></a></li>
+            </ul>
+
+            <div class="large_img">
+                <img src="pro-MG2.png">
+            </div> -->
+        </div>
+
+        <div class="mobile_container">
+            <!-- flex-item 2 only carousel will be hidden at mq min-width 992 -->
+            <h5>Apple iPhone 11 Pro (64GB) - Midnight Green</h5>
+
+            <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="pro-MG1.png" class="d-block caro_img" id="img1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="pro-MG2.png" class="d-block caro_img" id="img2">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+              </div>
+
+            <p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+
+                <b>&nbsp 4.0</b>
+            </p>
+
+            <p class="price_stock">Rs. 98,000 <em>In Stock</em></p>
+
+            <p>Free Delivery</p>
+
+            <!-- color and storage options -->
+            <div class="option">
+                <div class="color">
+                    <span>Color:</span>
+                    <img src="pro-MG2.png" id="c-green" title="Click for Midnight Green">
+                    <img src="pro-G2.png" id="c-gold" title="Click for Gold">
+                    <img src="pro-S2.png" id="c-silver" title="Click for Silver">
+                    <img src="pro-SG2.png" id="c-grey" title="Click for Space Greay">
+                </div>
+                <div class="storage">
+                    <span>Storage:</span>
+                    <div class="store">64 GB</div>
+                    <div class="store">256 GB</div>
+                    <div class="store">512 GB</div>
+                </div>
+            </div>
+
+            <!-- add to cart & buy now buttons -->
+            <div class="add_buy">
+                <div class="quantity">
+                    <span>Quantity:</span>
+                    <select name="quantity" id="qnt">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <a href="#" class="add-cart btn">Add to Cart</a>
+                <a href="#" class="buy btn">Buy Now</a>
+            </div>
+
+            <!-- phone specification table -->
+            <div class="specs">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th colspan="2" class="no_padding">
+                                <h5>Specifications</h5>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">In the Box</th>
+                            <td>
+                                iPhone, EarPods with Lightning Connector, Lightning to USB Cable, 5W USB Power Adapter,
+                                Documentation
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Width</th>
+                            <td>71.4 mm (2.81 inches)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Height</th>
+                            <td>144.0 mm (5.67 inches)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Depth</th>
+                            <td>8.1 mm (0.32 inches)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Weight</th>
+                            <td>188 grams (6.63 ounces)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Display</th>
+                            <td>5.8-inch Super Retina XDR display with HDR and True Tone</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Capacity</th>
+                            <td>64GB, 256GB, 512GB</td>
+                        </tr>
+
+                        <!-- create view more button here -->
+
+                        <tr class="hidden">
+                            <th scope="row">Splash, Water, and Dust Resistant</th>
+                            <td>Water resistant to a depth of 4 metres for up to 30 minutes (IP68)</td>
+                        </tr>
+                        <tr class="hidden">
+                            <th scope="row">Camera & Video</th>
+                            <td>Triple 12MP cameras (Ultra Wide, Wide, Telephoto) with Portrait mode, Night mode, Auto
+                                Adjustments,
+                                next-generation Smart HDR and 4K video up to 60 fps with extended dynamic range</td>
+                        </tr>
+                        <tr class="hidden">
+                            <th scope="row">Front Camera</th>
+                            <td>12MP TrueDepth front camera with Portrait mode, Smart HDR, 4K video recording up to 60
+                                fps and slo-mo
+                                video support for 1080p at 120 fps</td>
+                        </tr>
+                        <tr class="hidden">
+                            <th scope="row">Flash</th>
+                            <td>Rear Brighter True Tone Flash with Slow Sync and Front Retina Flash</td>
+                        </tr>
+                        <tr class="hidden">
+                            <th scope="row">Os & Processor Features</th>
+                            <td>iOS 13 & A13 Bionic Chip</td>
+                        </tr>
+                        <tr class="hidden">
+                            <th scope="row">Network Type</th>
+                            <td>4G VOLTE, 4G, 3G, 2G</td>
+                        </tr>
+                        <tr class="hidden">
+                            <th scope="row">Os & Processor Features</th>
+                            <td>iOS 13 & A13 Bionic Chip</td>
+                        </tr>
+                        <tr class="hidden">
+                            <th scope="row">Pre-installed Browser</th>
+                            <td>Safari</td>
+                        </tr>
+                        <tr class="hidden">
+                            <th scope="row">SIM Size</th>
+                            <td>Nano SIM and eSIM</td>
+                        </tr>
+                        <tr class="hidden">
+                            <th scope="row">Removable Battery</th>
+                            <td>No</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="view-btn">
+                    <button class="btn btn-primary show-btn" id="v_more">View More</button>
+                    <button class="btn btn-primary show-btn" id="v_less">View Less</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- cta -->
+    <!-- cta for mobile view -->
+    <div class="cta">
+
+        <div class="cta-txt">
+            <h3>Tired of Searching?</h3>Join us for <b>Free</b> to know about
+            latest phone launches, great offers & discounts
+        </div>
+        <div class="cta-form">
+            <input type="text" placeholder="Enter your Email/Mobile..."><br>
+            <button class="cta-btn btn">Subscribe for Free</button>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div class="footer-bg">
+
+        <div class="foot-logo">
+            <a href="index.html">
+                <img src="bunny-img-logo11.png" alt="Logo" title="mobilebunny.com" class="foot-logo-img vibrate-2">
+                <img src="bunny-text-logo1.png" alt="Logo" title="mobilebunny.com" class="foot-logo-text">
+            </a>
+        </div>
+        <div class="foot-content">
+
+            <div class="foot-media">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="foot-about">
+                <ul>
+                    <li><a href="#" class="border-ani">About Us</a></li>
+                    <li><a href="#" class="border-ani">Return Policy</a></li>
+                    <li><a href="#" class="border-ani">Privacy Policy</a></li>
+                    <li><a href="#" class="border-ani">Terms of Services</a></li>
+                </ul>
+            </div>
+
+            <div class="help">
+                <h5>Need Assistance?</h5>
+                <ul>
+                    <li><a href="#" class="border-ani">FAQ</a></li>
+                    <li><a href="#" class="border-ani">24x7 Support</a></li>
+                    <li><a href="#" class="border-ani">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="cta2">
+                <div class="cta-txt2">
+                    <h3>Tired of Searching?</h3>Join us for <b>Free</b> to know about
+                    latest phone launches, great offers & discounts
+                </div>
+                <div class="cta-form2">
+                    <input type="text" placeholder="Enter your Email/Mobile..."><br>
+                    <button class="cta-btn2 btn">Subscribe for Free</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Mobilebunny.com © 2020</p>
+        </div>
+
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="index.js"></script>
+    <script src="apple-11pro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
