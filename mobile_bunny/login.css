@@ -1,0 +1,232 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #3ab490, #196a8c, #1c297c);
+}
+.main_container{
+    margin-top: 40px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+}
+.logo img{
+    width: 2.5rem;
+}
+
+h2{
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+
+/* form container */
+.box{
+    height: max-content;
+    width: 90%;
+    background: #d8d5d5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: -3px -3px 15px rgba(255, 255, 255, 0.2), 
+                15px 15px 15px rgba(0, 0, 0, 0.1), 
+                inset -5px -5px 5px rgba(255, 255, 255, 0.2), 
+                inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #000;
+    margin: 0px auto;
+    padding:30px 0px;
+}
+/* form container */
+
+/* form */
+.box form{
+    font-size: 14px;
+    color: black;
+    margin: auto;
+}
+
+.inp_container{
+    position: relative;
+    width:250px;
+    margin:0px auto 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.input_field{
+    width:250px;
+    height: 40px;
+    padding: 0 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.inp_container label{
+    position: absolute;
+    left: 10px;
+    top:10px;
+    transition: all .3s;
+}
+.input_field:focus~ label{
+    left:5px;
+    top:-10px;
+    background: #d8d5d5;
+    padding:0 5px;
+    font-size: 12px;
+} 
+
+label.active{
+    left:5px;
+    top:-10px;
+    background: #d8d5d5;
+    padding:0 5px;
+    font-size: 12px;
+} 
+
+.inp_container input:focus{
+    outline:none;
+} 
+
+.forgot_pass{
+    width:100%;
+    text-align:right;
+    padding-right: 20px;
+    margin-top: -10px;
+}
+
+.forgot_pass a, .new-ac a{
+    font-size:12px; 
+    color:#0026af;
+}
+.new-ac{
+    font-size:12px; 
+}
+/* submit button */
+.submit{
+        height: 40px;
+        width: 150px;
+        background: #060c21;
+        color: white;
+        border: 1px solid gray;
+        font-size: 18px;
+        margin: -10px 0 0 0px;
+        cursor: pointer;
+}
+
+/* footer */
+
+
+.footer{
+    width: 100%;
+    height: 70px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links {
+    text-align: center;
+    color: #008868;
+}
+.links a{
+    text-decoration: none;
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    color: #f4f3f3;
+}
+.border-ani:hover{
+    color:white;
+}
+.links span{
+    color:#f4f3f3;
+}
+
+
+
+/* 
+.input-box1{
+    width: 300px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid gray;
+    border-left: 2px solid gray;
+    color: black;
+    font-size: 13px;
+    line-height: 2.3;
+    margin: 4px 0 40px 0;
+    padding: 0 0 0 10px;
+}
+.input-box2{
+    width: 300px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid gray;
+    border-left: 2px solid gray;
+    color: black;
+    font-size: 13px;
+    line-height: 2.3;
+    padding: 0 0 0 10px;
+    margin: 4px 0 4px 0;
+}
+.box a{
+    text-decoration: none;
+    float: right;
+    color: #8282ca;
+}
+
+.submit{
+    position: relative;
+    height: 40px;
+    width: 150px;
+    background: #060c21;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    font-size: 18px;
+    cursor: pointer;
+}
+.submit:hover{
+    background: linear-gradient(315deg,#3ab490,#196a8c, #1c297c);
+    color:white;
+    border: 1px solid white;
+}
+
+.new-ac{
+    position: relative;
+    color: black;
+    top: 20px;
+}
+.new-ac a{
+    float: none;
+    color: #0026af;
+}
+.box h4{
+    position: absolute;
+    top: -10px;
+    right: 21px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 3em;
+    color: #b3aeae69;
+    transition: 1.5s;    
+}
+.box:hover h4{
+    top: 21rem;
+} */
+
+/* form */
