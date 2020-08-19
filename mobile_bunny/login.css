@@ -9,13 +9,13 @@ body {
     background: linear-gradient(90deg, #3ab490, #196a8c, #1c297c);
 }
 .main_container{
-    margin-top: 40px;
+    margin-top: 25px;
 }
 .logo{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 10px 10px 20px 10px;
     
 }
 .logo img{
@@ -27,6 +27,7 @@ h2{
     text-align: center;
     color: white;
     font-weight: 600;
+    margin: 0 0 20px 0;
 }
 
 /* form container */
@@ -150,6 +151,43 @@ label.active{
 .links span{
     color:#f4f3f3;
 }
+
+
+
+
+/* logo animation */
+
+.vibrate-2 {
+    animation: vibrate-2 .6s linear infinite both
+}
+
+@-webkit-keyframes vibrate-2 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+    20% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px)
+    }
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px)
+    }
+    60% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px)
+    }
+    80% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px)
+    }
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+}
+
 
 
 
