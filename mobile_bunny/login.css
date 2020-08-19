@@ -5,7 +5,7 @@
 }
 
 body {
-    height: 100vh;
+    height: max-content;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(45deg, #3ab490, #196a8c, #1c297c);
 }
