@@ -122,6 +122,11 @@ label.active{
         margin: -10px 0 0 0px;
         cursor: pointer;
 }
+.submit:hover{
+    background: linear-gradient(315deg,#3ab490,#196a8c, #1c297c);
+    color:white;
+    border: 1px solid white;
+}
 
 /* footer */
 
