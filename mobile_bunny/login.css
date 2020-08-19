@@ -5,9 +5,8 @@
 }
 
 body {
-    height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(45deg, #3ab490, #196a8c, #1c297c);
+    background: linear-gradient(90deg, #3ab490, #196a8c, #1c297c);
 }
 .main_container{
     margin-top: 40px;
