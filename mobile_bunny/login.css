@@ -113,19 +113,25 @@ label.active{
 }
 /* submit button */
 .submit{
-        height: 40px;
-        width: 150px;
-        background: #060c21;
-        color: white;
-        border: 1px solid gray;
-        font-size: 18px;
-        margin: -10px 0 0 0px;
-        cursor: pointer;
+    display: block;
+    font-weight: 400;
+    border-radius: .25rem;
+    height: 40px;
+    width: 150px;
+    background: #060c21;
+    color: white;
+    border: 1px solid gray;
+    font-size: 18px;
+    margin: -10px 0 0 0px;
+    cursor: pointer;
 }
 .submit:hover{
     background: linear-gradient(315deg,#3ab490,#196a8c, #1c297c);
     color:white;
     border: 1px solid white;
+}
+.submit:focus{
+    outline: none;
 }
 
 /* footer */
@@ -158,7 +164,14 @@ label.active{
 }
 
 
-
+.blue-i{
+    border: 1px solid #0097c7;
+    color:#0097c7; 
+}
+.red-i{
+    border: 1px solid red;
+    color:red; 
+}
 
 /* logo animation */
 
