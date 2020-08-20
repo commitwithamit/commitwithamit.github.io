@@ -17,32 +17,43 @@ $(document).ready(function () {
     //color change on focus & blur of input boxes
     $("#email_mobile").on("focus blur", function () {
         $("#con_e_mob").toggleClass("blue-i");
-        $("#con_e_mob").removeClass("red-i");
     });
     $("#pass").on("focus blur", function () {
         $("#con_pass").toggleClass("blue-i");
-        $("#con_pass").removeClass("red-i");
     });
 
     //form validation
-    //1)c-#con_e_mob i-#email_mobile 
-    //1)c-#con_pass i-#pass 
-
     $("input[type=submit]").click(function () { 
 
         var em=$("#email_mobile") .val();
         var pw=$("#pass") .val();
 
         if(em== ""){
-            alert("Enter your email or mobile number!");
             $("#con_e_mob").addClass("red-i");
+            $("#message_em").show();
             return false;
-        }
-        if(pw== ""){
-            alert("Enter your password!");
-            $("#con_pass").addClass("red-i");
-            return false;
+        }else{
+            $("#con_e_mob").removeClass("red-i");
+            $("#message_em").hide();
         }
 
+        if(pw== ""){
+            $("#con_pass").addClass("red-i");
+            $("#message_pass").show();
+            return false;
+        }
+ 
     });
+
+    //this wasn't working inside the else condition in the
+    //code above so i wrote it seprately
+    $("input[type=submit]").click(function () { 
+        var yo=$("#pass").val();
+
+        if(yo!==""){
+            $("#con_pass").removeClass("red-i");
+            $("#message_pass").hide();
+        }
+    });
+
 });

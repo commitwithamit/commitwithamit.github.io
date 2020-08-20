@@ -39,14 +39,20 @@
         <div class="box">
             <form method="post" action="#">
     
-                <div class="inp_container" id="con_e_mob">
-                    <input type="text" id="email_mobile" class="input_field inp_email" autocomplete="off">
-                    <label for="email_mobile">Enter Email or Mobile Number</label>
+                <div class="groups">
+                    <div class="inp_container" id="con_e_mob">
+                        <input type="text" id="email_mobile" class="input_field inp_email" autocomplete="off">
+                        <label for="email_mobile">Enter Email or Mobile Number</label>
+                    </div>
+                    <span id="message_em">*Email or Mobile field is required.</span>
                 </div>
-    
-                <div class="inp_container" id="con_pass">
-                    <input type="password" id="pass" class="input_field">
-                    <label for="pass">Enter Password</label>
+
+                <div class="groups">
+                    <div class="inp_container" id="con_pass">
+                        <input type="password" id="pass" class="input_field">
+                        <label for="pass">Enter Password</label>
+                    </div>
+                    <span id="message_pass">*Password field is required.</span>
                 </div>
     
                 <div class="forgot_pass"><a href="#">Forgot password?</a></div><br>
