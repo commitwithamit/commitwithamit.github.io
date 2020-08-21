@@ -1,6 +1,8 @@
 $(document).ready(function () {
 
     //floating label effect
+    //when input box has some text inside it the floating label won't
+    //return to it's original place as a placeholder
     $(".inp_container .input_field").blur(function () {
 
         var input = $(this).val();
@@ -45,7 +47,7 @@ $(document).ready(function () {
  
     });
 
-    //this wasn't working inside the else condition in the
+    //this wasn't working inside the else condition for password in the
     //code above so i wrote it seprately
     $("input[type=submit]").click(function () { 
         var yo=$("#pass").val();

@@ -9,10 +9,6 @@ body {
     background: linear-gradient(90deg, #3ab490, #196a8c, #1c297c);
 }
 
-.main_container {
-    margin-top: 25px;
-}
-
 .logo {
     display: flex;
     justify-content: center;
@@ -48,6 +44,8 @@ h2 {
     padding: 30px 0px;
 }
 
+
+
 /* form container */
 
 /* form  */
@@ -70,7 +68,7 @@ h2 {
 }
 
 .input_field {
-    width: 250px;
+    width: 254px;
     height: 40px;
     padding: 0 10px;
     background: transparent;
@@ -105,35 +103,34 @@ label.active {
     outline: none;
 }
 
-/* validation messages */
-
-#message_em, #message_pass {
-    color: red;
-    font-weight: 600;
+.groups span{
     display: none;
+    color:red;
+    font-weight: 600;
+    font-size: 12px;
 }
-
-.forgot_pass {
-    width: 100%;
-    text-align: right;
-    padding-right: 20px;
-    margin: -10px 0 0 20px;
+/* to hide arrows for input type no. */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+  }
 
-.forgot_pass a, .new-ac a {
+.login a {
     font-size: 12px;
     color: #0026af;
-    text-decoration: none;
-    transition: all .3s;
 }
 
-.forgot_pass a:hover, .new-ac a:hover {
-    font-size: 17px;
-}
-
-.new-ac {
+.login {
     font-size: 12px;
 }
+
+
+
 
 /* submit button */
 
@@ -193,8 +190,6 @@ label.active {
     color: #f4f3f3;
 }
 
-
-
 /* for form validation */
 
 .blue-i {
@@ -207,6 +202,7 @@ label.active {
     color: red;
 }
 
+
 /* media queries */
 
 @media (min-width:400px) {
@@ -214,7 +210,7 @@ label.active {
         width: 375px;
     }
     .input_field {
-        width: 280px;
+        width: 290px;
     }
 }
 
@@ -225,7 +221,7 @@ label.active {
     .input_field {
         width: 330px;
     }
-    .forgot_pass a, .new-ac, .new-ac a {
+    .forgot_pass a, .login, .login a {
         font-size: 14px;
     }
 }
@@ -255,20 +251,13 @@ label.active {
     .input_field {
         width: 400px;
     }
-    .forgot_pass a, .new-ac, .new-ac a {
+    .forgot_pass a, .login, .login a {
         font-size: 16px;
     }
     .links a {
         font-size: 14px;
     }
 }
-
-
-
-
-
-
-
 
 
 /* logo animation */
