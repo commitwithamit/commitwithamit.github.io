@@ -1,0 +1,244 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/* product details */
+.added_items{
+    flex: 2;
+    margin: 0px 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.phone-box{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: max-content;
+    background: #f3f3f3;
+    border-radius: 10px;
+    margin: 20px auto 0px;
+    border: 1px solid #2a918e;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+     15px 15px 15px rgba(0, 0, 0, 0.1),
+     inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+     inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+#phone-box-margin{
+    /* position: relative;
+    left: 279px; */
+}
+.phone-box a{
+    color:black;
+    flex: .8;
+}
+.p-detail a{
+    color:black;
+}
+.p-img img{
+    width: 70px;
+    margin: 10px 15px;
+}
+.p-detail{
+    font-size: 1rem;
+    font-weight: 500;
+    flex: 3;
+}
+.p-detail h5,
+.p-detail,
+.quantity,
+select,
+.delete a,
+.del_icon,
+.row  {
+    font-size: .8rem;
+}
+.p-detail ul li{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px 0 0 0;
+}
+.p-detail ul{
+
+}
+#p-rupee-icon{
+    font-size: .9rem;
+}
+
+.quantity{
+    margin: 7px 0 0 0;
+}
+
+.delete{
+    margin: 5px 0;
+}
+.delete a{
+    text-decoration:none;
+    font-size: .9rem;    
+    color:#ea2424fa;  
+}
+/* product details */
+
+
+/* price summary box */
+
+
+.summary-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 92%;
+    height: max-content;
+    background: #f3f3f3;
+    border-radius: 10px;
+    margin: 20px auto 20px;
+    border: 1px solid #2a918e;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+     15px 15px 15px rgba(0, 0, 0, 0.1),
+     inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+     inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.summary-box p {
+    font-size: 1rem;
+    padding: 10px 5px 0px 15px;
+    margin: 0;
+}
+
+.seller{
+    font-size: 16px;
+    color: #8e8b8b;
+}
+
+.detail-price {
+    height: 155px;
+    margin: 0px 15px;
+    width: 100%;
+    border-top: 1px solid #9a9a9a;
+}
+.table td{
+    border-top: none;
+}
+.b-top{
+    border-top:1px soid grey !important;
+}
+.row{
+    display: flex;
+    margin: 19px 0 0 0;
+    justify-content: space-between;
+}
+.row1{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+}
+
+.top-border{
+    border-top: 2px dashed #a9a4a4;;
+    border-bottom: 2px dashed #a9a4a4;;
+}
+#color{
+    color:#2dd22d;
+}
+
+/* price summary box */
+
+
+/* place order button */
+
+.order{
+    width: 185px;
+    font-size: 18px;
+    font-weight: 900;
+    color: #f3f3f3e0;
+    background-image: linear-gradient(164deg, #cc4730 0%, #f78307 100%);
+    border: none;
+    border-radius: 5px;
+    line-height: 1.8;
+    padding: 0.2rem .75rem;
+    margin: 10px auto;
+}
+.order:hover{
+    color:#fff;
+    background-image: linear-gradient(164deg, #ce3a20 0%, #d67c1c 100%);
+}
+.order:focus{
+    outline: 0;
+}
+/* place order button */
+
+/* media queries */
+
+@media (min-width:450px){
+    .p-detail h5,
+    .p-detail,
+    .quantity,
+    .delete a,
+    .del_icon,
+    .row {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width:576px){
+    .p-img img {
+        width: 80px;
+    }
+}
+
+@media (min-width: 768px){
+
+    .p-img img {
+        width: 100px;
+    }
+    .p-detail {
+        height: 175px;
+    }
+    .p-detail h5,
+    .p-detail,
+    .quantity,
+    .delete a,
+    .del_icon,
+    .row {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 950px){
+    .main_container{
+        display: flex;
+        margin: 0 0 20px 0;
+    }
+    .summary-box {
+        flex: 1.2;
+        margin: 20px 13px 20px 0;
+    }
+    .summary-box p {
+        font-size: 1.3rem;
+    }
+    .p-img img {
+        width: 117px;
+    }
+}
+
+@media (min-width:1200px){
+    
+    .p-detail h5,
+    .p-detail,
+    .quantity,
+    .delete a,
+    .del_icon {
+        font-size: 1.35rem;
+    }
+    .del_icon {
+        font-size: 1.2rem;
+    }
+    .p-detail {
+        height: 202px;
+    }
+}
