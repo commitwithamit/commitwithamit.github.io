@@ -128,7 +128,7 @@ label.active {
 }
 
 .forgot_pass a:hover, .new-ac a:hover {
-    font-size: 17px;
+    color: #000c52;
 }
 
 .new-ac {
@@ -242,6 +242,12 @@ label.active {
     }
 }
 
+@media (min-width:900px){
+    .box form{
+        font-size: 15px;
+    }
+}
+
 @media (min-width:1200px) {
     .logo img {
         width: 3rem;
@@ -259,6 +265,9 @@ label.active {
         font-size: 16px;
     }
     .links a {
+        font-size: 14px;
+    }
+    .input_field:focus~label, .textarea_field:focus~label, label.active {
         font-size: 14px;
     }
 }

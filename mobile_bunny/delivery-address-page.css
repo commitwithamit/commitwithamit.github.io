@@ -9,6 +9,7 @@ body {
     background: linear-gradient(90deg, #3ab490, #196a8c, #1c297c);
 }
 
+
 .logo {
     display: flex;
     justify-content: center;
@@ -41,10 +42,8 @@ h2 {
     box-shadow: -3px -3px 15px rgba(255, 255, 255, 0.2), 15px 15px 15px rgba(0, 0, 0, 0.1), inset -5px -5px 5px rgba(255, 255, 255, 0.2), inset 5px 5px 5px rgba(0, 0, 0, 0.1);
     border: 1px solid #000;
     margin: 0px auto;
-    padding: 30px 0px;
+    padding: 30px 0px 20px;
 }
-
-
 
 /* form container */
 
@@ -76,6 +75,28 @@ h2 {
     outline: none;
 }
 
+.text_group {
+    height: 105px;
+}
+
+.textarea_con {
+    height: 73px;
+}
+
+.textarea_field {
+    width: 254px;
+    height: 60px;
+    border-radius: 7px;
+    background: transparent;
+    border: none;
+    padding: 0px 10px 0px 10px;
+    margin-top: 10px;
+}
+
+.textarea_field:focus {
+    outline: none;
+}
+
 .inp_container label {
     position: absolute;
     left: 10px;
@@ -84,6 +105,14 @@ h2 {
 }
 
 .input_field:focus~label {
+    left: 5px;
+    top: -10px;
+    background: #d8d5d5;
+    padding: 0 5px;
+    font-size: 12px;
+}
+
+.textarea_field:focus~label {
     left: 5px;
     top: -10px;
     background: #d8d5d5;
@@ -103,59 +132,86 @@ label.active {
     outline: none;
 }
 
-.groups span{
+.groups span {
     display: none;
-    color:red;
+    color: red;
     font-weight: 600;
     font-size: 12px;
 }
+
 /* to hide arrows for input type no. */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
+
 /* Firefox */
+
 input[type=number] {
     -moz-appearance: textfield;
-  }
-
-.login a {
-    font-size: 12px;
-    color: #0026af;
 }
 
-.login {
-    font-size: 12px;
+/* home/office delivery */
+
+.add-type {
+    width: 254px;
+    margin: 0 00 15px 0;
 }
 
+.add-title {}
 
+.radio-option {
+    font-size: 13px;
+}
 
+/* reset & submit buttons */
 
-/* submit button */
+.form_btns {
+    display: flex;
+    justify-content: space-around;
+}
 
-.submit {
-    display: block;
-    font-weight: 400;
-    border-radius: .25rem;
-    height: 40px;
-    width: 120px;
-    background: #060c21;
+.reset-btn, .submit-btn {
+    width: 115px;
+    height: 35px;
+    border-radius: 11px;
     color: white;
-    border: 1px solid gray;
-    font-size: 18px;
-    margin: -10px 0 0 0px;
-    cursor: pointer;
+    padding: 0px;
+    margin: 0;
+    box-shadow:5px 6px 7px -6px black;
 }
 
-.submit:hover {
-    background: linear-gradient(315deg, #3ab490, #196a8c, #1c297c);
+.reset-btn {
+    background: #ff5722;
+    border: 1px solid #4a1200;
+}
+
+.reset-btn:hover {
+    background: #e43804;
     color: white;
-    border: 1px solid white;
+    box-shadow:5px 6px 7px -6px black;
 }
 
-.submit:focus {
+.submit-btn {
+    background: #32b132;
+    border: 1px solid #053005;
+}
+
+.submit-btn:hover {
+    background: #048a04;
+    color: white;
+    box-shadow:5px 6px 7px -6px black;
+}
+
+
+.reset-btn:focus, .submit-btn:focus {
     outline: none;
+}
+
+:focus {
+    outline: 0!important;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
 }
 
 /* footer */
@@ -201,78 +257,128 @@ input[type=number] {
     border: 1px solid red;
     color: red;
 }
+/* select list for state css */
 
 
 /* media queries */
-
-@media (min-width:400px) {
+@media (min-width:400px){
     .box {
-        width: 375px;
+        width: 340px
     }
-    .input_field {
-        width: 290px;
-    }
+    .input_field, .textarea_field {
+        width: 290px; 
+    }    
 }
-
-@media (min-width:500px) {
+@media (min-width:576px){
     h2 {
-        font-size: 1.2rem;
-    }
-    .input_field {
-        width: 330px;
-    }
-    .forgot_pass a, .login, .login a {
-        font-size: 14px;
-    }
-}
-
-@media (min-width:768px) {
-    h2 {
-        font-size: 1.4rem;
-    }
+        font-size: 1.35rem;
+    }    
     .box {
+        width: 440px
+    }
+    .input_field, .textarea_field {
+        width: 360px;
+    } 
+}
+@media (min-width:768px){
+    .logo img {
+        width: 2.8rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }    
+    .box {
+        width: 490px
+    }
+    .input_field, .textarea_field {
         width: 400px;
-    }
-    .input_field {
-        width: 340px;
-    }
-    .groups span{
-        font-size: 13px;
-    }
+    } 
 }
-
-@media (min-width:900px){
+@media (min-width:992px){  
+    .box {
+        width: 850px
+    }
     .box form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         font-size: 15px;
     }
-}
-
-@media (min-width:1200px) {
-    .logo img {
-        width: 3rem;
+    .input_field{
+        width:380px;
     }
-    h2 {
-        font-size: 2rem;
+    .text_group {
+        flex-basis: 93%;
     }
-    .box {
-        width: 485px;
+    .textarea_field {
+        width: 100%;
+    } 
+    .add-type{
+        flex-basis: 100%;
+        padding: 0px 20px 0px 20px;
     }
-    .input_field {
-        width: 400px;
+    .add-title {
+        font-size: 17px;
     }
-    .forgot_pass a, .login, .login a {
-        font-size: 16px;
+    .radio-option {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 15px;
+        padding: 0 0 0 70px;
+    }
+    .form_btns {
+        justify-content: center;
+        width: 100%;
+    }
+    .reset-btn, .submit-btn {
+        margin: 0 25px;
     }
     .links a {
         font-size: 14px;
     }
     .groups span{
-        font-size: 14px;
+        font-size: 13px;
+    }
+    
+}
+
+@media (min-width:1200px){
+    .logo {
+        padding: 10px 10px 8px 10px;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .box {
+        width: 920px;
+    }
+    .input_field {
+        width: 395px;
+    }
+    .text_group {
+        flex-basis: 91%;
     }
     .input_field:focus~label, .textarea_field:focus~label, label.active {
         font-size: 14px;
     }
+    .links a {
+        font-size: 15px;
+    }
+    .groups span{
+        font-size: 14px;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* logo animation */

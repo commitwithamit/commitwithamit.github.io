@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- poppins font from google  -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/fbf0851f30.js"></script>
+
+    <!-- font awesome icons ink-->
+    <script src="https://kit.fontawesome.com/fbf0851f30.js"></script>
+    <!-- icofont icons link -->
+    <link rel="stylesheet" href="icofont/icofont.min.css">
+
+    <!-- Bootstrap & external CSS -->
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <!-- external css -->
+    <!--<link rel="stylesheet" href="css-for-header-footer.css">-->
+    <link rel="stylesheet" href="delivery-address-page.css">
+    <title>Enter the delivery address for this order</title>
+</head>
+
+<body>
+
+
+
+    <div class="main_container">
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="bunny-img-logo11.png" class="logo-img vibrate-2" alt="Logo" title="mobilebunny.com">
+            </a>
+        </div>
+
+        <h2>Enter the delivery address</h2>
+
+        <div class="box">
+            <form method="post" action="#">
+                <!-- full name -->
+                <div class="groups">
+                    <div class="inp_container" id="con_name">
+                        <input type="text" id="in_name" class="input_field" autocomplete="off">
+                        <label for="in_name">Full name</label>
+                    </div>
+                    <span id="message_name">*Full name field is required.</span>
+                </div>
+
+                <!-- mobile number -->
+                <div class="groups">
+                    <div class="inp_container" id="con_numb">
+                        <input type="number" id="in_numb" class="input_field" autocomplete="off">
+                        <label for="in_numb">Mobile number</label>
+                    </div>
+                    <span id="message_numb">*Mobile number field is required.</span>
+                    <span id="message_length_numb">*Mobile number should be 10 digit number.</span>
+                </div>
+
+                <!-- alternate mobile number -->
+                <div class="groups">
+                    <div class="inp_container" id="con_alnumb">
+                        <input type="number" id="in_alnumb" class="input_field" autocomplete="off">
+                        <label for="in_alnumb">Alternate Phone (optional)</label>
+                    </div>
+                    <span id="message_length_alnumb">*Mobile number should be 10 digit number.</span>
+                </div>
+
+                <!-- pincode -->
+                <div class="groups">
+                    <div class="inp_container" id="con_pin">
+                        <input type="number" id="in_pin" class="input_field" autocomplete="off">
+                        <label for="in_pin">Pincode</label>
+                    </div>
+                    <span id="message_pin">*Pincode field is required.</span>
+                    <span id="message_length_pin">*Pincode should be 6 digit number.</span>
+                </div>
+
+                <!-- address -->
+                <div class="groups text_group">
+                    <div class="inp_container textarea_con" id="con_address">
+                        <textarea name="address" id="in_address" class="textarea_field"></textarea>
+                        <label for="in_address">Address</label>
+                    </div>
+                    <span id="message_address">*Address field is required.</span>
+                </div>
+
+                <!-- city/town -->
+                <div class="groups">
+                    <div class="inp_container" id="con_city">
+                        <input type="text" id="in_city" class="input_field" autocomplete="off">
+                        <label for="in_city">City/Town</label>
+                    </div>
+                    <span id="message_city">*City/Town field is required.</span>
+                </div>
+
+                <!-- state -->
+                <div class="groups">
+                    <div class="inp_container" id="con_state">
+                        <input list="statelist" type="text" id="in_state" class="input_field" autocomplete="off">
+                        <label for="in_state">State</label>
+                        <datalist id="statelist">
+                            <option value="Andaman & Nicobar Islands">
+                            <option value="Andhra Pradesh">
+                            <option value="Arunachal Pradesh">
+                            <option value="Assam">
+                            <option value="Bihar">
+                            <option value="Chandigarh">
+                            <option value="Chhattisgarh">
+                            <option value="Dadra & Nagar Haveli">
+                            <option value="Daman and Diu">
+                            <option value="Delhi">
+                            <option value="Goa">
+                            <option value="Gujarat">
+                            <option value="Haryana">
+                            <option value="Himachal Pradesh">
+                            <option value="Jammu &amp; Kashmir">
+                            <option value="Jharkhand">
+                            <option value="Karnataka">
+                            <option value="Kerala">
+                            <option value="Lakshadweep">
+                            <option value="Madhya Pradesh">
+                            <option value="Maharashtra">
+                            <option value="Manipur">
+                            <option value="Meghalaya">
+                            <option value="Mizoram">
+                            <option value="Nagaland">
+                            <option value="Odisha">
+                            <option value="Puducherry">
+                            <option value="Punjab">
+                            <option value="Rajasthan">
+                            <option value="Sikkim">
+                            <option value="Tamil Nadu">
+                            <option value="Telangana">
+                            <option value="Tripura">
+                            <option value="Uttarakhand">
+                            <option value="Uttar Pradesh">
+                            <option value="West Bengal">
+                          </datalist>
+                        </div>
+                        <span id="message_state">*State field is required.</span>
+                </div>
+
+                 <!-- home/office delivery --> 
+                <div class="add-type">
+                    <div class="add-title">Address Type:</div>
+                    <div class="radio-option">
+                        <span><label><input type="radio" name="delivery type" value="home"> Home (All day
+                                delivery)</label></span>
+                        <span><label><input type="radio" name="delivery type" value="office"> Work (Delivery between
+                                10AM-5PM)</label></span>
+                    </div>
+                </div>
+
+
+                <div class="form_btns">
+                    <input type="submit" name="submit" value="Save" id="sub-btn" class="btn submit-btn">
+                    <input type="reset" name="reset" value="Reset" class="btn reset-btn">
+          
+                  </div>
+            </form>
+        </div>
+
+        <div class="footer">
+            <div class="links">
+                <a href="#" class="border-ani">Return Policy</a> <span>|</span>
+                <a href="#" class="border-ani">Privacy Policy</a> <span>|</span>
+                <a href="#" class="border-ani">Terms of Services</a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="delivery-address-page.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
