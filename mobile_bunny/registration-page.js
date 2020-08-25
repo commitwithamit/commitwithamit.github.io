@@ -55,6 +55,7 @@ $(document).ready(function () {
         if(number== ""){
             $("#con_numb").addClass("red-i");
             $("#message_numb").show();
+            $("#message_numb_length").hide();
             return false;
         }else{
             $("#con_numb").removeClass("red-i");
@@ -73,6 +74,7 @@ $(document).ready(function () {
         if(pass== ""){
             $("#con_pass").addClass("red-i");
             $("#message_pass").show();
+            $("#message_pass_length").hide();
             return false;
         }else{
             $("#con_pass").removeClass("red-i");
