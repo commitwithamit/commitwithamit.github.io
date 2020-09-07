@@ -91,6 +91,7 @@ h2 {
     border: none;
     padding: 0px 10px 0px 10px;
     margin-top: 10px;
+    resize: none;
 }
 
 .textarea_field:focus {
