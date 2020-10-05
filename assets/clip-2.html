@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>c-path</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* .cover{
+            background-image: url(Footer.jpg);
+            height: 100vh; */
+            /*clip-path: circle(100px at 78% 85%);*/
+            /*clip-path:ellipse(10% 15% at 0% 20%);*/
+            /*clip-path:inset(60px 10px 100px 150px);*/
+            /*clip-path: polygon(x y, x y, x y, x y);*/
+            /*clip-path: polygon(50% 0%, 100% 100%, 0% 100%);*/
+           /*  clip-path: polygon(
+              40% 5%,
+              50% 5%,
+              50% 40%,
+              70% 40%,
+              70% 60%,
+              50% 60%,
+              50% 95%,
+              40% 95%,
+              40% 90%,
+              40% 60%,
+              20% 60%,
+              20% 40%,
+              40% 40%
+            ); 
+        }*/
+        body{
+            background: #97e3f152;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            flex-flow: column;
+        }
+        .container{
+           width: 60%;
+           background:#fff;
+           border-radius: 10px;
+           margin-bottom: 20px;
+        }
+        .inner{
+            background:#0088ff83;
+            padding: 1rem;
+            border-radius: 10px;
+            color:#fff;
+            clip-path: circle(10% at 0% 0%);
+            transition: clip-path .5s ease-in-out;
+        }
+        .container:hover .inner{
+            clip-path: circle(70%);
+        }
+        .container-2, .container-3{
+            width: 60%;
+            border-radius: 10px;
+        }
+        .inner-2{
+            background: #00ffea;
+            padding:1rem;
+            border-radius:10px;
+            width:300px;
+            color:#fff;
+            clip-path:circle(10% at 90% 25%);
+            transition: all .5s ease-in-out;
+        }
+        .inner-3{
+            background: #00ffea;
+            padding: 1rem;
+            border-radius: 10px;
+            width: 300px;
+            color: white;
+            clip-path: inset(0px 0px 0px 280px);
+            transition: all .5s ease-in-out;
+        }
+        .container-3:hover .inner-3{
+            clip-path: inset(0px 0px 0px 0px);
+        }
+        span{
+            float:right;
+            position: relative;
+            top: 5px;
+            right: 11px;
+            font-weight: bold;
+        }
+        .inner-2:hover{
+            clip-path:circle(75%);
+        }
+        .inner-2:hover span{
+            color:#ff000000;
+        }
+    </style>
+</head>
+<body>
+    
+<!--<div class="cover"></div>-->
+
+<div class="container">
+    <div class="inner">
+        <h1>Hello!</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi iure, labore atque laborum cumque rem?</p>
+    </div>
+</div>
+
+<div class="container-2">
+    <div class="inner-2">
+        <span>i</span>
+        <h1>hello-2!</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore eius cupiditate voluptatum impedit.</p>
+    </div>
+</div>
+
+<div class="container-3">
+    <div class="inner-3">
+        <h1>Inset</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ipsa!</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip Path</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* .cover{
+            background-image: url(footer.jpg);
+            background-size: cover;
+            height: 100vh; */
+
+        /*clip-path: circle(20% at 10% 80%);*/
+        /*clip-path:ellipse(50px 80px at 50px 60px);*/
+        /*clip-path:inset(30% 2% 2% 10%);*/
+        /* t, r, b, l */
+        /*clip-path:polygon(50% 0%, 100% 50%, 50% 100%, 10% 50%);*/
+        /*clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);*/
+
+        /* clip-path: circle(20% at 0% 0%);
+        } */
+
+        body {
+            background: #97e3f152;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* .container {
+            width: 60%;
+            background: #fff;
+            border-radius: 10px;
+        } */
+
+        .inner {
+            /*background: #0086ff;*/
+            background: #00ffea;
+            padding: 1rem;
+            border-radius: 10px;
+            /*width: 100%;*/
+            width:250px;
+            color: white;
+            /*clip-path: circle(10% at 0% 0%);*/
+            clip-path: circle(10% at 90% 20%);
+            /*transition: clip-path .5s ease-in-out;*/
+            transition: all .5s ease-in-out;
+        }
+        .inner:hover{
+            clip-path:circle(75%);
+            background: #0086ff;
+        }
+        span{
+            float: right;
+            color:white;
+            font-weight: bold;
+            transition: color .5s;
+            position: relative;
+            margin-right: 4%;
+            top:14px;
+            left:6px;
+        }
+        .inner:hover span{
+            color:rgba(255, 0, 0, 0);
+        }
+       /*  .container:hover .inner{
+            clip-path:circle(75%)
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="inner">
+            <span>i</span>
+            <h1>hello!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quos suscipit provident delectus beatae
+                ipsum autem tempore!</p>
+        </div>
+    </div>
+
+    <!--<img src="Footer-mobile.jpg" alt="">-->
+
+</body>
+
+</html>
