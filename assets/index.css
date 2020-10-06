@@ -117,7 +117,7 @@ nav {
     left: 0;
     top: 0;
     text-align: center;
-    background: #3fbff9;
+    background: #1c1d1e;
     clip-path: circle(0% at 100% 0%);
     -webkit-clip-path: circle(0% at 100% 0%);
     transition: all .5s ease-in-out;
