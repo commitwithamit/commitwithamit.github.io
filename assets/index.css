@@ -22,9 +22,13 @@ a {
     font-family: proxi-thin;
     src: url("Proxima Nova Font/proxinova-thin.otf");
 }
+@font-face {
+    font-family: rose;
+    src: url("Proxima Nova Font/rosellinda alyamore.otf");
+}
 
 body {
-    font-family: proxi-nova;
+    font-family: rose;
 }
 
 /* navigation bar */
@@ -252,7 +256,8 @@ nav {
 }
 
 .card-text p {
-    font-family: proxi-thin;
+    /*font-family: proxi-thin;*/
+    font-family: rose;
 }
 
 .card-text a {
@@ -388,7 +393,8 @@ footer {
 
 .footer-item p {
     color: white;
-    font-family: proxi-thin;
+    /*font-family: proxi-thin;*/
+    font-family: rose;
     padding: 0 0 2rem 1rem;
 }
 
@@ -411,7 +417,7 @@ footer {
 .scroll-top p {
     color: white;
     font-size: 10px;
-    font-family: proxi-thin;
+    font-family: rose;
     letter-spacing: 1px;
 }
 
