@@ -9,26 +9,22 @@ a {
 }
 
 @font-face {
-    font-family: proxi-bold;
-    src: url("Proxima Nova Font/proximanova-bold.OTF");
+    font-family: proxibold;
+    src: url("proxima-font/proximanova-bold.OTF");
 }
 
 @font-face {
-    font-family: proxi-nova;
-    src: url("proximanova-regular.otf");
+    font-family: proxinova;
+    src: url("proxima-font/proximanova-regular.otf");
 }
 
 @font-face {
-    font-family: proxi-thin;
-    src: url("Proxima Nova Font/proxinova-thin.otf");
-}
-@font-face {
-    font-family: rose;
-    src: url("Proxima Nova Font/rosellinda alyamore.otf");
+    font-family: proxithin;
+    src: url("proxima-font/proxinova-thin.otf");
 }
 
 body {
-    font-family: rose;
+    font-family: proxinova;
 }
 
 /* navigation bar */
@@ -256,8 +252,7 @@ nav {
 }
 
 .card-text p {
-    /*font-family: proxi-thin;*/
-    font-family: rose;
+    font-family: proxithin;
 }
 
 .card-text a {
@@ -276,7 +271,7 @@ nav {
     color: #fff;
     font-size: 14px;
     padding: 9px 16px;
-    font-family: proxi-thin;
+    font-family: proxithin;
     filter: drop-shadow(-5px 0px 2px #80808091);
 }
 
@@ -393,8 +388,7 @@ footer {
 
 .footer-item p {
     color: white;
-    /*font-family: proxi-thin;*/
-    font-family: rose;
+    font-family: proxithin;
     padding: 0 0 2rem 1rem;
 }
 
@@ -417,7 +411,7 @@ footer {
 .scroll-top p {
     color: white;
     font-size: 10px;
-    font-family: rose;
+    font-family: proxithin;
     letter-spacing: 1px;
 }
 
