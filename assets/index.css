@@ -10,17 +10,17 @@ a {
 
 @font-face {
     font-family: proxibold;
-    src: url("proxima-font/proximanova-bold.OTF");
+    src: url("proximanova-bold.OTF");
 }
 
 @font-face {
     font-family: proxinova;
-    src: url("proxima-font/proximanova-regular.otf");
+    src: url("proximanova-regular.otf");
 }
 
 @font-face {
     font-family: proxithin;
-    src: url("proxima-font/proxinova-thin.otf");
+    src: url("proxinova-thin.otf");
 }
 
 body {
