@@ -24,8 +24,7 @@ a {
 }
 
 body {
-    font-family: "proxinova";
-    /*mm*/
+    font-family: "proxinova" sans-serif;
 }
 
 /* navigation bar */
