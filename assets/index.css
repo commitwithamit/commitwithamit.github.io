@@ -15,16 +15,16 @@ a {
 
 @font-face {
     font-family: proxinova;
-    src: url("proximanova-regular.otf");
+    src: url("proximanova-regular.OTF");
 }
 
 @font-face {
     font-family: proxithin;
-    src: url("proxinova-thin.otf");
+    src: url("proxinova-thin.OTF");
 }
 
 body {
-    font-family: "proxinova", sans-serif;
+    font-family: proxinova;
 }
 
 /* navigation bar */
