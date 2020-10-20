@@ -883,19 +883,19 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 } */
 
 .owl-nav {
-    font-size: 7rem;
+    font-size: 3rem; /* size of next & prev icons */
 }
 
 .owl-prev {
     position: absolute!important;
-    top: 55px;
+    top: 100px;
     left: 0px;
-    width: 35px;
+    width: 35px;   
 }
 
 .owl-next {
     position: absolute;
-    top: 55px;
+    top: 100px;
     right: 0px;
     width: 35px;
 }
