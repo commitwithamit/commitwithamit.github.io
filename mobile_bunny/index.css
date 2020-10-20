@@ -806,29 +806,34 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     display: flex;
     width: 100%;
 }
-
+.ads a {
+    padding: 2px;
+}
 .ads a {
     /*padding: 15px 10px 15px 10px;*/
 }
 
-/* .ads img {} */
 
-.hide_ad {
+.hide_ad_1, .hide_ad_2 {
     display: none;
 }
-
+@media (min-width:650px){
+    .hide_ad_2{
+        display: block;
+    }
+}
 @media (min-width:768px) {
     .ads a {
-        padding: 20px 15px 20px 15px;
+        padding: 8px;
     }
 }
 
 @media (min-width:992px) {
-    .hide_ad {
+    .hide_ad_1 {
         display: block;
     }
     .ads a {
-        padding: 20px 20px 20px 20px;
+        padding: 8px;
     }
 }
 
