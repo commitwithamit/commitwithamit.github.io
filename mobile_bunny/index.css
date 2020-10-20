@@ -849,6 +849,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 #battery-high {
     height: 460px;
+    margin-bottom:10px;
 }
 
 @media (min-width:360px) {
@@ -858,10 +859,18 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .headings {
-    padding: 8px 0px 0px 20px;
+    padding: 8px 0px 0px 0px;
     font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
 }
-
+@media (min-width:600px){
+    .headings{
+        font-size: 1.8rem;
+        text-align: left;
+        padding: 8px 0px 0px 20px;
+    }
+}
 .hr_line {
     flex-basis: 100%;
     margin: 0 0 0 0;
@@ -958,7 +967,11 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .emi-offer img {
     width: 100%;
     height: 204px;
-    margin-bottom: 20px;
+}
+@media (min-width:992px){
+    .emi-offer {
+        margin-bottom: 10px;
+    }
 }
 
 /* emi ads */
