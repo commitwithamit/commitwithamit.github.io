@@ -739,7 +739,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 .carousel-indicators .active {
     width: 30px;
-    height: 4px;
+    height: 3px;
     margin: -1px 9px 0px 9px;
 }
 
