@@ -558,7 +558,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
         width: 42px;
         font-size: 16px;
     }
-    .ham_button {
+    .ham_button, .sidebar {
         display: none;
     }
     .cart {
