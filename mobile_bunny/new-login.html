@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- poppins font from google  -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <!-- external css -->
+    <link rel="stylesheet" href="new-login.css">
+    <title>New login</title>
+</head>
+
+<body>
+
+    <div class="logo">
+        <a href="index.html">
+            <img src="bunny-img-logo11.png" class="logo-img vibrate-2" alt="Logo" title="mobilebunny.com">
+        </a>
+    </div>
+
+    <h2>Sign into your Mobile Bunny account</h2>
+
+    <div class="container">
+        <div class="box">
+
+            <h2>Login</h2>
+
+            <form action="#" method="POST">
+
+                <div class="groups">
+                    <div class="inp-container" id="con-e-mob">
+                        <input type="text" name="email" id="email-mobile" class="input-field input-email"
+                            autocomplete="off">
+                        <label for="email-mobile">Enter Email or Mobile Number</label>
+                    </div>
+                    <!--<span id="message-em">*Email or mobile field is required.</span>-->
+                </div>
+
+                <div class="groups">
+                    <div class="inp-container" id="con-pass">
+                        <input type="password" name="password" id="pass" class="input-field">
+                        <label for="pass">Enter password</label>
+                    </div>
+                    <!--<span id="message-pass">*Password field is required</span>-->
+                </div>
+
+                <div class="forgot-pass">
+                    <a href="#">Forgot password?</a>
+                </div> <br>
+
+                <input type="submit" value="Login" name="submit" class="submit"> <br>
+
+                <div class="new-ac">
+                    New to Mobile Bunny? <em><a href="registration-page.html">Create an account.</a></em>
+                </div>
+
+            </form>
+
+            <h4>Mobile Bunny</h4>
+            
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //floating label effect
+            //when input box has some text inside it the floating label won't
+            //return to it's original place as a placeholder
+            $(".inp-container .input-field").blur(function () {
+
+                var input = $(this).val();
+
+                if (input !== "") {
+                    $(this).siblings("label").addClass("active");
+                } else {
+                    $(this).siblings("label").removeClass("active");
+                }
+
+            });
+
+
+            //color change on focus & blur of input boxes
+            $("#email-mobile").on("focus blur", function () {
+                $("#con-e-mob").toggleClass("blue-i");
+            });
+            $("#pass").on("focus blur", function () {
+                $("#con-pass").toggleClass("blue-i");
+            });
+
+            //form validation
+            $("input[type=submit]").click(function () {
+
+                var em = $("#email-mobile").val();
+                var pw = $("#pass").val();
+
+                if (em == "") {
+                    $("#con-e-mob").addClass("red-i");
+                    $("#message-em").show();
+                    return false;
+                } else {
+                    $("#con-e-mob").removeClass("red-i");
+                    $("#message-em").hide();
+                }
+
+                if (pw == "") {
+                    $("#con-pass").addClass("red-i");
+                    $("#message-pass").show();
+                    return false;
+                }
+
+            });
+
+            //this wasn't working inside the else condition for password in the
+            //code above so i wrote it seprately
+            $("input[type=submit]").click(function () {
+                var yo = $("#pass").val();
+
+                if (yo !== "") {
+                    $("#con-pass").removeClass("red-i");
+                    $("#message-pass").hide();
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>
+<!-- linear-gradient(90deg, #240b36, #4c030fc7) -->

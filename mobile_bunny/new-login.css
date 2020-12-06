@@ -1,0 +1,246 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg, #3ab490, #196a8c, #1c297c);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo img {
+    width: 2.5rem;
+}
+
+h2 {
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.container .box {
+    position: relative;
+    height: 400px;
+    background: #090f2485;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color: white;
+}
+
+.container .box:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.container .box:nth-child(1):before {
+    /*background: #c31432;*/
+    /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to right, #240b36, #c31432);*/
+    /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to right, #240b36, #c31432);*/
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: rgb(172, 199, 57);
+    background: linear-gradient(90deg, #1c297ced 24%, #1e85e9f9 85%);
+}
+
+.container .box:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    /*background:#ffffff0d;*/
+    background: #ffffff05;
+    pointer-events: none;
+}
+
+/* login and mobile bunny up and down effect */
+
+.box h2{
+    font-size: 5rem;
+    position: absolute;
+    top: 17.5rem;
+    left: 2.2rem;
+    margin: 0px;
+    padding: 0px;
+    color: #ffffff0d;
+    transition: 1s;
+}
+
+.box h4 {
+    font-size: 2rem;
+    color: #ffffff14;
+    position: absolute;
+    top: 0px;
+    right: 2.3rem;
+    margin: 0px;
+    padding: 0px;
+    transition: 1s;
+}
+
+
+@media (min-width:1200px){
+    
+.box h2{
+    font-size: 7rem;
+    position: absolute;
+    top:14.5rem;
+    left: 1rem;
+    margin: 0px;
+    padding: 0px;
+    color:#ffffff0d;
+    transition: 1s;
+}
+.box h4{
+    font-size: 3rem;
+    color:#ffffff14;
+    position: absolute;
+    top:0px;
+    right: 1rem;
+    margin: 0px;
+    padding: 0px;
+    transition: 1s;
+}
+.box:hover h2{
+    top: -30px;
+}
+.box:hover h4{
+    top: 20.5rem;
+}
+}
+
+
+
+
+.groups {
+    height: 73px;
+}
+
+.inp-container {
+    position: relative;
+    margin: 0px auto;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.input-field {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.inp-container label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    transition: all .3s;
+    cursor:text;
+    font-size: 14px;
+}
+
+.input-field:focus~label {
+    left: 5px;
+    top: -10px;
+    /*background: #d8d5d5;*/
+    background: #28122f;
+    padding: 0 5px;
+    font-size: 12px;
+    background: linear-gradient(90deg, #172a5c, #113065);
+}
+label.active {
+    left: 5px;
+    top: -10px;
+    /*background: #d8d5d5;*/
+    padding: 0 5px;
+    font-size: 12px;
+    background: linear-gradient(90deg, #172a5c, #113065);
+}
+
+.inp-container input:focus {
+    outline: none;
+}
+
+.forgot-pass{
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+    margin: -10px 0 0 -2px;
+}
+
+.submit{
+    display: block;
+    font-weight: 400;
+    border-radius: .25rem;
+    height: 40px;
+    width: 105px;
+    background: #4a614500;
+    color: white;
+    border: 1px solid #fff;
+    font-size: 18px;
+    margin: -10px 0 0 21px;
+    cursor: pointer;
+}
+/* .submit{
+    display: block;
+    font-weight: 400;
+    border-radius: .25rem;
+    height: 40px;
+    width: 120px;
+    background: #4a614500;
+    color: white;
+    border: 1px solid #fff;
+    font-size: 18px;
+    margin: -10px 0 0 0px;
+    cursor: pointer;
+} */
+.submit:hover {
+    background: linear-gradient(315deg, #3ab490, #196a8c, #1c297c);;
+    color: white;
+    border: 1px solid white;
+}
+.submit:focus {
+    outline: none;
+}
+
+.new-ac{
+    padding: 0 21px;
+}
+.new-ac a, .forgot-pass a {
+    color: #f3f3f3;
+    text-decoration: none;
+    transition: all .3s;
+    font-size: 15px;
+}
+.new-ac a:hover, .forgot-pass a:hover{
+    color: #070073;
+}
