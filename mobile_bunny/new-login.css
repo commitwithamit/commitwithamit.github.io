@@ -79,13 +79,17 @@ h2 {
     pointer-events: none;
 }
 
+form{
+    padding: 0 20px;
+}
+
 /* login and mobile bunny up and down effect */
 
 .box h2{
-    font-size: 5rem;
+    font-size: 3.5rem;
     position: absolute;
-    top: 17.5rem;
-    left: 2.2rem;
+    top: 19.5rem;
+    left: 4.5rem;
     margin: 0px;
     padding: 0px;
     color: #ffffff0d;
@@ -101,37 +105,44 @@ h2 {
     margin: 0px;
     padding: 0px;
     transition: 1s;
+    display: none;
 }
 
-
-@media (min-width:1200px){
-    
-.box h2{
-    font-size: 7rem;
-    position: absolute;
-    top:14.5rem;
-    left: 1rem;
-    margin: 0px;
-    padding: 0px;
-    color:#ffffff0d;
-    transition: 1s;
-}
-.box h4{
-    font-size: 3rem;
-    color:#ffffff14;
-    position: absolute;
-    top:0px;
-    right: 1rem;
-    margin: 0px;
-    padding: 0px;
-    transition: 1s;
-}
+/* .input-field:focus h2{
+    top:-30px;
+} */
 .box:hover h2{
-    top: -30px;
+    top: -3px;
+    font-size: 2.2rem;
+    left: 6rem;
+    color: #ffffff1c;
 }
 .box:hover h4{
     top: 20.5rem;
 }
+
+@media (min-width:1200px){
+    
+    .box h2{
+        font-size: 7rem;
+        position: absolute;
+        top:14.5rem;
+        left: 1rem;
+        margin: 0px;
+        padding: 0px;
+        color:#ffffff0d;
+        transition: 1s;
+    }
+    .box h4{
+        font-size: 3rem;
+        color:#ffffff14;
+        position: absolute;
+        top:0px;
+        right: 1rem;
+        margin: 0px;
+        padding: 0px;
+        transition: 1s;
+    }
 }
 
 
@@ -146,7 +157,7 @@ h2 {
     margin: 0px auto;
     border: 1px solid #fff;
     border-radius: 5px;
-    width: 250px;
+    min-width: 248px;
 }
 
 .input-field {
@@ -193,8 +204,7 @@ label.active {
 .forgot-pass{
     width: 100%;
     text-align: right;
-    padding-right: 20px;
-    margin: -10px 0 0 -2px;
+    margin: -10px 0 0 0px;
 }
 
 .submit{
@@ -207,7 +217,7 @@ label.active {
     color: white;
     border: 1px solid #fff;
     font-size: 18px;
-    margin: -10px 0 0 21px;
+    margin: -10px 0 0 0px;
     cursor: pointer;
 }
 /* .submit{
@@ -232,9 +242,6 @@ label.active {
     outline: none;
 }
 
-.new-ac{
-    padding: 0 21px;
-}
 .new-ac a, .forgot-pass a {
     color: #f3f3f3;
     text-decoration: none;
@@ -242,5 +249,5 @@ label.active {
     font-size: 15px;
 }
 .new-ac a:hover, .forgot-pass a:hover{
-    color: #070073;
+    color: #b9b9b9;
 }
