@@ -5,8 +5,16 @@
 }
 
 body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(90deg, #3ab490, #196a8c, #1c297c);
+}
+
+.main-container {
+    flex-basis: 100%;
 }
 
 .logo {
@@ -295,4 +303,11 @@ label.active {
 
 .links span {
     color: #f4f3f3;
+}
+
+
+@media (min-width:360px){
+    .links a {
+        font-size: 12px;
+    }
 }
