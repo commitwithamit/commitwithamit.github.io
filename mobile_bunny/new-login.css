@@ -288,6 +288,29 @@ label.active {
     color: #f4f3f3;
 }
 
+
+
+/* for form validation */
+
+.blue-i {
+    border: 1px solid #0097c7;
+    color: #0097c7;
+}
+
+.red-i {
+    border: 1px solid red;
+    color: red;
+}
+
+#message-em, #message-pass {
+    color: red;
+    font-weight: 600;
+    display: none;
+}
+
+
+
+
 @media (min-width:360px) {
     .links a {
         font-size: 12px;
