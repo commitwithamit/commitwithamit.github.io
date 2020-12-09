@@ -42,6 +42,7 @@ h2 {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    margin-bottom: 15px;
     color: white;
 }
 
@@ -89,7 +90,8 @@ form{
     font-size: 3.5rem;
     position: absolute;
     top: 19.5rem;
-    left: 4.5rem;
+    left: 50%;
+    transform: translate(-50%, 0px);/* centering horizontally */
     margin: 0px;
     padding: 0px;
     color: #ffffff0d;
@@ -108,13 +110,9 @@ form{
     display: none;
 }
 
-/* .input-field:focus h2{
-    top:-30px;
-} */
 .box:hover h2{
     top: -3px;
     font-size: 2.2rem;
-    left: 6rem;
     color: #ffffff1c;
 }
 .box:hover h4{
@@ -144,8 +142,6 @@ form{
         transition: 1s;
     }
 }
-
-
 
 
 .groups {
@@ -186,7 +182,8 @@ form{
     background: #28122f;
     padding: 0 5px;
     font-size: 12px;
-    background: linear-gradient(90deg, #172a5c, #113065);
+    /*background: linear-gradient(90deg, #172a5c, #113065);*/
+    background: linear-gradient(90deg, #172351, #163063);
 }
 label.active {
     left: 5px;
@@ -194,7 +191,7 @@ label.active {
     /*background: #d8d5d5;*/
     padding: 0 5px;
     font-size: 12px;
-    background: linear-gradient(90deg, #172a5c, #113065);
+    background: linear-gradient(90deg, #172351, #163063);
 }
 
 .inp-container input:focus {
@@ -220,6 +217,21 @@ label.active {
     margin: -10px 0 0 0px;
     cursor: pointer;
 }
+/* 
+.submit{
+    display: block;
+    font-weight: 400;
+    border-radius: .25rem;
+    height: 40px;
+    width: 105px;
+    background: #4a614500;
+    color: white;
+    border: 1px solid #fff;
+    font-size: 18px;
+    margin: -10px 0 0 0px;
+    cursor: pointer;
+}
+ */
 /* .submit{
     display: block;
     font-weight: 400;
@@ -232,9 +244,10 @@ label.active {
     font-size: 18px;
     margin: -10px 0 0 0px;
     cursor: pointer;
-} */
+} 
+*/
 .submit:hover {
-    background: linear-gradient(315deg, #3ab490, #196a8c, #1c297c);;
+    background: linear-gradient(315deg, #3ab490, #196a8c, #1c297c);
     color: white;
     border: 1px solid white;
 }
@@ -250,4 +263,36 @@ label.active {
 }
 .new-ac a:hover, .forgot-pass a:hover{
     color: #b9b9b9;
+}
+
+
+/* footer */
+
+.footer {
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
+    text-align: center;
+    color: #008868;
+}
+
+.links a {
+    text-decoration: none;
+    position: relative;
+    font-size: 11px;
+    font-weight: bold;
+    color: #f4f3f3e3;
+}
+
+.border-ani:hover {
+    color: white;
+}
+
+.links span {
+    color: #f4f3f3;
 }
