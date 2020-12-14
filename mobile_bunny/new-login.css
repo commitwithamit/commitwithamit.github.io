@@ -110,7 +110,7 @@ form {
 
 .box h4 {
     font-size: 3rem;
-    color: #ffffff12;
+    color: #ffffff29;
     position: absolute;
     top: 0px;
     right: 20px;
@@ -130,7 +130,7 @@ form {
 .box:hover h4 {
     top: 20.5rem;
     font-size: 2.5rem;
-    color: #ffffff2b;
+    color: #ffffff40;
 }
 
 .groups {
@@ -166,11 +166,9 @@ form {
 .input-field:focus~label {
     left: 5px;
     top: -10px;
-    /*background: #d8d5d5;*/
-    background: #28122f;
+    background: #162c5e;
     padding: 0 5px;
     font-size: 12px;
-    /*background: linear-gradient(90deg, #172a5c, #113065);*/
     background: linear-gradient(90deg, #172351, #163063);
 }
 
@@ -192,23 +190,37 @@ label.active {
     text-align: right;
     margin: -10px 0 0 0px;
 }
-
-.submit {
-    display: block;
-    font-weight: 400;
+ 
+ .submit {
+    background-color: transparent;
+    border: 1px solid #fff;
     border-radius: .25rem;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    margin: -10px 0 12px 0px;
     height: 40px;
     width: 105px;
-    background: #4a614500;
-    color: white;
-    border: 1px solid #fff;
-    font-size: 18px;
-    margin: -10px 0 0 0px;
-    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    /*background: #4a614500;*/
+ }
+.submithover, .submit:focus{
+    color:#fff;
+    outline:none;
 }
-
-/* 
 .submit{
+    background-image: linear-gradient(45deg,#196a8c 50%, #1c297c 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    transition: all .5s ease-in-out;
+}
+.submit:hover{
+    background-position: 0;
+}
+
+/* .submit {
     display: block;
     font-weight: 400;
     border-radius: .25rem;
@@ -220,24 +232,9 @@ label.active {
     font-size: 18px;
     margin: -10px 0 0 0px;
     cursor: pointer;
-}
- */
-
-/* .submit{
-    display: block;
-    font-weight: 400;
-    border-radius: .25rem;
-    height: 40px;
-    width: 120px;
-    background: #4a614500;
-    color: white;
-    border: 1px solid #fff;
-    font-size: 18px;
-    margin: -10px 0 0 0px;
-    cursor: pointer;
-} 
-*/
-
+    text-align: center;
+} */
+/*
 .submit:hover {
     background: linear-gradient(315deg, #3ab490, #196a8c, #1c297c);
     color: white;
@@ -246,8 +243,19 @@ label.active {
 
 .submit:focus {
     outline: none;
-}
+} */
 
+
+
+
+
+
+
+
+
+.new-ac{
+    font-size: 15px;
+}
 .new-ac a, .forgot-pass a {
     color: #f3f3f3;
     text-decoration: none;
@@ -306,7 +314,12 @@ label.active {
     color: #e03333;
     font-weight: 600;
     display: none;
+    font-size: 12px;
+    margin-top: 2px;
 }
+
+
+/* MQ */
 
 @media (min-width:360px) {
     .links a {
@@ -323,10 +336,10 @@ label.active {
     }
     .input-field:focus~label {
         font-size: 13px;
-        top: -11px;
+        top: -9px;
     }
     .inp-container label {
-        top: 10px;
+        top: 12px;
         font-size: 13px;
     }
     label.active {
@@ -335,6 +348,9 @@ label.active {
     }
     .links a {
         font-size: 13px;
+    }
+    #message-em, #message-pass {
+        font-size: 14px;
     }
 }
 
@@ -365,6 +381,9 @@ label.active {
 @media (min-width: 768px) {
     form {
         width: 75%;
+    }
+    #message-em, #message-pass {
+        font-size: 15px;
     }
 }
 
@@ -416,7 +435,7 @@ label.active {
         width: 38%;
     }
     .inp-container label {
-        top: 8px;
+        top: 10px;
         font-size: 15px;
     }
     label.active {
@@ -425,10 +444,19 @@ label.active {
     }
     .input-field:focus~label {
         font-size: 14px;
-        top: -12px;
+        top: -10 px;
     }
     .input-field {
         font-size: 16px;
+    }
+    #message-em, #message-pass {
+        font-size: 16px;
+    }
+    .new-ac{
+        font-size: 17px;
+    }
+    .new-ac a, .forgot-pass a {
+        font-size: 15px;
     }
 }
 
