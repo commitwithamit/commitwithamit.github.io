@@ -7,17 +7,23 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(90deg, #3ab490, #196a8c, #1c297c);
-}
-
-.main_container {
-    margin-top: 25px;
-}
-
-.logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 10px 20px 10px;
+    height: 100vh;
+}
+
+.main_container {
+    margin: 30px 0 0 0;
+}
+
+.logo {
+    position: absolute;
+    top: 1.5rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 20px 10px; */
 }
 
 .logo img {
@@ -29,7 +35,8 @@ h2 {
     text-align: center;
     color: white;
     font-weight: 600;
-    margin: 0 0 20px 0;
+    margin: 0 0 30px 0;
+    /*margin: 0 0 20px 0;*/
 }
 
 /* form container */
@@ -114,10 +121,12 @@ label.active {
 }
 
 .forgot_pass {
-    width: 100%;
+    clear: right;
+    margin-bottom: 8px;
+    /* width: 100%;
     text-align: right;
     padding-right: 20px;
-    margin: -10px 0 0 20px;
+    margin: -10px 0 0 20px; */
 }
 
 .forgot_pass a, .new-ac a {
@@ -143,11 +152,13 @@ label.active {
     border-radius: .25rem;
     height: 40px;
     width: 120px;
+    float: right;
     background: #060c21;
     color: white;
     border: 1px solid gray;
     font-size: 18px;
-    margin: -10px 0 0 0px;
+    margin: 0px 0 5px 0px;
+    /*margin: -10px 0 0 0px;*/
     cursor: pointer;
 }
 
@@ -216,6 +227,9 @@ label.active {
     .input_field {
         width: 280px;
     }
+    h2 {
+        font-size: 1.2rem;
+    }
 }
 
 @media (min-width:500px) {
@@ -253,7 +267,7 @@ label.active {
         width: 3rem;
     }
     h2 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
     .box {
         width: 485px;

@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "D:\\Web Designs"
+		},
+		{
+			"path": "..\\..\\externship-HTML"
+		},
+		{
+			"path": "..\\..\\Users\\Amit\\Desktop\\html videos"
+		},
+		{
+			"path": "..\\..\\project-X"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\Users\\Amit\\Desktop\\BS-practice"
+		},
+		{
+			"path": "..\\..\\Riya_Rawat"
+		},
+		{
+			"path": "..\\..\\boostrap-website"
+		},
+		{
+			"path": "..\\..\\xampp\\htdocs\\practice"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "projectX",
+		"git.ignoreLimitWarning": true
+	}
+}
