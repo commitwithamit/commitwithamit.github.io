@@ -29,7 +29,7 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "projectX",
+		"liveServer.settings.multiRootWorkspaceName": "practice",
 		"git.ignoreLimitWarning": true
 	}
 }

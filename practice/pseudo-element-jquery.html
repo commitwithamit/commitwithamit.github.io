@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting Pseudo elements in jquery</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+        }
+        .ham{
+            width: 100px;
+            height: 100px;
+            background: transparent;
+            border: none;
+            position: relative;
+        }
+        .ham span{
+            position: absolute;    
+            width:100px;
+            height:5px;
+            background: #000;
+            left: 0;    
+            
+        }
+        .ham span::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top:-15px;
+            width:100px;
+            height:5px;
+            background: #000;
+            transition: .3s all;
+        }
+        .ham span::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            top:15px;
+            width:100px;
+            height:5px;
+            background: #000;
+            transition: .3s all;
+        }
+
+        .ham.change span{
+            position: absolute;    
+            width:100px;
+            height:5px;
+            background: transparent;
+            left: 0;    
+            
+        }
+        .ham.change span::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top:0;
+            width:100px;
+            height:5px;
+            background: red;
+            transform: rotate(-36deg);
+        }
+        .ham.change span::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            top:0;
+            width:100px;
+            height:5px;
+            background: red;
+            transform: rotate(36deg);
+        }
+    </style>
+</head>
+<body>
+    
+    <button class="ham">
+        <span></span>
+    </button>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $(".ham").click(function(){
+                $(".ham").toggleClass("change");
+            });
+
+        });
+    </script>
+</body>
+</html>
