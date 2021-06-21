@@ -6,7 +6,8 @@
     box-sizing: border-box;
 }
 body{
-    background: url(dark-city.jpg);
+    background-image: url(dark-city.jpg);
+    background-color: #151a1d;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
