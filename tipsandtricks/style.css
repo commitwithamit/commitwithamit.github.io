@@ -7,13 +7,12 @@
 }
 body{
     background: url(dark-city.jpg);
-    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
-@font-face {
-    font-family: satisfy;
-    src: url("Satisfy-Regular.ttf");
-}
+
 /* nav */
 nav{
     margin-top: 1rem;
