@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(dark-city.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@font-face {
+    font-family: satisfy;
+    src: url("Satisfy-Regular.ttf");
+}
+/* nav */
+nav{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem 1rem 1rem;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #dccd2a;
+    font-family: 'Amarante', cursive;
+    font-size: 1.3rem;
+}
+
+.logo img{
+    width: 80px;
+    transform: scaleX(-1);
+    border-radius: 50%;
+}
