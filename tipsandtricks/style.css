@@ -138,9 +138,9 @@ nav ul li a{
     letter-spacing: 2px;
 }
 
-@media screen and (orientation : landscape) {
+@media screen and (max-width:668px) and (orientation : landscape) {
     .banner h1, .banner h3 {
-        top: 63%;
+        top: 55%;
     }
 }
 
