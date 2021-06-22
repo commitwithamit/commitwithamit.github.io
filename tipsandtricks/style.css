@@ -5,12 +5,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+*:focus{
+    outline: none!important;
+}
 body{
     background-image: url(dark-city.jpg);
     background-color: #151a1d;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    -webkit-background-attachment:fixed;
     background-size: cover;
 }
 
@@ -121,7 +125,7 @@ nav ul li a{
     /* transform: scaleX(-1); */
     border-radius: 50%;
 }
-.banner h1{
+.banner h1, .banner h3{
     color:#dccd2a;
     font-family: 'Amarante', cursive;
     position: absolute;
