@@ -102,6 +102,9 @@ nav ul{
     display: none;
     transition: all .3s;
 }
+.dp-none, .banner h1{
+    display: none;
+}
 .dp-block{
     display: block;
 }
@@ -134,6 +137,22 @@ nav ul li a{
     transform: translate(-50%,-50%);
     letter-spacing: 2px;
 }
+
+@media screen and (orientation : landscape) {
+    .banner h1, .banner h3 {
+        top: 63%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .banner h1{
+        display: block;
+    }
+    .banner h3{
+        display: none;
+    }
+}
+
 
 /* animation */
 .slide-bottom {
