@@ -39,11 +39,38 @@
         <div class="accordian">
             <div class="heading">
                 <h3>
-                    horizontally center a fixed or absolute positioned element?
+                    Horizontally center a fixed or absolute positioned element?
                 </h3>
             </div>
             <div class="answer">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo dolorum tempora cumque quod et cum magni. Et tenetur, rerum quod reiciendis voluptates at exercitationem ratione quibusdam soluta? Delectus possimus eum dolores? Modi, sed neque illum accusantium provident sit sint impedit.
+                .class{
+                    <br>
+                    &emsp; position: fixed/absolute;
+                    <br>
+                    &emsp; left: 50%;
+                    <br>
+                    &emsp; transform: translate(-50%, 0);
+                    <br>
+                }
+            </div>
+        </div> 
+
+        <div class="accordian">
+            <div class="heading">
+                <h3>
+                    Horizontally center a fixed or absolute positioned element?
+                </h3>
+            </div>
+            <div class="answer">
+                .class{
+                    <br>
+                    &emsp; position: fixed/absolute;
+                    <br>
+                    &emsp; left: 50%;
+                    <br>
+                    &emsp; transform: translate(-50%, 0);
+                    <br>
+                }
             </div>
         </div>
 
@@ -58,8 +85,16 @@
                 $("nav ul").toggleClass("dp-block");
             });
             
+
+            $(".heading").click(function(){
+                if($(this).next().hasClass("active")){
+                    $(this).next().removeClass("active").slideUp();
+                }else{
+                    $(this).next().addClass("active").slideDown();
+                }
+            });
         });
-        
+
     </script>
 </body>
 </html>
