@@ -151,7 +151,7 @@ nav ul li a{
     padding: 5px 10px;
     display: none;
 }
-.answer p{
+.answer p, .answer b{
     color:#dccd2a;
 }
 

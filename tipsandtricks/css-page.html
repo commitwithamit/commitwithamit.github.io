@@ -82,6 +82,77 @@
                 </p>
             </div>
         </div>
+        
+        <div class="accordian">
+            <div class="heading">
+                Fix footer at the bottom of the page using flexbox?
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="answer">
+
+                <b>Html:</b>
+                <br>
+                &lt;div class="wrapper"&gt;
+                <br>
+                &emsp; &lt;header&gt;&lt;/header&gt;
+                <br>
+                &emsp; &lt;main&gt;&lt;/main&gt;
+                <br>
+                &emsp; &lt;footer&gt;&lt;/footer&gt;
+                <br>
+                &lt;/div&gt;
+                <br>
+                <b>Css:</b>
+                <br>
+                html,body{
+                    <br>
+                    &emsp;height: 100%;
+                    <br>
+                    &emsp;width: 100%;
+                    <br>
+                }
+                <br>
+                .wrapper{
+                    <br>
+                    &emsp;min-height: 100%;
+                    <br>
+                    &emsp;display: flex;   
+                    <br>
+                    &emsp;flex-direction: column;
+                    <br>
+                    &emsp;align-items: stretch;
+                    <br>
+                }  
+                <br>
+                main{
+                   <br>
+                   &emsp; flex-grow: 1;
+                   <br>
+                }  
+                <br>
+                header, main, footer{
+                    <br>
+                    &emsp; flex-shrink: 0;
+                }
+            </div>
+        </div>
+
+        <div class="accordian">
+            <div class="heading">
+                Remove skyblue outline when clicking button, input or textareas?
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="answer">
+                element:focus {
+                    <br>
+                    &emsp; outline: 0!important;
+                    <br>
+                    &emsp; box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) 
+                    !important;
+                    <br>
+                }
+            </div>
+        </div> 
 
     </main>
 
