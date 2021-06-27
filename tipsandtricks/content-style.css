@@ -136,13 +136,23 @@ nav ul li a{
 }
 .heading{
     padding: 5px 10px;
-    background: red;
+    background: #009688;
+}
+.heading{
+    display: flex;
+    font-size: 17px;
+    height: max-content;
+    align-items: center;
+    font-weight: 600;
 }
 .answer{
     color: #fff;
     font-size: 15px;
     padding: 5px 10px;
     display: none;
+}
+.answer p{
+    color:#dccd2a;
 }
 
 

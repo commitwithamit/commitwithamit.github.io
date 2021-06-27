@@ -7,6 +7,8 @@
     <title>Css tips & tricks by Amit Kumar</title>
     <!-- external css file -->
     <link rel="stylesheet" href="content-style.css">
+    <!-- fa-icons -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
     
@@ -38,9 +40,8 @@
         
         <div class="accordian">
             <div class="heading">
-                <h3>
-                    Horizontally center a fixed or absolute positioned element?
-                </h3>
+                Horizontally center a fixed or absolute positioned element?
+                <i class="fas fa-plus"></i>
             </div>
             <div class="answer">
                 .class{
@@ -57,9 +58,8 @@
 
         <div class="accordian">
             <div class="heading">
-                <h3>
-                    Horizontally center a fixed or absolute positioned element?
-                </h3>
+                Vertically & Horizontally center a fixed or absolute positioned element?
+                <i class="fas fa-plus"></i>
             </div>
             <div class="answer">
                 .class{
@@ -68,9 +68,18 @@
                     <br>
                     &emsp; left: 50%;
                     <br>
-                    &emsp; transform: translate(-50%, 0);
+                    &emsp; top: 50%;
+                    <br>
+                    &emsp; width: 300px;
+                    <br>
+                    &emsp; height: 200px;
+                    <br>
+                    &emsp; margin: -100px 0px 0px -150px;
                     <br>
                 }
+                <p>
+                    <b>Note:</b> give margin-top half the height in (-ve) and margin-left half the width in (-ve). 
+                </p>
             </div>
         </div>
 
@@ -85,11 +94,13 @@
                 $("nav ul").toggleClass("dp-block");
             });
             
-
+            //accordian
             $(".heading").click(function(){
                 if($(this).next().hasClass("active")){
+                    $(this).children("i").removeClass("fa-minus").addClass("fa-plus");
                     $(this).next().removeClass("active").slideUp();
                 }else{
+                    $(this).children("i").removeClass("fa-plus").addClass("fa-minus");
                     $(this).next().addClass("active").slideDown();
                 }
             });
