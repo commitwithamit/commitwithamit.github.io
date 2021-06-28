@@ -38,121 +38,124 @@
     
     <main>
         
-        <div class="accordian">
-            <div class="heading">
-                Horizontally center a fixed or absolute positioned element?
-                <i class="fas fa-plus"></i>
+        <div class="acco-wrapper">
+            <div class="accordian">
+                <div class="heading">
+                    Horizontally center a fixed or absolute positioned element?
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="answer">
+                    .class{
+                        <br>
+                        &emsp; position: fixed/absolute;
+                        <br>
+                        &emsp; left: 50%;
+                        <br>
+                        &emsp; transform: translate(-50%, 0);
+                        <br>
+                    }
+                </div>
+            </div> 
+    
+            <div class="accordian">
+                <div class="heading">
+                    Vertically & Horizontally center a fixed or absolute positioned element?
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="answer">
+                    .class{
+                        <br>
+                        &emsp; position: fixed/absolute;
+                        <br>
+                        &emsp; left: 50%;
+                        <br>
+                        &emsp; top: 50%;
+                        <br>
+                        &emsp; width: 300px;
+                        <br>
+                        &emsp; height: 200px;
+                        <br>
+                        &emsp; margin: -100px 0px 0px -150px;
+                        <br>
+                    }
+                    <p>
+                        <b>Note:</b> give margin-top half the height in (-ve) and margin-left half the width in (-ve). 
+                    </p>
+                </div>
             </div>
-            <div class="answer">
-                .class{
+            
+            <div class="accordian">
+                <div class="heading">
+                    Fix footer at the bottom of the page using flexbox?
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="answer">
+    
+                    <b>Html:</b>
                     <br>
-                    &emsp; position: fixed/absolute;
+                    &lt;div class="wrapper"&gt;
                     <br>
-                    &emsp; left: 50%;
+                    &emsp; &lt;header&gt;&lt;/header&gt;
                     <br>
-                    &emsp; transform: translate(-50%, 0);
+                    &emsp; &lt;main&gt;&lt;/main&gt;
                     <br>
-                }
+                    &emsp; &lt;footer&gt;&lt;/footer&gt;
+                    <br>
+                    &lt;/div&gt;
+                    <br>
+                    <b>Css:</b>
+                    <br>
+                    html,body{
+                        <br>
+                        &emsp;height: 100%;
+                        <br>
+                        &emsp;width: 100%;
+                        <br>
+                    }
+                    <br>
+                    .wrapper{
+                        <br>
+                        &emsp;min-height: 100%;
+                        <br>
+                        &emsp;display: flex;   
+                        <br>
+                        &emsp;flex-direction: column;
+                        <br>
+                        &emsp;align-items: stretch;
+                        <br>
+                    }  
+                    <br>
+                    main{
+                       <br>
+                       &emsp; flex-grow: 1;
+                       <br>
+                    }  
+                    <br>
+                    header, main, footer{
+                        <br>
+                        &emsp; flex-shrink: 0;
+                    <br>
+                    }
+                </div>
             </div>
-        </div> 
-
-        <div class="accordian">
-            <div class="heading">
-                Vertically & Horizontally center a fixed or absolute positioned element?
-                <i class="fas fa-plus"></i>
-            </div>
-            <div class="answer">
-                .class{
-                    <br>
-                    &emsp; position: fixed/absolute;
-                    <br>
-                    &emsp; left: 50%;
-                    <br>
-                    &emsp; top: 50%;
-                    <br>
-                    &emsp; width: 300px;
-                    <br>
-                    &emsp; height: 200px;
-                    <br>
-                    &emsp; margin: -100px 0px 0px -150px;
-                    <br>
-                }
-                <p>
-                    <b>Note:</b> give margin-top half the height in (-ve) and margin-left half the width in (-ve). 
-                </p>
-            </div>
+    
+            <div class="accordian">
+                <div class="heading">
+                    Remove skyblue outline when clicking button, input or textareas?
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="answer">
+                    element:focus {
+                        <br>
+                        &emsp; outline: 0!important;
+                        <br>
+                        &emsp; box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) 
+                        !important;
+                        <br>
+                    }
+                </div>
+            </div> 
         </div>
-        
-        <div class="accordian">
-            <div class="heading">
-                Fix footer at the bottom of the page using flexbox?
-                <i class="fas fa-plus"></i>
-            </div>
-            <div class="answer">
-
-                <b>Html:</b>
-                <br>
-                &lt;div class="wrapper"&gt;
-                <br>
-                &emsp; &lt;header&gt;&lt;/header&gt;
-                <br>
-                &emsp; &lt;main&gt;&lt;/main&gt;
-                <br>
-                &emsp; &lt;footer&gt;&lt;/footer&gt;
-                <br>
-                &lt;/div&gt;
-                <br>
-                <b>Css:</b>
-                <br>
-                html,body{
-                    <br>
-                    &emsp;height: 100%;
-                    <br>
-                    &emsp;width: 100%;
-                    <br>
-                }
-                <br>
-                .wrapper{
-                    <br>
-                    &emsp;min-height: 100%;
-                    <br>
-                    &emsp;display: flex;   
-                    <br>
-                    &emsp;flex-direction: column;
-                    <br>
-                    &emsp;align-items: stretch;
-                    <br>
-                }  
-                <br>
-                main{
-                   <br>
-                   &emsp; flex-grow: 1;
-                   <br>
-                }  
-                <br>
-                header, main, footer{
-                    <br>
-                    &emsp; flex-shrink: 0;
-                }
-            </div>
-        </div>
-
-        <div class="accordian">
-            <div class="heading">
-                Remove skyblue outline when clicking button, input or textareas?
-                <i class="fas fa-plus"></i>
-            </div>
-            <div class="answer">
-                element:focus {
-                    <br>
-                    &emsp; outline: 0!important;
-                    <br>
-                    &emsp; box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) 
-                    !important;
-                    <br>
-                }
-            </div>
-        </div> 
 
     </main>
 
