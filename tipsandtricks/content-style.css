@@ -29,6 +29,7 @@ main{
 }
 .main-wrapper{
     height: 355px;
+    margin-top: -45px;
 }
 .acco-wrapper{
     overflow-y: auto;    
