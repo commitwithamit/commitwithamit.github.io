@@ -171,13 +171,18 @@
             });
             
             //accordian
-            $(".heading").click(function(){
+            $(".heading").click(function(){  
                 if($(this).next().hasClass("active")){
                     $(this).children("i").removeClass("fa-minus").addClass("fa-plus");
                     $(this).next().removeClass("active").slideUp();
                 }else{
                     $(this).children("i").removeClass("fa-plus").addClass("fa-minus");
                     $(this).next().addClass("active").slideDown();
+                }
+                if($(".answer").hasClass("active")){
+                    $(".main-wrapper").css("margin-top","-80px");
+                }else{
+                    $(".main-wrapper").css("margin-top","0px");
                 }
             });
         });
