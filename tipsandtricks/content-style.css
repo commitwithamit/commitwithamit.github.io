@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@font-face {
+    font-family: poppins;
+    src: url(Poppins-Light.ttf);
+}
 *{
     margin: 0;
     padding: 0;
@@ -19,10 +22,17 @@ nav{
     padding: 1rem 1rem 0;
 }
 main{
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 530px;
+}
+.main-wrapper{
+    height: 355px;
+}
+.acco-wrapper{
+    overflow-y: auto;    
+    height: 455px;
 }
 /* menu btn */
 .menu-btn{
