@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery tips & tricks by Amit Kumar</title>
+    <!-- external css file -->
+    <link rel="stylesheet" href="content-style.css">
+    <!-- fa-icons -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+    
+    <nav>
+        <button class="menu-btn">
+            <span></span>
+        </button>
+
+        <ul class="slide-bottom">
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+            <li>
+                <a href="html-page.html">HTML</a>
+            </li>
+            <li>
+                <a href="css-page.html">CSS</a>
+            </li>
+            <li>
+                <a href="jquery-page.html">JQUERY</a>
+            </li>
+            <li>
+                <a href="php-page.html">PHP</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <main>
+        <!-- main-wrapper because i was unable to vertically center the div acco-wrapper with height same as <main> -->
+        <div class="main-wrapper">
+            <div class="acco-wrapper">
+                <div class="accordian">
+                    <div class="heading">
+                        Fixing a section/div on the top of a website on scroll.
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="answer">
+                        Suppose we want to fix a div at the top when scrolltop position is at 572.
+                        <br>
+                        <b>Html:</b> <br>
+                        &lt;div class="box"&gt;&lt;/div&gt; <br>
+                        
+                        <b>Css:</b> <br>
+                        .fixed{<br>
+                            &emsp;    position: fixed; <br>
+                            &emsp;    top: 0px;
+                            <br> }  <br> 
+                        
+                        <b>jQuery:</b> <br>
+                        $(window).scroll(function(){ <br>
+                        &emsp; if($(this).scrollTop()>572){ <br>
+                        &emsp;&emsp; $(".box").addClass("fixed"); <br>
+                        &emsp; }else{ <br>
+                        &emsp;&emsp; $(".box").removeClass("fixed"); <br>
+                        &emsp; } <br>
+                        });
+                    </div> 
+                </div> 
+        
+                <div class="accordian">
+                    <div class="heading">
+                        Open print dialog box on screen load?
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="answer">
+                        <div class="code">
+                            $(document).ready(function(){ <br>
+                                &emsp; window.print(); <br>
+                            });
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordian">
+                    <div class="heading">
+                        Repeat animation every time an other button/text/link etc is clicked?
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="answer">
+                        We are using 3 different classes for explaination: <br>
+                        1) .animation = For animation. <br>
+                        2) #animate-me = Id which we are going to animate. <br>
+                        3) .click-me = On clicking this we will trigger the animation. <br>
+                        <br>
+                        if(!$("#animate_me").hasClass("animation")){ <br>
+                        &emsp; $(".click-me").click(function(){ <br>
+                        &emsp;&emsp; $("#animate_me").addClass("animation"); <br>
+                        &emsp; setTimeout(function(){ <br>
+                        &emsp;&emsp; $(".animate_me").removeClass("animation"); <br>
+                        &emsp; }, 1000); <br>
+                        &emsp;}); <br>
+                        }; <br>
+                        
+                        <p>
+                       <b>Notes:</b> <br>
+                        a) Notice the "<span class="h-light">!</span>" in first line of the code if(<span class="h-light">!</span>$("#animate_me").hasClass
+                       ("animation")); this "!" means the opposite of what our code is acutally saying i.e. if "#animate_me does not have class animation".
+                       <br>
+                       b) The "<span class="h-light">1000</span>" at the end of the code represents the delay of 1 second.
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="accordian">
+                    <div class="heading">
+                        Toggling up/down, +/- font awesome icons using jQuery?
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="answer">
+                        <b>Method 1:</b> <br>
+                        &emsp; $("i", this).toggleClass("class-1 class-2"); <br>
+
+                        <b>Method 2:</b> <br>
+                        &emsp; $(this).find("i").toggle(); <br>
+
+                        <b>Tip:</b> <br>
+                        Method 2 is the best because it can be used with other elments as well. <br>
+                        Ex:- <br>
+                        <b>Html:</b> <br>
+                        &lt;div id="xyz"&gt; <br> 
+                        &emsp;    &lt;img src="down.png"&gt; <br>
+                        &emsp;    &lt;img src="up.png"&gt; <br>
+                       &lt;/div&gt; <br>
+                        <b>jQuery:</b> <br>
+                        $("#xyz").click(function(){ <br>
+                        &emsp;    $(this).find("img").toggle(); <br>
+                        }); 
+                    </div>
+                </div>
+                
+                <div class="accordian">
+                    <div class="heading">
+                        Do something when mouse leaves window function?
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="answer">
+                        <b>Js:</b> <br>
+                        To track the cursor write the following code:- <br>
+
+                        function addEvent(obj, evt, fn) { <br>
+                        &emsp;    if (obj.addEventListener) { <br>
+                        &emsp;&emsp;    obj.addEventListener(evt, fn, false); <br>
+                        &emsp;    } <br>
+                        &emsp;    else if (obj.attachEvent) { <br>
+                        &emsp;&emsp;    obj.attachEvent("on" + evt, fn); <br>
+                        &emsp;    } <br>
+                        } <br>
+
+                        Let us use alert when the mouse leaves the window:- <br>
+                        addEvent(document, 'mouseout', function(evt) { <br>
+                            if (evt.toElement == null && evt.relatedTarget == null){  <br>
+                                alert('Left the Canves'); <br>
+                            } <br>
+                        });
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/jquery.js"></script>
+    <script>
+         
+        $(document).ready(function () {
+            $(".menu-btn").click(function(){
+                $(this).toggleClass("close");
+                $("nav ul").toggleClass("dp-block");
+            });
+            
+            //accordian
+            $(".heading").click(function(){  
+                if($(this).next().hasClass("active")){
+                    $(this).children("i").removeClass("fa-minus").addClass("fa-plus");
+                    $(this).next().removeClass("active").slideUp();
+                }else{
+                    $(this).children("i").removeClass("fa-plus").addClass("fa-minus");
+                    $(this).next().addClass("active").slideDown();
+                }
+                if($(".answer").hasClass("active")){
+                    $(".main-wrapper").css("margin-top","-80px");
+                }else{
+                    $(".main-wrapper").css("margin-top","0px");
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

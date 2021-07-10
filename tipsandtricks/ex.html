@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            font-size: 1.2rem;
+            background: red;
+        }
+        div:nth-child(2){
+            height: 60px;
+            width: 100%;
+            background: #000;
+            color: white;
+            text-align: center;
+        }
+        div:nth-child(3){
+            background: greenyellow;
+        }
+        .fix-class{
+            position: fixed;
+            top:0;
+        }
+        .last-fixed-position{
+            position: relative;
+            top:780px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse dicta asperiores quod omnis laboriosam beatae quaerat quia in quo corporis, architecto nostrum, sunt debitis porro autem voluptatum qui illo officiis error facilis non, blanditiis a odio? Recusandae optio impedit mollitia non, incidunt aut iusto eligendi totam expedita sed eum ducimus ad quo adipisci deleniti eos! Quaerat perspiciatis eos libero quidem, consequuntur maxime eveniet facere nostrum! Eos voluptatibus perspiciatis modi magnam, commodi beatae, eligendi quae impedit dignissimos veritatis eveniet cupiditate fuga dolore accusantium voluptatem quasi, quidem nesciunt esse. Possimus maiores eius id error placeat blanditiis, nesciunt consequuntur natus odio assumenda quaerat vero reprehenderit in ad aut. Aperiam molestias id laborum sapiente reprehenderit veniam reiciendis. Tenetur minima voluptatem quidem, eos esse aliquam nemo praesentium debitis laudantium sint fugit distinctio fuga harum sunt consectetur quas repellat sit adipisci dolor quod sequi! Doloremque eius id nihil voluptas, aspernatur quaerat unde praesentium ipsam explicabo suscipit distinctio esse nam porro excepturi et atque! Blanditiis possimus doloribus obcaecati, quisquam laudantium eius iure. Voluptatem ducimus deleniti culpa animi quos alias, commodi pariatur. Corrupti quibusdam rerum quia dolores qui repellat tenetur reprehenderit quaerat! Dignissimos minima modi, ab dolor fugiat iste quasi deserunt, totam numquam, exercitationem praesentium autem commodi vitae!
+    </div>
+
+    <div class="box">
+        Fix it
+    </div>
+
+    <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, nemo. Enim ipsum saepe molestiae omnis id veniam quod accusantium sed, dolorem vel iusto incidunt facilis aliquam distinctio porro aut ea, autem possimus totam assumenda alias veritatis? Optio blanditiis sapiente quos soluta asperiores ipsam, dolorem quam hic quidem quas minus cupiditate adipisci dignissimos natus accusamus sunt reiciendis magnam nesciunt eaque modi at veritatis nihil ad. Nulla deserunt repellat temporibus quisquam dolorum quis voluptate earum quidem quae? Aut harum corrupti error beatae explicabo tempore sunt eveniet id quos animi, sint excepturi odio, molestiae nam, voluptatibus et consectetur nisi minus laboriosam temporibus asperiores? Nostrum laboriosam distinctio, illum, dolorum explicabo obcaecati illo unde officia voluptatum vero, molestias id tenetur qui cumque adipisci excepturi rerum. Beatae temporibus fuga incidunt doloribus dicta. Officiis, ex. Nemo, accusantium iure illo magni molestias sapiente iusto placeat fugit tempore obcaecati officiis laudantium quaerat, sed, laborum tempora corporis! Voluptas minus provident reiciendis animi itaque eos dignissimos non, sit nihil praesentium atque, suscipit pariatur alias nam fugit, consectetur ea voluptatem delectus molestias officiis ipsum sequi veniam? Enim facilis qui nisi sed mollitia quam quas vel natus adipisci, cum amet, ad nobis maiores sunt est. Commodi quaerat veniam ea nemo nobis esse a.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem corrupti magni soluta iusto harum iste nobis molestias laboriosam nemo laudantium in id porro blanditiis ipsam repellat voluptate, vitae veniam ab sit qui enim cum? Eaque eius doloremque aut molestiae fuga fugiat consectetur suscipit et reprehenderit, eveniet voluptates! Culpa consequuntur ipsum laboriosam illo error necessitatibus ipsam quam in, aliquam sunt quaerat quis quae eveniet mollitia a blanditiis, voluptates nemo fugiat! Repudiandae doloremque impedit qui reprehenderit asperiores itaque cumque expedita sapiente corrupti animi illum ipsum illo optio iusto eum assumenda necessitatibus ratione molestias nihil, quam minus a? Perferendis, rem consequuntur nulla ipsum maiores molestiae sed porro ducimus tempora recusandae odio, sint, cumque numquam nobis dolor quisquam deserunt modi cupiditate et animi itaque doloribus. Facilis accusamus necessitatibus, dicta minus repellendus reprehenderit aspernatur pariatur aut quia repudiandae similique rerum excepturi vitae labore quae est nam ducimus aliquid atque! Asperiores quidem repudiandae tempora quibusdam dignissimos voluptate, consequuntur temporibus modi, deserunt consequatur reiciendis et expedita ipsum sunt corporis est! Molestiae, rem exercitationem ea quisquam laudantium accusantium similique dolore labore necessitatibus earum aliquid, consectetur velit tempore quidem ipsa aspernatur facilis? Labore explicabo tenetur voluptatibus eligendi placeat sint nostrum ab eaque cupiditate. Commodi deleniti magni odit quis molestias.
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        $(window).scroll(function(){
+            //var top = $(window).scrollTop();
+            //console.log(top);
+            if($(this).scrollTop()>572){
+                $(".box").addClass("fix-class");
+            }else{
+                $(".box").removeClass("fix-class");
+            }
+        });
+    </script>
+</body>
+</html>
