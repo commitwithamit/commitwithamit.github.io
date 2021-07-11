@@ -160,6 +160,7 @@ nav ul li a{
     font-size: 15px;
     padding: 5px 10px;
     display: none;
+    word-break: break-word;
 }
 .answer p, .answer b{
     color:#dccd2a;
@@ -180,7 +181,14 @@ pre{
 }
 
 /* MQ */
-
+@media screen and (min-width:360px){
+    .accordian{
+        width: 335px;
+    }
+    .answer{
+        word-break: keep-all;
+    }
+}
 @media screen and (min-width:576px) {
     .accordian{
         width: 400px;
