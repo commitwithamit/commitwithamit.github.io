@@ -145,6 +145,9 @@ nav ul li a{
     width: 300px;
     margin: 0 auto 10px;
 }
+.accordian:last-child {
+    padding-bottom: 45px;
+}
 .heading{
     padding: 5px 10px;
     background: #009688;
