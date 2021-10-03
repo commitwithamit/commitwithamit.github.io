@@ -10,26 +10,26 @@
 			"path": "..\\..\\Users\\Amit\\Desktop\\html videos"
 		},
 		{
-			"path": "..\\..\\project-X"
-		},
-		{
 			"path": ".."
 		},
 		{
 			"path": "..\\..\\Users\\Amit\\Desktop\\BS-practice"
 		},
 		{
-			"path": "..\\..\\Riya_Rawat"
-		},
-		{
 			"path": "..\\..\\boostrap-website"
 		},
 		{
 			"path": "..\\..\\xampp\\htdocs\\practice"
+		},
+		{
+			"path": "..\\..\\xampp\\htdocs\\dunder-mifflin"
+		},
+		{
+			"path": "..\\..\\xampp\\htdocs\\ongc"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "practice",
+		"liveServer.settings.multiRootWorkspaceName": "ongc",
 		"git.ignoreLimitWarning": true
 	}
 }
