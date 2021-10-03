@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="new-css.css">
+    <link rel="stylesheet" href="index.css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-icons-1.4.1/bootstrap-icons.css">
     <title>login</title>
 
 </head>
@@ -18,11 +19,12 @@
 
         <div class="box">
 
-            <div class="logo">
-                <img src="logo.png" alt="logo">
+            <div class="logo mb-4">
+                <img src="maroon-logo.png" alt="logo">
+                <img src="white-logo.png" class="white-logo" alt="logo">
             </div>
 
-            <h5 class="py-2 text-center">Member Login</h5>
+            <!-- <h5 class="py-2 text-center">Member Login</h5> -->
 
             <form action="#" method="post" class="px-5">
 
@@ -41,13 +43,32 @@
                 </div>
 
                 <div class="group">
-                    <input type="submit" value="Login" class="sub-btn btn w-100 mt-4 px-4 text-light fw-bold">
+                    <input type="submit" value="Login" class="sub-btn btn w-100 mt-4 px-4 fw-bold">
                 </div>
             </form>
         </div>
 
+        <div class="dark-light">
+            <div class="dl-btn">
+                <!-- <i class="bi bi-moon-stars-fill"></i> -->
+                <i class="bi bi-moon-stars"></i>
+                <i class="bi bi-brightness-high white-logo"></i>
+            </div>
+        </div>
+
     </div>
     
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".dark-light").click(function(){
+                $("body").toggleClass("dark");
+                $(".logo").find("img").toggle();
+                $(".dl-btn").find("i").toggle();
+            });
+
+        });
+    </script>
     
 </body>
 
