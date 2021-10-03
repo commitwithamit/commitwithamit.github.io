@@ -31,7 +31,14 @@ body{
     height: max-content;
     padding: 2rem 0;
 }
-h4{
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.logo > img{
+	width: 70px;
+}
+h5{
     color: var(--btn-clr);
 }
 .group{
