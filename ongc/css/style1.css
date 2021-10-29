@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@500;600;700');
+*{
+	border-radius: 0px;
+	font-family: "poppins",sans-serif;
+}
+
+body{
+	background-color:#ffe4c4 ;
+	display: flex;
+	align-items: center;
+	height: 100vh;
+}
+.login{
+	border: none ;
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+}
+
+.login-box{
+	color: white ;
+	background:	#A52A2A ;
+	text-align: center;
+	border-radius: 10px;
+	height: 415px;
+    width: 370px;
+    box-shadow: 5px 10px 18px #A52A2A ;
+}
+.logo-container > img{
+	width: 80px;
+}
+.logo-container{
+	margin-bottom: 50px;
+}
+
+.inp-con{
+	margin-bottom: 30px;
+}
+.extra-mb{
+	margin-bottom: 40px;
+}
+
+.text, .text:focus{
+	border-color: transparent;
+	border-bottom: 1px solid white;
+	background-color:#A52A2A;
+	color: white;
+	font-size: 1.1rem;
+}
+::placeholder, ::-moz-placeholder{
+	color:#f2d9d9 !important;	
+	font-size: 1rem;
+}
+/* disabling spin button on input type number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.sub-btn{
+	border-radius: 20px;
+	border: 0px;
+	padding: 5px 24px;
+	font-size: 18px;
+	color: #800000;
+}
+.sub-btn:hover{
+    background: #FFE1E1;
+	color:#000;
+}
+*:focus{
+	outline: none!important;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+}
