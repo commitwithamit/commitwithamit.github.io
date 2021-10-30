@@ -16,29 +16,30 @@
 <body>
     
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light px-sm-2 px-md-3 px-lg-5">
+    <nav class="navbar navbar-expand-md navbar-light bg-light px-sm-2 px-md-3 px-lg-5">
         <div class="container-fluid">
 
           <a class="navbar-brand" href="#">
             <img src="image/maroon-logo.png" alt="ONGC Logo">
           </a>
-          
-          <form class="mx-auto">
-            <div class="search-bar-form">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="" type="submit"><i class="bi bi-search"></i></button>
-            </div>
-          </form>
+
+          <div class="search-con">
+            <form class="">
+              <div class="search-bar-form">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="" type="submit"><i class="bi bi-search"></i></button>
+              </div>
+            </form>
+          </div>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="menu-icon"></span>
           </button>
-
+          <!-- collapse -->
           
-
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             
-            <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end d-flex">
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto justify-content-end d-flex">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i> Home</a>
               </li>
@@ -50,13 +51,13 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
-              </li>
+              </li>            
             </ul>
 
           </div>
+
         </div>
       </nav>
-
       <script src="bootstrap-5.0.0-beta2-dist/js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery.js"></script>
       <script>
@@ -69,3 +70,5 @@
       </script>
 </body>
 </html>
+
+
