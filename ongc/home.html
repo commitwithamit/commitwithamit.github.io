@@ -2,7 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible"<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css">
+        <!-- external css -->
+        <link rel="stylesheet" href="css/home.css">
+        <!-- bootstrap icon link -->
+        <link rel="stylesheet" href="bootstrap-icons-1.4.1/bootstrap-icons.css">
+        
+        <title>ONGC | Homepage</title>
+    </head>
+    <body>
+        
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light px-sm-2 px-md-3 px-lg-5">
+            <div class="container-fluid">
+    
+              <a class="navbar-brand me-0" href="#">
+                <img src="image/maroon-logo.png" alt="ONGC Logo">
+              </a>
+    
+              <div class="search-con">
+                <form class="">
+                  <div class="search-bar-form">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="" type="submit"><i class="bi bi-search"></i></button>
+                  </div>
+                </form>
+              </div>
+    
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="menu-icon"></span>
+              </button>
+              <!-- collapse -->
+              
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto justify-content-end d-flex">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i> Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-person-circle"></i> John Doe</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-gear"></i> Settings</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                  </li>            
+                </ul>
+    
+              </div>
+    
+            </div>
+          </nav>
+          <script src="bootstrap-5.0.0-beta2-dist/js/bootstrap.bundle.min.js"></script>
+          <script src="js/jquery.js"></script>
+          <script>
+            $(document).ready(function () {
+              $(".navbar-toggler").click(function(){
+                $(this).toggleClass("active");
+                $(this, ".menu-icon").toggleClass("rotate-center");
+              });
+            });
+          </script>
+    </body>
+    </html>
+    
+    
+     content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- bootstrap -->
     <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css">
