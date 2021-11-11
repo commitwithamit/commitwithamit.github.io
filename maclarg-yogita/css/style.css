@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
-
 html {
   scroll-behavior: smooth;
 }
@@ -143,31 +141,83 @@ header {
   background-color: #353fa5;
   mix-blend-mode: color-burn;
 }
-.banner img {
+.banner {
+  height: 100vh;
+  overflow: hidden;
+}
+.banner-img {
+  background-image: url(../images/bann-c.jpg);
   width: 100%;
   height: 100vh;
-  /* filter: blur(2px); */
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-attachment: fixed; */
+  background-size: cover;
 }
-
+.banner-img::before {
+  position: fixed;
+}
+@font-face {
+  font-family: "elianto";
+  src: url(../fonts/Elianto-Regular.ttf);
+  font-style: normal;
+}
 .banner-text {
+  max-width: 590px;
+  height: 210px;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  margin: -50px 0 0 -284px;
   text-align: center;
-  font-family: "Nunito", sans-serif;
+  font-family: elianto;
   font-weight: 700;
   color: #23235a;
+  backdrop-filter: blur(38px);
+  border-top: 4px solid #23235a;
+  border-left: 4px solid #23235a;
+  border-right: 4px solid #23235a;
 }
-.banner-text h1 b {
-  color: white;
-  text-shadow: 0px 0px 7px #cd2929,
-    0px 0px 14px #cd2935,
-    0px 0px 28px #cd2935,
-    0px 0px 56px #cd2935,
-    0px 0px 85px #cd2935;
+.banner-text::before {
+  content: "";
+  border-bottom: 4px solid #23235a;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 158px;
+  transition: all .3s ease;
+}
+.banner-text::after {
+  content: "";
+  border-bottom: 4px solid #23235a;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 158px;
+  transition: all .3s ease;
+}
+.banner-link:hover .banner-text::before,
+.banner-link:hover .banner-text::after{
+  width: 220px;
 }
 
+.banner-text h1 {
+  font-size: 3.5rem;
+}
+.banner-text h1 b {
+  color: #000;
+}
+.banner-heading {
+  padding: 2rem;
+  /* border: 4px solid #23235a; */
+  /* border-top: 4px solid #23235a;
+  border-left: 4px solid #23235a;
+  border-right: 4px solid #23235a; */
+}
+
+.banner-link {
+  margin-top: -36px;
+}
 .banner a {
   background: #23235a;
   border: 1px solid #23235a;
@@ -207,101 +257,96 @@ header {
   }
 }
 
-
-
 /* animation */
-  .animate {
-    font-size: 25px;
-    position: absolute;
-    top: 68px;
-    left: 200px;
-    line-height: 1;
-    display: none;
-  }
-  .animate span {
-    display: inline-block;
-  }
+.animate {
+  font-size: 25px;
+  position: absolute;
+  top: 68px;
+  left: 200px;
+  line-height: 1;
+  display: none;
+}
+.animate span {
+  display: inline-block;
+}
 
+.animate span:nth-of-type(2) {
+  animation-delay: 0.05s;
+}
+.animate span:nth-of-type(3) {
+  animation-delay: 0.1s;
+}
+.animate span:nth-of-type(4) {
+  animation-delay: 0.15s;
+}
+.animate span:nth-of-type(5) {
+  animation-delay: 0.2s;
+}
+.animate span:nth-of-type(6) {
+  animation-delay: 0.25s;
+}
+.animate span:nth-of-type(7) {
+  animation-delay: 0.3s;
+}
+.animate span:nth-of-type(8) {
+  animation-delay: 0.35s;
+}
+.animate span:nth-of-type(9) {
+  animation-delay: 0.4s;
+}
+.animate span:nth-of-type(10) {
+  animation-delay: 0.45s;
+}
+.animate span:nth-of-type(11) {
+  animation-delay: 0.5s;
+}
+.animate span:nth-of-type(12) {
+  animation-delay: 0.55s;
+}
+.animate span:nth-of-type(13) {
+  animation-delay: 0.6s;
+}
+.animate span:nth-of-type(14) {
+  animation-delay: 0.65s;
+}
+.animate span:nth-of-type(15) {
+  animation-delay: 0.7s;
+}
+.animate span:nth-of-type(16) {
+  animation-delay: 0.75s;
+}
+.animate span:nth-of-type(17) {
+  animation-delay: 0.8s;
+}
+.animate span:nth-of-type(18) {
+  animation-delay: 0.85s;
+}
+.animate span:nth-of-type(19) {
+  animation-delay: 0.9s;
+}
+.animate span:nth-of-type(20) {
+  animation-delay: 0.95s;
+}
 
-  .animate span:nth-of-type(2) {
-    animation-delay: .05s;
-  }
-  .animate span:nth-of-type(3) {
-    animation-delay: .1s;
-  }
-  .animate span:nth-of-type(4) {
-    animation-delay: .15s;
-  }
-  .animate span:nth-of-type(5) {
-    animation-delay: .2s;
-  }
-  .animate span:nth-of-type(6) {
-    animation-delay: .25s;
-  }
-  .animate span:nth-of-type(7) {
-    animation-delay: .3s;
-  }
-  .animate span:nth-of-type(8) {
-    animation-delay: .35s;
-  }
-  .animate span:nth-of-type(9) {
-    animation-delay: .4s;
-  }
-  .animate span:nth-of-type(10) {
-    animation-delay: .45s;
-  }
-  .animate span:nth-of-type(11) {
-    animation-delay: .5s;
-  }
-  .animate span:nth-of-type(12) {
-    animation-delay: .55s;
-  }
-  .animate span:nth-of-type(13) {
-    animation-delay: .6s;
-  }
-  .animate span:nth-of-type(14) {
-    animation-delay: .65s;
-  }
-  .animate span:nth-of-type(15) {
-    animation-delay: .7s;
-  }
-  .animate span:nth-of-type(16) {
-    animation-delay: .75s;
-  }
-  .animate span:nth-of-type(17) {
-    animation-delay: .8s;
-  }
-  .animate span:nth-of-type(18) {
-    animation-delay: .85s;
-  }
-  .animate span:nth-of-type(19) {
-    animation-delay: .9s;
-  }
-  .animate span:nth-of-type(20) {
-    animation-delay: .95s;
-  }
-
-
-  .four span {
+.four span {
   /* color: #8d6a00; */
   color: #000;
   opacity: 0;
   transform: translate(0, -100px) rotate(360deg) scale(0);
   animation: revolveDrop 1.5s forwards;
-  }
+}
 
-
-  @keyframes revolveDrop {
+@keyframes revolveDrop {
   10% {
-  transform: translate(0, -50px) rotate(180deg) scale(1);
+    transform: translate(0, -50px) rotate(180deg) scale(1);
   }
 
   60% {
-  transform: translate(0, 20px) scale(.8) rotate(0deg);
+    transform: translate(0, 20px) scale(0.8) rotate(0deg);
   }
 
   100% {
-  transform: translate(0) scale(1) rotate(0deg);
-  opacity: 1;
+    transform: translate(0) scale(1) rotate(0deg);
+    opacity: 1;
   }
-  }
+}

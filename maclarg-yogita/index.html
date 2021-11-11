@@ -95,15 +95,18 @@
     <!-- banner -->
     <div class="banner">
       <div class="color"></div>
-      <img src="images/bann.jpg" alt="" />
+      <!-- <img src="images/bann-c.jpg" alt="" /> -->
+      <div class="banner-img"></div>
       <div class="banner-text">
-        <h1>
-          <b
-            >India's Most Tech <br />
-            Solution Providers</b
-          >
-        </h1>
-        <a href="#" class="btn">Learn More</a>
+        <div class="banner-heading">
+          <h1>
+            <b>IndiA's Most Tech <br />
+              Solution PrOviders</b>
+          </h1>
+        </div>
+        <div class="banner-link">
+          <a href="#" class="btn banner-btn">Learn More</a>
+        </div>
       </div>
     </div>
 
@@ -176,9 +179,17 @@
             $(".animate").removeClass("four");
             $(".animate").css("display", "none");
           }
-        // var sc = $(document).scrollTop();
-        // console.log(sc);
       });
+      $(".banner-btn").hover(function () {
+          // over
+          $(".banner-text::before").css("border-bottom","4px solid red");
+          $(".banner-text::after").css("width","220px");
+        }, function () {
+          // out
+          $(".banner-text::before").css("width","158px");
+          $(".banner-text::after").css("width","158px");
+        }
+      );
     </script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
