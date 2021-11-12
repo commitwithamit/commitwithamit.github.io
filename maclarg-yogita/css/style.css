@@ -185,7 +185,7 @@ header {
   bottom: 0;
   left: 0;
   width: 158px;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .banner-text::after {
   content: "";
@@ -194,10 +194,10 @@ header {
   bottom: 0;
   right: 0;
   width: 158px;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .banner-link:hover .banner-text::before,
-.banner-link:hover .banner-text::after{
+.banner-link:hover .banner-text::after {
   width: 220px;
 }
 
@@ -261,8 +261,8 @@ header {
 .animate {
   font-size: 25px;
   position: absolute;
-  top: 68px;
-  left: 200px;
+  top: 23px;
+  left: 204px;
   line-height: 1;
   display: none;
 }
