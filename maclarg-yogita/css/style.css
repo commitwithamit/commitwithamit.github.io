@@ -104,6 +104,14 @@ header {
 .dropdown-item:hover {
   background-color: #ececed;
 }
+.dropdown-item p {
+  white-space: normal;
+}
+@media screen and (min-width: 992px) {
+  .dropdown-item p {
+    white-space: nowrap;
+  }
+}
 .dropdown-menu {
   margin-top: 0;
 }
@@ -164,6 +172,7 @@ header {
   font-style: normal;
 }
 .banner-text {
+  display: none;
   max-width: 590px;
   height: 210px;
   position: absolute;
@@ -275,28 +284,24 @@ header {
   font-size: 16px;
   padding-left: 29px;
 }
-/* .animate {
-  font-size: 25px;
-  position: absolute;
-  top: 23px;
-  left: 204px;
-  line-height: 1;
-  display: none;
-} */
-@media screen and (min-width: 440px) {
-  .animate-text-con {
-    min-height: 382px;
-  }
-  .animate {
-    font-size: 26px;
-    top: 13%;
-    padding-left: 60px;
-  }
-  .animate-2 {
-    bottom: 37%;
-    font-size: 23px;
-    padding-left: 52px;
-  }
+.learn-text {
+  text-align: center;
+}
+.learn-text h3{
+  text-align: center;
+  border-bottom: 1px solid #7d75ff45;
+  width: max-content;
+  margin: 0 auto;
+  padding-bottom: 6px;
+}
+.learn-text h3{
+  font-size: 1rem;
+}
+.learn-text div{
+  margin-top: 10px;
+}
+.learn-links{
+  color: #6c63ff;
 }
 .animate span,
 .animate-2 span {
@@ -392,6 +397,62 @@ header {
 }
 
 /* media query */
+
+@media screen and (min-width: 440px) {
+  .animate-text-con {
+    min-height: 382px;
+  }
+  .animate {
+    font-size: 26px;
+    top: 13%;
+    padding-left: 60px;
+  }
+  .animate-2 {
+    bottom: 37%;
+    font-size: 23px;
+    padding-left: 52px;
+  }
+}
+
+@media (min-width: 576px) {
+  .learn p {
+    font-size: 1rem;
+  }
+  .learn-text h3 {
+    font-size: 1.5rem;
+}
+}
+@media (min-width: 768px) {
+  .learn p {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 992px) {
+  .learn p {
+    /* font-size: ; */
+  }
+  .learn-text {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap;
+
+  }
+  .learn-text h3{
+    font-size: 1.75rem;
+  }
+  .learn-text div{
+    margin-top: -20px;
+  }
+  .learn-text div p:nth-of-type(2) {
+    text-indent: 155px;
+  }
+}
+@media (min-width: 1200px) {
+  .learn p {
+    /* font-size: ; */
+  }
+}
 
 @media (max-width: 1150px) {
   .navbar-nav {
