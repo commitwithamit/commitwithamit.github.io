@@ -375,7 +375,7 @@ header {
 
 .four span {
   /* color: #8d6a00; */
-  color: #000;
+  color: #fff;
   opacity: 0;
   transform: translate(0, -100px) rotate(360deg) scale(0);
   animation: revolveDrop 1.5s forwards;
