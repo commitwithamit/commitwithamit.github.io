@@ -67,13 +67,13 @@
                   </ul>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item drop-hide">
                   <a class="nav-link" aria-current="page" href="#">Projects</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item drop-hide">
                   <a class="nav-link" href="#">Store</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item drop-hide">
                   <a class="nav-link">Tech News</a>
                 </li>
               </ul>
@@ -97,7 +97,7 @@
       <div class="color"></div>
       <!-- <img src="images/bann-c.jpg" alt="" /> -->
       <div class="banner-img"></div>
-      <div class="banner-text">
+      <div class="banner-text backdrop-blur">
         <div class="banner-heading">
           <h1>
             <b>IndiA's Most Tech <br />
@@ -115,50 +115,56 @@
       <hr width="80%" />
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-6 animate-text-con">
-            <img src="images/svg-1.svg" width="100%" />
+          <div class="col-12 col-lg-6 animate-text-con">
+            <!-- <img src="images/svg-1.svg"> -->
             <div class="animate four">
-                <span>L</span>
-                <span>e</span>
-                <span>a</span>
-                <span>r</span> 
-                <span>n</span>
-                &nbsp;
-                <span>b</span>
-                <span>y</span>
-                <br>
-                <span>y</span>
-                <span>o</span>
-                <span>u</span>
-                <span>r</span>
-                <span>s</span>
-                <span>e</span>
-                <span>l</span>
-                <span>f</span>
+              <span>L</span>
+              <span>e</span>
+              <span>a</span>
+              <span>r</span> 
+              <span>n</span>
+              &nbsp;
+              <span>b</span>
+              <span>y</span>
+              &nbsp;
+              <span>y</span>
+              <span>o</span>
+              <span>u</span>
+              <span>r</span>
+              <span>s</span>
+              <span>e</span>
+              <span>l</span>
+              <span>f</span>
+            </div>
+
+            <div class="animate-2 four">
+              <span>N</span>
+              <span>e</span>
+              <span>e</span>
+              <span>d</span>
+              &nbsp;
+              <span>O</span>
+              <span>u</span>
+              <span>r</span>
+              &nbsp;
+              <span>H</span>
+              <span>e</span>
+              <span>l</span>
+              <span>p</span>
+              <span>?</span>
             </div>
           </div>
-          <div class="col-12 col-md-6 pt-5">
-            <h2 class="text-center">Lorem ipsum dolor sit amet.</h2>
+          <div class="col-12 col-lg-6 pt-3 text-center">
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab non
-              voluptatibus imped minima. Nostrum, ab omnis, deserunt excepturi
-              labore nulla, vel sunt eligendi totam saepe reiciendis est id
-              natus adipisci.
-              <a href="#">learn by yourself</a>
-              dolor sit, amet consectetur adipisicing elit. Libero consequatur
-              cumque maiores totam blanditiis facere accusamus tempora, quos
-              fugiat asperiores numquam quisquam iste vitae cupiditate in minima
-              eveniet ea minus ab officiis. Vel, quam culpa dignissimos fuga
-              error iusto dolores!
-              <a href="#">need our help?</a>
-              Beatae quos dolor magnam odio repellendus, dolore sunt minus enim
-              nihil adipisci odit quas?
+              We provide step by step guide to help you repair your gadgets at the place of your own choice with our <a href="#">learn by yourself</a> guide.
             </p>
+            <p class="">
+              If your are looking for someone to fix your gadgets we are there for you as well. Please check out <a href="#">need our help?</a> section.
+            </p>  
           </div>
         </div>
       </div>
     </div>
-
     <script src="js/jquery.js"></script>
     <script>
       $(document).ready(function () {
@@ -173,159 +179,20 @@
       });
       $(window).scroll(function(){
           if($(this).scrollTop()>370){
-            $(".animate").addClass("four");
-            $(".animate").css("display", "block");
+            $(".animate, .animate-2").addClass("four");
+            $(".animate, .animate-2").css("display", "flex");
           }else{
-            $(".animate").removeClass("four");
-            $(".animate").css("display", "none");
+            $(".animate, .animate-2").removeClass("four");
+            $(".animate, .animate-2").css("display", "none");
           }
       });
-      $(".banner-btn").hover(function () {
-          // over
-          $(".banner-text::before").css("border-bottom","4px solid red");
-          $(".banner-text::after").css("width","220px");
-        }, function () {
-          // out
-          $(".banner-text::before").css("width","158px");
-          $(".banner-text::after").css("width","158px");
-        }
-      );
+      $(".drop-hide").hover(function(){
+        $(".dropdown-menu, .drop-link").removeClass("show");
+
+      });
     </script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
-</html>
-<!-- 
-<div class="container">
-    <div class="animate four">
-      <span>L</span>
-      <span>e</span>
-      <span>a</span>
-      <span>r</span> 
-      <span>n</span>
-      &nbsp;
-      <span>b</span>
-      <span>y</span>
-      <br>
-      <span>y</span>
-      <span>o</span>
-      <span>u</span>
-      <span>r</span>
-      <span>s</span>
-      <span>e</span>
-      <span>l</span>
-      <span>f</span>
-    </div>
-  </div>
-  
-  @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
-  *{
-      margin: 0;
-      padding: 0;
-  }
-  body{
-      font-family: 'Lato', sans-serif;
-      font-size: 14px;
-      color: #999999;
-      word-wrap:break-word;
-  }
-  .container {
-      width: 100%;
-      margin: auto;
-      font-weight: 900;
-      text-transform: uppercase;
-      text-align: center;
-      padding: 0 0 200px;
-  }
-  .animate {
-      font-size: 50px;
-      margin: 100px 0 0;
-  }
-  .animate span {
-      display: inline-block;
-  }
-  
-  
-  .animate span:nth-of-type(2) {
-      animation-delay: .05s;
-  }
-  .animate span:nth-of-type(3) {
-      animation-delay: .1s;
-  }
-  .animate span:nth-of-type(4) {
-      animation-delay: .15s;
-  }
-  .animate span:nth-of-type(5) {
-      animation-delay: .2s;
-  }
-  .animate span:nth-of-type(6) {
-      animation-delay: .25s;
-  }
-  .animate span:nth-of-type(7) {
-      animation-delay: .3s;
-  }
-  .animate span:nth-of-type(8) {
-      animation-delay: .35s;
-  }
-  .animate span:nth-of-type(9) {
-      animation-delay: .4s;
-  }
-  .animate span:nth-of-type(10) {
-      animation-delay: .45s;
-  }
-  .animate span:nth-of-type(11) {
-      animation-delay: .5s;
-  }
-  .animate span:nth-of-type(12) {
-      animation-delay: .55s;
-  }
-  .animate span:nth-of-type(13) {
-      animation-delay: .6s;
-  }
-  .animate span:nth-of-type(14) {
-      animation-delay: .65s;
-  }
-  .animate span:nth-of-type(15) {
-      animation-delay: .7s;
-  }
-  .animate span:nth-of-type(16) {
-      animation-delay: .75s;
-  }
-  .animate span:nth-of-type(17) {
-      animation-delay: .8s;
-  }
-  .animate span:nth-of-type(18) {
-      animation-delay: .85s;
-  }
-  .animate span:nth-of-type(19) {
-      animation-delay: .9s;
-  }
-  .animate span:nth-of-type(20) {
-      animation-delay: .95s;
-  }
-  
-  
-  .four span {
-	color: #8d6a00;
-	opacity: 0;
-	transform: translate(0, -100px) rotate(360deg) scale(0);
-	animation: revolveDrop 1.5s forwards;
-}
-
-
-@keyframes revolveDrop {
-	30% {
-		transform: translate(0, -50px) rotate(180deg) scale(1);
-	}
-
-	60% {
-		transform: translate(0, 20px) scale(.8) rotate(0deg);
-	}
-
-	100% {
-		transform: translate(0) scale(1) rotate(0deg);
-		opacity: 1;
-	}
-}
-  --> 
+</html> 
   
