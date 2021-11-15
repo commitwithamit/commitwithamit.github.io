@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -154,8 +155,8 @@ header {
   height: 100vh;
   overflow: hidden;
 }
-.banner-img {
-  background-image: url(../images/bann-c.jpg);
+.banner {
+  background-image: url(../images/bann.jpg);
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
@@ -163,16 +164,23 @@ header {
   /* background-attachment: fixed; */
   background-size: cover;
 }
-.banner-img::before {
-  position: fixed;
-}
 @font-face {
   font-family: "elianto";
   src: url(../fonts/Elianto-Regular.ttf);
   font-style: normal;
 }
+.banner-text-con {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .banner-text {
-  display: none;
+  text-align: center;
+  height: 135px;
+}
+/* .banner-text {
   max-width: 590px;
   height: 210px;
   position: absolute;
@@ -180,17 +188,13 @@ header {
   left: 50%;
   margin: -50px 0 0 -284px;
   text-align: center;
-  font-family: elianto;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   color: #23235a;
-  /* backdrop-filter: blur(38px);
-  -webkit-backdrop-filter: blur(38px);
-  -moz-backdrop-filter:blur(38px);
-  -ms-backdrop-filter:blur(38px); */
   border-top: 4px solid #23235a;
   border-left: 4px solid #23235a;
   border-right: 4px solid #23235a;
-}
+} */
 /* slightly transparent fallback */
 .backdrop-blur {
   background-color: rgba(255, 255, 255, 0.9);
@@ -210,7 +214,7 @@ header {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 158px;
+  width: 55px;
   transition: all 0.3s ease;
 }
 .banner-text::after {
@@ -219,7 +223,7 @@ header {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 158px;
+  width: 55px;
   transition: all 0.3s ease;
 }
 .banner-link:hover .banner-text::before,
@@ -228,7 +232,8 @@ header {
 }
 
 .banner-text h1 {
-  font-size: 3.5rem;
+  font-size: 1.5rem;
+  /* font-size: 3.5rem; */
 }
 .banner-text h1 b {
   color: #000;
@@ -236,19 +241,20 @@ header {
 .banner-heading {
   padding: 2rem;
   /* border: 4px solid #23235a; */
-  /* border-top: 4px solid #23235a;
+  border-top: 4px solid #23235a;
   border-left: 4px solid #23235a;
-  border-right: 4px solid #23235a; */
+  border-right: 4px solid #23235a;
 }
 
 .banner-link {
-  margin-top: -36px;
+  margin-top: -27px;
 }
 .banner a {
   background: #23235a;
   border: 1px solid #23235a;
   color: white;
-  padding: 0.7rem 2rem;
+  padding: 0.4rem 1rem;
+  /* padding: 0.7rem 2rem; */
   margin: 0.5rem 0;
 }
 .banner a:hover {
@@ -287,20 +293,20 @@ header {
 .learn-text {
   text-align: center;
 }
-.learn-text h3{
+.learn-text h3 {
   text-align: center;
   border-bottom: 1px solid #7d75ff45;
   width: max-content;
   margin: 0 auto;
   padding-bottom: 6px;
 }
-.learn-text h3{
+.learn-text h3 {
   font-size: 1rem;
 }
-.learn-text div{
+.learn-text div {
   margin-top: 10px;
 }
-.learn-links{
+.learn-links {
   color: #6c63ff;
 }
 .animate span,
@@ -420,7 +426,7 @@ header {
   }
   .learn-text h3 {
     font-size: 1.5rem;
-}
+  }
 }
 @media (min-width: 768px) {
   .learn p {
@@ -436,12 +442,11 @@ header {
     align-items: center;
     text-align: left;
     flex-wrap: wrap;
-
   }
-  .learn-text h3{
+  .learn-text h3 {
     font-size: 1.75rem;
   }
-  .learn-text div{
+  .learn-text div {
     margin-top: -20px;
   }
   .learn-text div p:nth-of-type(2) {
