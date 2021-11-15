@@ -32,11 +32,6 @@ a {
 }
 
 header {
-  /* background-image: url(../images/bann.jpg); */
-  /* background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh; */
   background: #23235a;
   position: fixed;
   right: 0;
@@ -46,7 +41,6 @@ header {
 
 .header {
   width: 100%;
-  /* position: absolute; */
   z-index: 999;
 }
 
@@ -160,12 +154,10 @@ header {
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
-  
   background-position: center center;
-  -webkit-background-position:center center;
-  /* background-attachment: fixed; */
+  -webkit-background-position: center center;
   background-size: cover;
-  -webkit-background-size:cover;
+  -webkit-background-size: cover;
 }
 @font-face {
   font-family: "elianto";
@@ -182,22 +174,10 @@ header {
 .banner-text {
   text-align: center;
   height: 135px;
-}
-/* .banner-text {
-  max-width: 590px;
-  height: 210px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -50px 0 0 -284px;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  color: #23235a;
   border-top: 4px solid #23235a;
   border-left: 4px solid #23235a;
   border-right: 4px solid #23235a;
-} */
+}
 /* slightly transparent fallback */
 .backdrop-blur {
   background-color: rgba(255, 255, 255, 0.9);
@@ -243,10 +223,6 @@ header {
 }
 .banner-heading {
   padding: 2rem;
-  /* border: 4px solid #23235a; */
-  border-top: 4px solid #23235a;
-  border-left: 4px solid #23235a;
-  border-right: 4px solid #23235a;
 }
 
 .banner-link {
@@ -257,7 +233,6 @@ header {
   border: 1px solid #23235a;
   color: white;
   padding: 0.4rem 1rem;
-  /* padding: 0.7rem 2rem; */
   margin: 0.5rem 0;
 }
 .banner a:hover {
@@ -272,7 +247,6 @@ header {
   background-position: center;
   min-height: 253px;
   position: relative;
-  /* min-height: 467px; */
 }
 
 .animate,
@@ -430,10 +404,29 @@ header {
   .learn-text h3 {
     font-size: 1.5rem;
   }
+  .banner-text {
+    height: 157px;
+  }
+  .banner-text h1 {
+    font-size: 2rem;
+  }
 }
 @media (min-width: 768px) {
   .learn p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+  .learn-text {
+    text-align: left;
+}
+  .animate {
+    font-size: 23px;
+    top: 20%;
+    padding-left: 48px;
+  }
+  .animate-2 {
+    bottom: 40%;
+    font-size: 19px;
+    padding-left: 40px;
   }
 }
 @media (min-width: 992px) {
@@ -453,12 +446,32 @@ header {
     margin-top: -20px;
   }
   .learn-text div p:nth-of-type(2) {
-    text-indent: 155px;
+    text-indent: 100px;
+  }
+  .animate {
+    font-size: 26px;
+    top: 13%;
+    padding-left: 60px;
+  }
+  .animate-2 {
+    bottom: 37%;
+    font-size: 23px;
+    padding-left: 52px;
   }
 }
 @media (min-width: 1200px) {
-  .learn p {
-    /* font-size: ; */
+  .banner-text {
+    height: 211px;
+  }
+  .banner-text h1 {
+    font-size: 3.5rem;
+  }
+  .banner a {
+    padding: 0.7rem 2rem;
+  }
+  .banner-text::before,
+  .banner-text::after {
+    width: 135px;
   }
 }
 

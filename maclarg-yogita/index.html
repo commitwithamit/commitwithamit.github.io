@@ -117,7 +117,7 @@
       <hr width="80%" class="mx-auto"/>
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-6 animate-text-con">
+          <div class="col-12 col-md-6 animate-text-con">
             <!-- <img src="images/svg-1.svg"> -->
             <div class="animate four">
               <span>L</span>
@@ -156,14 +156,14 @@
               <span>?</span>
             </div>
           </div>
-          <div class="col-12 col-lg-6 pt-3 learn-text">
+          <div class="col-12 col-md-6 pt-3 pt-md-5 pt-lg-0 learn-text">
             <h3>Do it yourself or Book a Repair </h3>
             <div>
               <p class="mb-0">
                 We provide step by step guide to help you repair your gadgets at the place of your own choice with our <a href="#" class="learn-links">learn by yourself</a> guide.
               </p>
               <p>
-                If you are looking for someone to fix your gadgets we are there for you as well. Please check out <a href="#" class="learn-links">need our help?</a> section.
+                If you are looking for someone to fix your gadgets we are there for you as well. To book a repair please check out <a href="#" class="learn-links">need our help?</a> section.
               </p> 
             </div> 
           </div>
@@ -173,6 +173,7 @@
     <script src="js/jquery.js"></script>
     <script>
       $(document).ready(function () {
+        // dropdown hide/show & color bg changes
         $(".dropdown").hover(function () {
           $(".dropdown .dropdown-menu").toggleClass("display");
           if ($(".dropdown .dropdown-menu").hasClass("display")) {
@@ -181,6 +182,17 @@
             $(".drop-link").css("color", "white");
           }
         });
+
+        // hiding dropdown on hover of other links
+        $(".drop-hide").hover(function(){
+          $(".dropdown-menu, .drop-link").removeClass("show");
+        });
+
+        // hiding dropdown on click of dropdown menu
+        $(".dropdown").click(function () { 
+          $(".dropdown-menu").toggleClass("show");
+        });
+
       });
       $(window).scroll(function(){
           if($(this).scrollTop()>370){
@@ -191,10 +203,7 @@
             $(".animate, .animate-2").css("display", "none");
           }
       });
-      $(".drop-hide").hover(function(){
-        $(".dropdown-menu, .drop-link").removeClass("show");
-
-      });
+      
     </script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
