@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="bootstrap-icons-1.7.0/bootstrap-icons.css">
+    <!-- navbar css -->
+    <link rel="stylesheet" href="css/navbar-style.css">
+    <!-- external css -->
+    <link rel="stylesheet" href="css/profile-style.css">
+    <link rel="stylesheet" href="css/homepage-style.css">
+    <title>John Doe | ONGC</title>
+</head>
+<body>
+    <!-- navbar -->
+<nav class="navbar navbar-light bg-light navbar-expand-lg">
+    <div class="container-fluid">
+        <!-- logo -->
+        <a class="navbar-brand" href="#">
+            <img src="images/maroon-logo.png" alt="ONGC Logo">
+        </a>
+
+        <!-- desktop search bar -->
+        <div class="nav-search">
+        <form class="">
+            <div class="search-bar-form">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="" type="submit"><i class="bi bi-search"></i></button>
+            </div>
+        </form>
+        </div>
+
+        <!-- menu button -->
+        <button type="button" class="navbar-toggler"><span class="menu-icon"></span></button>
+
+        <!-- collapsing menu -->
+        <div class="collapse-menu">
+            <ul class="navbar-nav">
+                <!-- search bar for mob view -->
+                <li class="nav-item nav-ham-search">
+                <form class="">
+                    <div class="search-bar-form">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="" type="submit"><i class="bi bi-search"></i></button>
+                    </div>
+                </form>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-house"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-person-circle"></i> John Doe</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-gear"></i> Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                </li> 
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="main-con">
+    <!-- pro pic, name designation, bts=> edit profile & album -->
+    <div class="head">
+        <div class="bio-data">
+            <div class="profile-pic-con">
+                <img src="images/pro-pic.jpg">
+            </div>
+            <div class="user-name-con">
+                <h3>John Doe</h3>
+                <h6>Retired</h6>
+            </div>
+            <div class="btn-con">
+                <button class="btn-primary btn">Edit Profile</button>
+                <button class="btn-secondary btn">Album</button>
+            </div>
+        </div>
+        <div class="hr-line"></div>
+    </div>
+
+    <!-- add post block -->
+    <div class="add-post-block">
+        <form action="#" method="post" enctype="multipart/form-data">
+          <input type="text" name="caption" id="inp-caption" placeholder="Write something here..." autocomplete="off" class="mb-3">
+    
+          <!-- displaying img/vid to user before uploading -->
+          <div class="display-img-vid-con">
+            <img src="image/Penguins.jpg">
+          </div>
+    
+          <label for="inp-img-vid" class="btn-img-vid">
+            <i class="bi bi-images"></i><span> photos/videos</span>
+            <input type="file" accept="image/*, video/*" name="img-vid" id="inp-img-vid">
+          </label>
+          <label for="inp-sub-post" class="btn-sub-post">
+            <i class="bi bi-send"></i>
+            <input type="submit" value="Post" id="inp-sub-post">
+          </label>
+        </form>
+    </div>
+
+    <!-- user's own post recent to older -->
+    <div class="post-block">
+        <!-- single post container -->
+        <div class="post-container">
+          <!-- employee's profile image, name -->
+          <div class="emp-pro-img-con">
+            <img src="images/pro-pic.jpg"> 
+            <span class="name-date-con">
+              <div class="emp-name">
+                Jone Doe
+              </div>
+              <div class="post-date">
+                Today 1:15 PM
+              </div>
+            </span>
+          </div>
+          <hr class="post-br-line">
+          <!-- uploaded post of user -->
+          <div class="post-main">
+            <img src="images/post-pic.jpg" class="emp-img-vid">
+            <div class="caption">
+              <!-- caption (if any) --> 
+              This is Pam and Jim.
+            </div>
+            <div class="like-cmt-con">
+              <span class="btn-like">
+                <!-- When liked, remove class bi-hand-thumbs-up and add bi-hand-thumbs-up-fill and vice versa-->
+                <i class="bi bi-hand-thumbs-up"></i>
+              </span>
+              <span class="btn-comment">
+                <i class="bi bi-chat-square-text"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</main>
+
+    <script src="bootstrap-5.0.0-beta2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            // navbar toggler 
+            $(".navbar-toggler").click(function(){
+                $(this).toggleClass("active");
+                $(this, ".menu-icon").toggleClass("rotate-center");
+                $(".collapse-menu").slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>
