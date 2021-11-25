@@ -7,7 +7,7 @@
   margin: 1.5rem auto 0;
 }
 .profile-pic-con {
-  margin-bottom: 1.2rem;
+  margin: 0 auto 1.2rem;
   width: 150px;
   height: 150px;
   border-radius: 3px;
@@ -80,7 +80,7 @@
 /* start -> modal edit form */
 
 .form-group{
-  width: 70%;
+  width: 90%;
   margin: 0 auto 1.8rem auto;
   position: relative;
 }
@@ -113,7 +113,7 @@
   border-radius: 3px;
 }
 .form-group-1{
-  width: 70%;
+  width: 90%;
   margin: 0 auto 1.8rem auto;
   position: relative;
 }
@@ -125,9 +125,22 @@
   margin: auto;
   display: block;
 }
+input, textarea{
+  background: transparent;
+}
 /* end -> modal edit form */
 
-
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
 
 @media (min-width: 768px) {
   .bio-data {
@@ -138,6 +151,7 @@
   }
   .profile-pic-con {
     margin-right: 15px;
+    margin-left: 0px;
     margin-bottom: 0;
   }
   .user-name-con {
