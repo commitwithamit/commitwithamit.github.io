@@ -28,6 +28,83 @@
   text-align: center;
   margin-bottom: 1.2rem;
 }
+
+/* start-> edit pro btn and album btn */
+
+.btn-edit-pro,
+.btn-album {
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+.btn-edit-pro i,
+.btn-album i {
+  padding: 7px 12px 9px 12px;
+  border-radius: 3px 0 0 3px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-edit-pro span,
+.btn-album span{
+  padding: 6px 10px 7px 9px;
+  border-radius: 0 3px 3px 0;
+  display: inline-block;
+}
+.btn-edit-pro{
+  background: #0d6efd;
+  margin-right: 0.8rem;
+}
+.btn-edit-pro i{
+  background: #0c55c1;
+}
+.btn-album,
+.btn-album span{
+  background: #6c757d;
+}
+.btn-album i{
+  background: #53575a;
+}
+
+.btn-edit-pro span::before{
+  background-color: #0c55c1;
+}
+.btn-album span::before{
+  background-color: #53575a;
+}
+.btn-edit-pro span::before,
+.btn-album span::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0px 3px 3px 0px;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms linear;
+}
+.btn-edit-pro:hover span::before,
+/* .btn-edit-pro:focus span::before, */
+.btn-album:hover span::before,
+.btn-album:focus span::before{
+  transform: scaleX(1);
+}
+.btn-edit-pro span,
+.btn-album span{
+  /* background-color: #0d6efd; */
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* .btn-edit-pro:hover span,
+.btn-edit-pro:hover{
+  background: #0c55c1;
+} */
+/* end-> edit pro btn and album btn */
+
 .hr-line {
   width: 100%;
   border: none;

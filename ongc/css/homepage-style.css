@@ -49,7 +49,6 @@ background: #fff !important; */
   outline: none;
   box-shadow: 0 0 0 0 !important;
 }
-
 /* main = add post and showing post */
 .main-con {
   width: 100%;
@@ -79,39 +78,79 @@ background: #fff !important; */
 .display-img-vid-con img {
   width: 100%;
 }
+
+/* start-> add post buttons */
+#inp-img-vid, #inp-sub-post{
+  display: none; /* inp:file */
+}
 .btn-img-vid,
-.btn-sub-post {
+.btn-sub-post{
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
-}
-.btn-img-vid{
-  background: #027214;
-    padding: 0.35rem 0;
-}
-.btn-img-vid i {
-  background: #027214;
-}
-.btn-img-vid span {
-  background: #219b35;
-  display: none;
+  border: none;
 }
 .btn-img-vid i,
 .btn-sub-post i {
-  padding: 8px 12px;
-  border-radius: 3px;
+  padding: 7px 12px 9px 12px;
+  border-radius: 3px 0 0 3px;
   color: #fff;
   cursor: pointer;
 }
-.btn-sub-post i {
+.btn-img-vid span,
+.btn-sub-post span{
+  padding: 6px 10px 7px 9px;
+  border-radius: 0 3px 3px 0;
+  display: inline-block;
+  border: none;
+  color: #fff;
+}
+.btn-img-vid{
+  background: #219b35;
+  margin-right: 0.8rem;
+}
+.btn-img-vid i{
+  background: #027214;
+}
+.btn-sub-post{
+  background: #a51e24;
+}
+.btn-sub-post i{
   background: #810006;
 }
-#inp-sub-post {
-  display: none;
+.btn-sub-post span{
+  background: transparent;
 }
-#inp-img-vid {
-  display: none;
+.btn-img-vid span::before{
+  background-color: #027214;
 }
+.btn-sub-post span::before{
+  background-color: #810006!important;
+}
+.btn-img-vid span::before,
+.btn-sub-post span::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0px 3px 3px 0px;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms linear;
+}
+.btn-img-vid:hover span::before,
+.btn-img-vid:focus span::before,
+.btn-sub-post:hover span::before,
+.btn-sub-post:focus span::before{
+  transform: scaleX(1);
+}
+.btn-img-vid span,
+.btn-sub-post span{
+  position: relative;
+  z-index: 2;
+}
+/* end-> add post buttons */
+
 /* showing other people's post */
 .post-block {
   padding: 1rem;
@@ -127,12 +166,19 @@ background: #fff !important; */
   align-items: flex-end;
   width: max-content;
 }
-.emp-pro-img-con img {
-  width: 45px;
+.pro-img-con {
+  width: 50px;
+  height: 50px;
   margin-right: 10px;
   border-radius: 3px;
+  overflow: hidden;
 }
-
+.pro-img-con img{
+  width: 100%;
+  height: 100%;
+  /* object-fit: fill; */
+  border-radius: 3px;
+}
 .emp-pro-img-con .emp-name {
   font-size: 1.2rem;
   font-weight: 600;
@@ -167,107 +213,18 @@ background: #fff !important; */
 
 /* Media Queries */
 @media screen and (min-width: 576px) {
-  .navbar {
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-  }
-  .nav-ham-search {
-    display: none;
-  }
-  .nav-search {
-    display: block;
-    flex-grow: 0.2;
-  }
   .main-con {
     max-width: 500px;
   }
-  .btn-img-vid span,
-  #inp-sub-post {
-    display: inline;
-  }
-  .btn-img-vid,
-  .btn-sub-post {
-    border-radius: 3px;
-    color: #fff;
-    cursor: pointer;
-  }
-  .btn-img-vid i {
-    background: #027214;
-  }
-  .btn-img-vid span {
-    background: #219b35;
-  }
-  .btn-img-vid i,
-  .btn-sub-post i {
-    padding: 8px 12px;
-    border-radius: 3px 0px 0px 3px;
-    color: #fff;
-    cursor: pointer;
-  }
-  .btn-img-vid span,
-  .btn-sub-post input {
-    padding: 8px 12px 8px 5px;
-    border-radius: 0px 3px 3px 0px;
-    color: #fff;
-    cursor: pointer;
-  }
-  .btn-sub-post i {
-    background: #810006;
-  }
-  .btn-sub-post,
-  .btn-sub-post input {
-    background: #a51e24;
-    border: none;
-  }
-  .btn-sub-post input {
-    padding: 7px 12px 6px 5px;
-  }
-  #inp-img-vid {
-    display: none;
-  }
 }
 @media screen and (min-width: 768px) {
-  .navbar {
-    padding-left: 1.7rem;
-    padding-right: 1.7rem;
-  }
-  .navbar-brand img {
-    width: 55px;
-  }
-  .navbar-nav .nav-link {
-    font-size: 1.2rem;
-  }
   .main-con {
     max-width: 700px;
   }
 }
 @media screen and (min-width: 992px) {
-  .navbar {
-    padding-left: 4.7rem;
-    padding-right: 4.7rem;
-  }
-  .collapse-menu {
-    display: flex !important;
-    flex-basis: auto;
-  }
-  .navbar-expand-lg .navbar-nav {
-    justify-content: space-evenly;
-    display: flex;
-    width: 100%;
-  }
-  .navbar-toggler {
-    display: none;
-  }
   .main-con {
     max-width: 800px;
-  }
-}
-@media screen and (min-width: 1110px) {
-  .collapse-menu {
-    width: 46%;
-  }
-  .navbar-nav li:nth-of-type(2) {
-    margin-left: 0;
   }
 }
 @media screen and (min-width: 1200px) {

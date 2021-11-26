@@ -79,10 +79,14 @@
       </div>
       <div class="btn-con">
         <!-- Button trigger modal carrying edit profile form-->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Edit Profile
+        <button type="button" class="btn-edit-pro" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <!-- do not put space between <i> & <span> if you do then you'll se space in btn on browser -->
+          <i class="bi bi-pencil"></i><span>Edit Profile</span>
+          <!-- #0d6efd h- #0b5ed7 -->
         </button>
-        <button class="btn-secondary btn">Album</button>
+        <button class="btn-album">
+          <i class="bi bi-images"></i><span>Album</span>
+        </button>
       </div>
     </div>
     <div class="hr-line"></div>
@@ -99,12 +103,11 @@
       </div>
 
       <label for="inp-img-vid" class="btn-img-vid">
-        <i class="bi bi-images"></i><span> photos/videos</span>
+        <i class="bi bi-file-earmark-plus"></i><span> photos/videos</span>
         <input type="file" accept="image/*, video/*" name="img-vid" id="inp-img-vid">
       </label>
       <label for="inp-sub-post" class="btn-sub-post">
-        <i class="bi bi-send"></i>
-        <input type="submit" value="Post" id="inp-sub-post">
+        <i class="bi bi-send"></i><span>Post</span><input type="submit" value="Post" id="inp-sub-post">
       </label>
     </form>
   </div>
