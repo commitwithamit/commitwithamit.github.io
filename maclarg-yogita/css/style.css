@@ -239,7 +239,10 @@ header {
   text-decoration: underline;
 }
 
-/* Learn How To Repair Any Gadget */
+/* start -> Learn How To Repair Any Gadget */
+.h2, h2 {
+  font-size: 1.5rem;
+}
 .animate-text-con {
   background-image: url(../images/svg-2.svg);
   background-repeat: no-repeat;
@@ -267,6 +270,10 @@ header {
   font-size: 16px;
   padding-left: 29px;
 }
+.learn{
+  background: #c4c4ff;
+  color: #4c4646;
+}
 .learn-text {
   text-align: center;
 }
@@ -282,6 +289,9 @@ header {
 }
 .learn-text div {
   margin-top: 10px;
+}
+.learn p {
+  font-size: 1.1rem;
 }
 .learn-links {
   color: #6c63ff;
@@ -378,6 +388,31 @@ header {
     opacity: 1;
   }
 }
+/* end -> Learn How To Repair Any Gadget */
+
+/* start -> blog cards by swiper */
+.swiper-con{
+  position: relative;
+  height: 100%;
+}
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  background: #000;
+}
+
+/* end -> blog cards by swiper */
+
+
+
 
 /* media query */
 
@@ -399,7 +434,7 @@ header {
 
 @media (min-width: 576px) {
   .learn p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .learn-text h3 {
     font-size: 1.5rem;
@@ -412,6 +447,9 @@ header {
   }
 }
 @media (min-width: 768px) {
+  .h2, h2 {
+  font-size: 2rem;
+}
   .learn p {
     font-size: 1.1rem;
   }
@@ -431,7 +469,7 @@ header {
 }
 @media (min-width: 992px) {
   .learn p {
-    /* font-size: ; */
+    font-size: 1.3rem;
   }
   .learn-text {
     display: flex;
@@ -460,6 +498,9 @@ header {
   }
 }
 @media (min-width: 1200px) {
+  .learn p {
+    font-size: 1.4rem;
+  }
   .banner-text {
     height: 211px;
   }

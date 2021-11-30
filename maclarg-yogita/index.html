@@ -9,6 +9,40 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- swiper css for card sliders -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <style>
+
+      body {
+        /* background: #eee; */
+        /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif; */
+        /* font-size: 14px; */
+        /* color: #000; */
+        /* margin: 0;
+        padding: 0; */
+      }
+
+      .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+    </style>
   </head>
 
   <body>
@@ -157,7 +191,7 @@
             </div>
           </div>
           <div class="col-12 col-md-6 pt-3 pt-md-5 pt-lg-0 learn-text">
-            <h3>Do it yourself or Book a Repair </h3>
+            <!-- <h3>Do it yourself or Book a Repair </h3> -->
             <div>
               <p class="mb-0">
                 We provide step by step guide to help you repair your gadgets at the place of your own choice with our <a href="#" class="learn-links">learn by yourself</a> guide.
@@ -170,6 +204,42 @@
         </div>
       </div>
     </div>
+<!-- blog cards by swiper -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+
+
+
     <script src="js/jquery.js"></script>
     <script>
       $(document).ready(function () {
@@ -195,7 +265,7 @@
 
       });
       $(window).scroll(function(){
-          if($(this).scrollTop()>370){
+          if($(this).scrollTop()>360){
             $(".animate, .animate-2").addClass("four");
             $(".animate, .animate-2").css("display", "flex");
           }else{
@@ -205,7 +275,25 @@
       });
       
     </script>
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html> 
