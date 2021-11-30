@@ -391,24 +391,10 @@ header {
 /* end -> Learn How To Repair Any Gadget */
 
 /* start -> blog cards by swiper */
-.swiper-con{
-  position: relative;
-  height: 100%;
+.card{
+  padding: 0.1rem;
+  box-shadow: 0px 11px 16px -6px #000;
 }
-.swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-  background: #000;
-}
-
 /* end -> blog cards by swiper */
 
 

@@ -34,8 +34,8 @@
       .swiper-slide {
         background-position: center;
         background-size: cover;
-        width: 300px;
-        height: 300px;
+        width: max-content;
+        height: max-content;
       }
 
       .swiper-slide img {
@@ -207,33 +207,63 @@
 <!-- blog cards by swiper -->
 <div class="swiper mySwiper">
   <div class="swiper-wrapper">
+
     <div class="swiper-slide">
-      <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+      <div class="card" style="width: 18rem;">
+        <img src="images/swiper-1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
     </div>
+
     <div class="swiper-slide">
-      <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+      <div class="card" style="width: 18rem;">
+        <img src="images/swiper-2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
     </div>
+
     <div class="swiper-slide">
-      <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+      <div class="card" style="width: 18rem;">
+        <img src="images/swiper-4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
     </div>
+
     <div class="swiper-slide">
-      <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+      <div class="card" style="width: 18rem;">
+        <img src="images/swiper-5.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
     </div>
+
     <div class="swiper-slide">
-      <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+      <div class="card" style="width: 18rem;">
+        <img src="images/swiper-6.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
     </div>
-    <div class="swiper-slide">
-      <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-    </div>
-    <div class="swiper-slide">
-      <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-    </div>
-    <div class="swiper-slide">
-      <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-    </div>
-    <div class="swiper-slide">
-      <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-    </div>
+
+
   </div>
   <div class="swiper-pagination"></div>
 </div>
@@ -282,6 +312,10 @@
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: "auto",
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: true,
+        },
         coverflowEffect: {
           rotate: 50,
           stretch: 0,
@@ -292,6 +326,7 @@
         pagination: {
           el: ".swiper-pagination",
         },
+        loop:true,
       });
     </script>
     <script src="js/bootstrap.bundle.min.js"></script>
