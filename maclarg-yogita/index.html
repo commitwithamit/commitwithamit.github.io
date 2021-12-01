@@ -214,7 +214,7 @@
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="swiper-link">Read more.</a>
         </div>
       </div>
     </div>
@@ -225,7 +225,7 @@
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="swiper-link">Read more.</a>
         </div>
       </div>
     </div>
@@ -236,7 +236,7 @@
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="swiper-link">Read more.</a>
         </div>
       </div>
     </div>
@@ -247,7 +247,7 @@
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="swiper-link">Read more.</a>
         </div>
       </div>
     </div>
@@ -258,7 +258,7 @@
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="swiper-link">Read more.</a>
         </div>
       </div>
     </div>
@@ -266,6 +266,8 @@
 
   </div>
   <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
 </div>
 
 
@@ -313,7 +315,7 @@
         centeredSlides: true,
         slidesPerView: "auto",
         autoplay: {
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: true,
         },
         coverflowEffect: {
@@ -325,6 +327,10 @@
         },
         pagination: {
           el: ".swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
         loop:true,
       });

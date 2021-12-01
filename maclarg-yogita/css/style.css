@@ -36,7 +36,7 @@ header {
   position: fixed;
   right: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10;
 }
 
 .header {
@@ -394,6 +394,48 @@ header {
 .card{
   padding: 0.1rem;
   box-shadow: 0px 11px 16px -6px #000;
+  background-color: #fec5bb;;
+  border-radius: 1.25rem;
+}
+.card-title {
+  color: #363636;
+}
+.swiper-3d .swiper-slide-shadow,
+.swiper-3d .swiper-slide-shadow-bottom,
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-top{
+  border-radius: 1.25rem;
+}
+.swiper-slide img {
+  border-radius: 1.25rem 1.25rem 0 0;
+}
+.card-body {
+  padding: 1rem;
+}
+.swiper-link{
+  color: #353fa5;
+  font-weight: 600;
+}
+:root {
+  --swiper-navigation-size: 25px!important;
+  --swiper-theme-color: #e96d57!important;
+}
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  margin-top: 0!important;
+  top:unset!important;
+  bottom:11px!important;
+}
+.swiper-button-next,
+.swiper-rtl
+.swiper-button-prev {
+  right: 36%!important;
+}
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: 36%!important;
+  /* right: auto; */
 }
 /* end -> blog cards by swiper */
 
