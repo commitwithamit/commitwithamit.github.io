@@ -26,8 +26,13 @@ html {
   }
   *:focus {
     box-sizing: 0 0 0 0 !important;
-    outline: none;
+    outline: none!important;
     box-shadow: 0 !important;
+  }
+  .form-control:focus {
+    box-sizing: 0 0 0 0 !important;
+    outline: none!important;
+    box-shadow: 0 0 0 0rem transparent !important;
   }
   
   header {
@@ -35,7 +40,7 @@ html {
     position: fixed;
     right: 0;
     left: 0;
-    z-index: 1;
+    z-index: 20;
   }
   
   .header {
