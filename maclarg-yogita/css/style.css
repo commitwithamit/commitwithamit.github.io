@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 body {
+  height: 100%;
   color: #666666;
   font-size: 14px;
   line-height: 1.80857;
