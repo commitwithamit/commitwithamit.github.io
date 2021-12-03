@@ -109,9 +109,9 @@
                 <b>India's Most Trusted Tech <br />
                   Solution Providers</b>
               </h1>
-            </div>
-            <div class="banner-link">
-              <a href="#" class="btn banner-btn">Learn More</a>
+              <div class="banner-link">
+                <a href="#" class="btn banner-btn">Learn More</a>
+              </div>
             </div>
           </div>
         </div>
@@ -122,58 +122,35 @@
     <section> 
       <div class="learn">
         <h2 class="text-center">Learn How To Repair Any Gadget</h2>
-        <hr width="80%" class="mx-auto"/>
+        <hr width="80%" class="content-hr"/>
         <div class="container">
           <div class="row">
-            <div class="col-12 col-md-6 animate-text-con">
-              <!-- <img src="images/svg-1.svg"> -->
-              <div class="animate four">
-                <span>L</span>
-                <span>e</span>
-                <span>a</span>
-                <span>r</span> 
-                <span>n</span>
-                &nbsp;
-                <span>b</span>
-                <span>y</span>
-                &nbsp;
-                <span>y</span>
-                <span>o</span>
-                <span>u</span>
-                <span>r</span>
-                <span>s</span>
-                <span>e</span>
-                <span>l</span>
-                <span>f</span>
+            <div class="col-12 col-md-6 learn-margin ani-slide-left">
+              <div class="learn-img-con">
+                <img src="images/learn-by-self-2.svg">
               </div>
-  
-              <div class="animate-2 four">
-                <span>N</span>
-                <span>e</span>
-                <span>e</span>
-                <span>d</span>
-                &nbsp;
-                <span>O</span>
-                <span>u</span>
-                <span>r</span>
-                &nbsp;
-                <span>H</span>
-                <span>e</span>
-                <span>l</span>
-                <span>p</span>
-                <span>?</span>
+              <div class="learn-text">
+                <p class="mb-0">
+                  Now you can repair your gadgets with the help of our learn by yourself guides. Where we provide easy step by step guide on how you can repair any electronic device at home.
+                </p>
+              </div>
+              <div class="learn-btn-con">
+                <a href="#" class="btn learn-btn"> Learn by Yourself </a>
               </div>
             </div>
-            <div class="col-12 col-md-6 pt-3 pt-md-5 pt-lg-0 learn-text">
-              <!-- <h3>Do it yourself or Book a Repair </h3> -->
-              <div>
+            
+            <div class="col-12 col-md-6 ani-slide-right">
+              <div class="learn-img-con">
+                <img src="images/book-a-repair-2.svg">
+              </div>            
+              <div class="learn-text">
                 <p class="mb-0">
-                  We provide step by step guide to help you repair your gadgets at the place of your own choice with our <a href="#" class="learn-links">learn by yourself</a> guide.
+                  Are you looking for someone to fix your gadgets? Well, our team of expert technicians with years of experience will fix it for you. Just click the link below to book a repair.
                 </p>
-                <p>
-                  If you are looking for someone to fix your gadgets we are there for you as well. To book a repair please check out <a href="#" class="learn-links">need our help?</a> section.
-                </p> 
-              </div> 
+              </div>
+              <div class="learn-btn-con">
+                <a href="#" class="btn learn-btn"> Need our help? </a>
+              </div>
             </div>
           </div>
         </div>
@@ -184,7 +161,7 @@
     <section>
       <div class="tech-news">
         <h2 class="text-center">Tech News</h2>
-        <hr width="80%" class="mx-auto"/>
+        <hr width="80%" class="content-hr"/>
     
         <!-- blog cards by swiper -->
         <div class="swiper mySwiper">
@@ -244,8 +221,6 @@
                 </div>
               </div>
             </div>
-    
-    
           </div>
           <div class="swiper-pagination"></div>
           <div class="swiper-button-next"></div>
@@ -256,41 +231,9 @@
 
 
     <script src="js/jquery.js"></script>
-    <script>
-      $(document).ready(function () {
-        // dropdown hide/show & color bg changes
-        $(".dropdown").hover(function () {
-          $(".dropdown .dropdown-menu").toggleClass("display");
-          if ($(".dropdown .dropdown-menu").hasClass("display")) {
-            $(".drop-link").css("color", "black");
-          } else {
-            $(".drop-link").css("color", "white");
-          }
-        });
-
-        // hiding dropdown on hover of other links
-        $(".drop-hide").hover(function(){
-          $(".dropdown-menu, .drop-link").removeClass("show");
-        });
-
-        // hiding dropdown on click of dropdown menu
-        $(".dropdown").click(function () { 
-          $(".dropdown-menu").toggleClass("show");
-        });
-
-      });
-      $(window).scroll(function(){
-          if($(this).scrollTop()>360){
-            $(".animate, .animate-2").addClass("four");
-            $(".animate, .animate-2").css("display", "flex");
-          }else{
-            $(".animate, .animate-2").removeClass("four");
-            $(".animate, .animate-2").css("display", "none");
-          }
-      });
-      
-    </script>
+    <script src="js/navbar.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <!-- swiper js code -->
     <script>
       var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
@@ -322,3 +265,4 @@
   </body>
 </html> 
   
+<!-- add .slide-in-left to learn self on scroll  -->
