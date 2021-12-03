@@ -35,9 +35,7 @@ section{
   height: 100vh;
   background-image: url(../images/bann.jpg);
   background-repeat: no-repeat;
-  /* background-position:center!important; */
-  background-position-x: center !important;
-  background-position-y: center !important;
+  background-position:100%!important;
   background-size: cover;
   overflow: hidden;
 }
@@ -173,9 +171,13 @@ section{
 .learn-margin{
   margin-bottom: 4rem;
 }
+/* animation */
+.ani-slide{
+  overflow: hidden;
+}
 .ani-slide-left,
 .ani-slide-right{
-  visibility: hidden;
+visibility: hidden;
 }
 /* end -> Learn How To Repair Any Gadget */
 

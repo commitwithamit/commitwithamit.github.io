@@ -20,8 +20,8 @@ $(document).ready(function () {
     $(window).scroll(function(){
         if($(this).scrollTop()>400){
             $(".ani-slide-left, .ani-slide-right").css("visibility", "visible");
-            // $(".ani-slide-left").addClass("slide-in-left");
-            // $(".ani-slide-right").addClass("slide-in-right");
+            $(".ani-slide-left").addClass("slide-in-left");
+            $(".ani-slide-right").addClass("slide-in-right");
         }
         // var top = $(document).scrollTop();
         // console.log(top);
