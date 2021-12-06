@@ -17,24 +17,16 @@ $(document).ready(function () {
       $(".dropdown-menu").toggleClass("show");
     });
 
+    // learn by self & book a repair slide animation on scroll position
     $(window).scroll(function(){
         if($(this).scrollTop()>400){
-            $(".ani-slide-left, .ani-slide-right").css("visibility", "visible");
-            $(".ani-slide-left").addClass("slide-in-left");
-            $(".ani-slide-right").addClass("slide-in-right");
+          $(".ani-slide-left, .ani-slide-right").css("visibility", "visible");
+          $(".ani-slide-left").addClass("slide-in-left");
+          $(".ani-slide-right").addClass("slide-in-right");
         }
-        // var top = $(document).scrollTop();
-        // console.log(top);
-    });
-
-    // $(window).scroll(function(){
-        // if($(this).scrollTop()>360){
-        //   $(".animate, .animate-2").addClass("four");
-        //   $(".animate, .animate-2").css("display", "flex");
-        // }else{
-        //   $(".animate, .animate-2").removeClass("four");
-        //   $(".animate, .animate-2").css("display", "none");
-        // }
-    // });
-
+    });    
 });
+
+
+
+  /* $(".product-img-con").css("transform: translateY(-20px)", "box-shadow: none").addClass("active"); */
