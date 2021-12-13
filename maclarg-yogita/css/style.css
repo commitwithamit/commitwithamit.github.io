@@ -278,6 +278,7 @@ visibility: hidden;
   position: relative;
   background: #8d94b6;
   border-radius: 10px 10px 10px 50px;
+  box-shadow: -4px 4px 12px 0 #000000b0;
 }
 
 .product-con video{
@@ -286,7 +287,8 @@ visibility: hidden;
 .product-details{
       /* padding: 0.3rem 1rem 1rem 1rem; */
   text-align: center;
-  background: white;
+  /* background: white; */
+  background: #e9ebf5;
   display: flex;
   justify-content: center;
   align-items: center;
