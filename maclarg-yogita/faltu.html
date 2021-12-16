@@ -4,47 +4,142 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>snap</title>
     <style>
-        .main{
-            width: 300px;
-            height: 300px;
-            background: rgb(122, 121, 121);
-            color: #fff;
-            position: relative;
-        }/* 
-        .main::after{
-            content: "";
-            width: 400px;
-            height: 400px;
-            display: block;
-            background: red;
-            position: relative;
-            z-index: -2;
-        } */
-        
-        .m{
-            width: 300px;
-            height: 300px;
-            display: block;
-            background: rgb(25, 0, 255);
-            position: relative;
-        }
-        .h{
-            width: 301px;
-            height: 301px;
-            display: block;
-            background: red;
-            position: relative;
-            z-index: -2;
-        }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+  margin-top: 5rem;
+}
+:root{
+  --pro-width: 290px;
+  --pro-height: 400px;
+}
+.product-con{
+  width: var(--pro-width);
+  height: max-content;
+  margin: auto;
+  background: #8d94b6;
+  border-radius: 10px 10px 10px 50px;
+  box-shadow: -4px 4px 12px 0 #000000b0;
+  overflow:hidden;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px ;
+  text-align: center;
+}
+.product-con video{
+    width:100%;
+    display: block;
+}
+.product-details-con{
+  display: flex;
+  justify-content: center;
+  width: var(--pro-width);
+  padding: 1rem 0;
+}
+.product-details{
+    width:90%;
+    height: 90%;
+    background: #e9ebf5;
+    border-radius: 10px 10px 10px 50px;
+    padding: .7rem;
+}
+.product-details p{
+  display: none;
+}
+.product-details table{
+  font-size: 13px;
+  text-align: left;
+  margin: auto;
+}
+.product-buy-seemore{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.product-price{
+  color: #383837;
+  font-weight: 600;
+  padding-left: 0.25rem;
+}
+.product-btn{
+  background-color: #707ecb;
+  border-color: #5f7ad9;
+  color: white;
+}
+.product-btn:hover,
+.product-btn:focus{
+  background-color: #4a5dc9;
+  color: white;
+}
+.product-details h6,
+.product-details table{
+  margin-bottom: 1rem;
+}
+.tiny-text {
+  font-size: 12px;
+  color: #746e6e;
+}
+/* product-con(wxh & tsize),  */
+@media (min-width: 576px){}
+@media (min-width: 768px){
+  .product-con {
+    width: calc(var(--pro-width) + 160px);
+    
+  }
+  .product-details-con{
+    width: calc(var(--pro-width) + 160px);
+  }
+  .product-details {
+    height: 85%;
+    padding: 1.2rem;
+  }
+}
+@media (min-width: 992px){
+  .product-con{
+    width: calc(var(--pro-width) + 160px + 300px);
+    display: flex;
+    flex-flow: row-reverse;
+  }
+}
+@media (min-width: 1200px){}
     </style>
 </head>
 <body>
-    <div class="main">
-        <div class="m"></div>
-        <div class="h"></div>
-    </div>
+    <div class="product-con">
+        <div class="product-vid">
+            <video muted loop controls>
+                <source src="images/product-vid-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="product-details-con">
+          <div class="product-details">
+            <h6 class="product-name">Kedarnath Temple Wood's 3D Model</h6>
+          <table>
+            <tr>
+              <td>Color</td>
+              <td>Golden Oak</td>
+            </tr>
+            <tr>
+              <td>Material</td>
+              <td>Wood</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td><span class="tiny-text">LXWXH</span>	14x8x12 Cm</td>
+            </tr>
+            <tr>
+              <td>Made in India</td>
+            </tr>
+          </table>
+          <div class="product-buy-seemore">
+            <div class="product-price">Rs. 750/-</div>
+            <a href="#" class="btn product-btn btn-sm">Buy Now</a>
+          </div>
+          </div>          
+        </div>
+      </div>
 </body>
 </html>
 
@@ -84,3 +179,15 @@
 <!-- https://xhamster16.desi/videos/lena-paul-unexpectedly-creampied-during-hot-threesome-xheSsOv -->
 <!-- https://xhamster16.desi/videos/blacked-kendra-sunderland-meets-mandingo-7391555 -->
 <!-- https://xhamster16.desi/videos/gangbang-with-a-teen-who-tastes-and-drinks-everyone-s-cocks-xhiPg5W -->
+
+
+<!-- Colour:	Golden Oak
+Material:	Wood
+Item Dimensions: LxWxH	14 x 8 x 12 Centimeters
+
+About this item
+Gift for All Occasions
+QC Passed
+Toxic Chemical Free
+Made in India
+ -->
