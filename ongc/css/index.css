@@ -60,9 +60,12 @@ background: #fff !important; */
     background: var(--card-clr);
     box-shadow: 13px 13px 20px var(--box-shd-down), -13px -13px 20px var(--box-shd-up);
     border-radius: 7px;
-    width:78%;
+    width:90%;
     height: max-content;
     padding: 2rem 0;
+}
+.form-pd{
+    padding: 0 1.8rem;
 }
 .logo-error-con{
     height:110px;
@@ -157,6 +160,11 @@ h5{
 }
 input[type=number]{
     -moz-appearance: textfield;
+}
+@media (min-width:576px) {
+    .form-pd{
+        padding:0 3rem;
+    }
 }
 @media (min-width:992px) {
     .box{
