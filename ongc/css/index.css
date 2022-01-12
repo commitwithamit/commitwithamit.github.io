@@ -48,7 +48,7 @@ background: #fff !important; */
 }
 .main-con{
     background: var(--bg-clr);
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,12 +68,13 @@ background: #fff !important; */
     height:110px;
 }
 .logo{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 9px;
+    width: 70px;
+    height: 75px;
+    overflow: hidden;
+    margin: 0 auto 9px;
 }
 .logo > img{
-	width: 70px;
+	width: 100%;
 }
 .white-logo{
     display: none;
