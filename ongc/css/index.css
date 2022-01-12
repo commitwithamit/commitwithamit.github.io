@@ -52,7 +52,8 @@ background: #fff !important; */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 .75rem;
+    padding: 0 1.75rem;
+    /* padding: 0 .75rem; */
     position: relative;
 }
 
@@ -60,7 +61,7 @@ background: #fff !important; */
     background: var(--card-clr);
     box-shadow: 13px 13px 20px var(--box-shd-down), -13px -13px 20px var(--box-shd-up);
     border-radius: 7px;
-    width:90%;
+    max-width: 350px;
     height: max-content;
     padding: 2rem 0;
 }
@@ -166,9 +167,14 @@ input[type=number]{
         padding:0 3rem;
     }
 }
+@media (min-width:768px) {
+    .box{
+        max-width: 380px;
+    }
+}
 @media (min-width:992px) {
     .box{
-        width:28%;
+        max-width: 400px;
     }
 }
 span{
@@ -189,4 +195,15 @@ span{
 }
 .resend{
     height: max-content;
+}
+.re-otp{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+@media (min-width:400px){
+    .re-otp {
+        flex-flow: row;
+        justify-content: center;
+    }
 }
