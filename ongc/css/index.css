@@ -64,6 +64,7 @@ background: #fff !important; */
     max-width: 350px;
     height: max-content;
     padding: 2rem 0;
+    margin: 65px 0;
 }
 .form-pd{
     padding: 0 1.8rem;
