@@ -59,7 +59,7 @@ background: #fff !important; */
 }
 .add-post-block {
   padding: 1rem;
-  margin: 1.5rem auto;
+  margin: 2.5rem auto;
   border: 1px solid #a51e24;
   border-radius: 3px;
   max-width: 600px;
@@ -80,8 +80,12 @@ background: #fff !important; */
 }
 
 /* start-> add post buttons */
-#inp-img-vid, #inp-sub-post{
-  display: none; /* inp:file */
+#inp-img-vid,
+#inp-sub-post,
+.btn-img-vid span,
+.btn-sub-post span{
+  display: none;
+  /* inp:file */
 }
 .btn-img-vid,
 .btn-sub-post{
@@ -93,7 +97,7 @@ background: #fff !important; */
 .btn-img-vid i,
 .btn-sub-post i {
   padding: 7px 12px 9px 12px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 3px;
   color: #fff;
   cursor: pointer;
 }
@@ -101,7 +105,6 @@ background: #fff !important; */
 .btn-sub-post span{
   padding: 6px 10px 7px 9px;
   border-radius: 0 3px 3px 0;
-  display: inline-block;
   border: none;
   color: #fff;
 }
@@ -152,6 +155,9 @@ background: #fff !important; */
 /* end-> add post buttons */
 
 /* showing other people's post */
+.post-container{
+  overflow: hidden;
+}
 .post-block {
   padding: 1rem;
   margin: 1.5rem auto;
@@ -162,14 +168,13 @@ background: #fff !important; */
 
 /* posts css */
 .emp-pro-img-con {
-  display: flex;
-  align-items: flex-end;
-  width: max-content;
+  display: grid;
+  grid-template-columns: 50px auto;
+  grid-column-gap: 10px;
 }
 .pro-img-con {
   width: 50px;
   height: 50px;
-  margin-right: 10px;
   border-radius: 3px;
   overflow: hidden;
 }
@@ -179,11 +184,21 @@ background: #fff !important; */
   /* object-fit: fill; */
   border-radius: 3px;
 }
-.emp-pro-img-con .emp-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding-bottom: 5px;
+.name-date-con{
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+  line-height: 1; 
 }
+.emp-pro-img-con .emp-name {
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 
 .emp-pro-img-con .post-date {
   color: #504a4a;
@@ -198,11 +213,11 @@ background: #fff !important; */
 
 /* like and comment */
 .like-cmt-con {
-  display: flex;
-  justify-content: flex-end;
-}
-.btn-comment {
-  margin-left: 1.5rem;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-column-gap: 20px;
+  justify-content: end;
+  padding: 0px 2px;
 }
 .btn-like i,
 .btn-comment i {
@@ -216,10 +231,21 @@ background: #fff !important; */
   .main-con {
     max-width: 500px;
   }
+  .btn-img-vid span,
+  .btn-sub-post span{
+    display: inline-block;
+  }
+  .btn-img-vid i,
+  .btn-sub-post i {
+    border-radius: 3px 0px 0px 3px;
+  }
 }
 @media screen and (min-width: 768px) {
   .main-con {
     max-width: 700px;
+  }
+  .emp-pro-img-con .emp-name {
+    font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 992px) {
