@@ -130,7 +130,7 @@ h5{
 }
 
 .dark-light{
-    position: absolute;
+    position: fixed;
     left: 20px;
     bottom: 10px;
     width: 40px;
