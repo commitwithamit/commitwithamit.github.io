@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap css-->
+    <link
+      rel="stylesheet"
+      href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="bootstrap-icons-1.7.0/bootstrap-icons.css" />
+    <title>ONGC | Login</title>
+  </head>
+
+  <body>
+    <div class="main-con">
+      <div class="box">
+        <div class="logo-error-con">
+          <div class="logo">
+            <img src="images/maroon-logo.png" alt="logo" />
+            <img src="images/white-logo.png" class="white-logo" alt="logo" />
+          </div>
+          <span class="error_msg text-center"> </span>
+        </div>
+        <!-- <h5 class="py-2 text-center">Member Login</h5> -->
+
+        <form action="index.php" method="POST" class="px-5">
+          <div class="group">
+            <label for="cpf_no">CPF No.</label>
+            <input type="text" class="form-control" name="cpf_no" id="cpf_no" />
+            <span id="span_cpf" class="error_msg"> </span>
+          </div>
+
+          <div class="group group-btn mb-0">
+            <input
+              type="submit"
+              value="Login"
+              id="submit-btn"
+              class="sub-btn btn fw-bold"
+            />
+          </div>
+        </form>
+      </div>
+
+      <!-- dark mode button -->
+      <div class="dark-light">
+        <div class="dl-btn">
+          <!-- <i class="bi bi-moon-stars-fill"></i> -->
+          <i class="bi bi-moon-stars"></i>
+          <i class="bi bi-brightness-high white-logo"></i>
+        </div>
+      </div>
+    </div>
+
+    <script src="bootstrap-5.0.0-beta2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".close-me").click(function () {
+          $("body").removeClass("modal-open");
+          $(".modal").removeClass("show d-block");
+          $("#modal-bg").removeClass("modal-backdrop fade show");
+        });
+
+        $("#submit-btn").click(function () {
+          var inp_cpf = $.trim($("#cpf_no").val());
+          if (inp_cpf.length > 0) {
+            $("#span_cpf").hide();
+            $("#cpf_no").removeClass("err_border");
+          } else {
+            $("#span_cpf").show().text("* CPF number is required.");
+            $("#cpf_no").addClass("err_border");
+            return false;
+          }
+          if ($("body").hasClass("dark")) {
+            $.ajax({
+              type: "post",
+              url: "dark-mode-handler.php",
+              data: { cpf: inp_cpf },
+              success: function (output) {
+                alert(output);
+              },
+            });
+          }
+        });
+
+        $(".dark-light").click(function () {
+          $("body").toggleClass("dark");
+          $(".logo").find("img").toggle();
+          $(".dl-btn").find("i").toggle();
+          // var cpf = $("#cpf_no").val();
+        });
+      });
+    </script>
+  </body>
+</html>
