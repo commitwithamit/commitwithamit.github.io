@@ -3,12 +3,12 @@ $(document).ready(function () {
       // over
       $(".banner-text").addClass("full-line");
         setTimeout(function(){
-          $(".banner-link").addClass("jello-horizontal");
+          $(".banner-link").addClass("pulsate-fwd");
         }, 100);
     }, function () {
       // out
       $(".banner-text").removeClass("full-line");
-      $(".banner-link").removeClass("jello-horizontal");
+      $(".banner-link").removeClass("pulsate-fwd");
     }
   );
 
