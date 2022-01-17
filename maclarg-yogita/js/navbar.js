@@ -1,4 +1,18 @@
 $(document).ready(function () {
+  $(".banner-link").hover(function () {
+      // over
+      $(".banner-text").addClass("full-line");
+        setTimeout(function(){
+          $(".banner-link").addClass("jello-horizontal");
+        }, 100);
+    }, function () {
+      // out
+      $(".banner-text").removeClass("full-line");
+      $(".banner-link").removeClass("jello-horizontal");
+    }
+  );
+
+
     // dropdown hide/show & color bg changes
     $(".dropdown").hover(function () {
       $(".dropdown .dropdown-menu").toggleClass("display");
@@ -19,11 +33,11 @@ $(document).ready(function () {
 
     // learn by self & book a repair slide animation on scroll position
     $(window).scroll(function(){
-        if($(this).scrollTop()>400){
-          $(".ani-slide-left, .ani-slide-right").css("visibility", "visible");
-          $(".ani-slide-left").addClass("slide-in-left");
-          $(".ani-slide-right").addClass("slide-in-right");
-        }
+      if($(this).scrollTop()>400){
+        $(".ani-slide-left, .ani-slide-right").css("visibility", "visible");
+        $(".ani-slide-left").addClass("slide-in-left");
+        $(".ani-slide-right").addClass("slide-in-right");
+      }
     });    
 });
 
