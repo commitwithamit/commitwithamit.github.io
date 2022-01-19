@@ -372,7 +372,7 @@ footer{
 .enquiry-con{
   width: max-content;
   height: max-content;
-  padding: 2rem 2rem 0 2rem;
+  padding: 4rem 2rem 0 2rem;
   margin: auto;
 }
 .fm-group{
@@ -480,10 +480,12 @@ footer{
 .icon-mx{
   margin-top: 1px;
 }
+.tele-p:hover .tele-icon,
 .tele-icon:hover{
   background: #ffb703;
   color: white;
 }
+.whapp-p:hover .whatsapp-icon,
 .whatsapp-icon:hover{
   background: #25D366;
   color: white;
