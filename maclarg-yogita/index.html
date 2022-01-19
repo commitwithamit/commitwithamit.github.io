@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/navbar-style.css">
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="bootstrap-icons-1.7.0/bootstrap-icons.css">
     <!-- swiper css for card sliders -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
   </head>
@@ -96,7 +98,6 @@
     </div>
     </header>
 
-  
     <!-- banner -->
     <section>
       <div class="banner">
@@ -242,7 +243,7 @@
       <div class="product-con">
         <div class="product-vid">
             <video autoplay muted loop>
-                <source src="images/product-vid-1.mp4" type="video/mp4">
+                <!-- <source src="images/product-vid-1.mp4" type="video/mp4"> -->
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -273,34 +274,101 @@
           </div>          
         </div>
       </div>
-      <!-- <div class="product-con">
-        <div class="product-group">
+    </section>
 
-          <div class="product-img-con">
-            <img src="images/product-1.jpg">
+    <!-- footer -->
+    <section class="mb-0">
+      <footer>
+        <!-- <div class="achievement-con">
+          <h3>
+            <a href="#">2020 Startup Grand Challenge Winner of UK india <i class="bi bi-arrow-right"></i></a>
+          </h3>
+        </div> -->
+        <!-- enquiry form -->
+        <div class="enquiry-con">
+          <form action="#" method="post">
+            <div class="fm-group">
+              <input type="text" name="name" placeholder="Name">
+            </div>
+            <div class="fm-group">
+              <input type="email" name="email" placeholder="Email">
+            </div>
+            <div class="fm-group">
+              <textarea name="message" cols="30" rows="3" placeholder="Message"></textarea>
+            </div>
+            <div class="fm-group1">
+              <input type="submit" value="Send" id="enquiry-sub-btn">
+            </div>
+          </form>
+        </div>
+    
+        <div class="contact-con">
+          <!-- phone numbers -->
+          <div class="phone-num">
+            <h5>Contacts</h5>
+            <div>
+              <p>
+                <span class="boot-icon tele-icon"><i class="bi bi-telephone"></i></span> 8979403038
+              </p>
+              <span class="sm-vr-line"></span>
+              <p>
+                <span class="boot-icon whatsapp-icon"><i class="bi bi-whatsapp"></i></span> 9412739971
+              </p>
+            </div>
           </div>
-
-          <div class="product-details-con">
-            <div class="product-details">
-              <div class="product-name">Kedarnath Temple Woods 3D Model</div>
-              <div class="product-buy-seemore">
-                <div class="product-price">Rs. 599/-</div>
-                <div class="btn btn-success btn-sm">Buy Now</div>
-              </div>
+          <!-- social media -->
+          <div class="social-media">
+            <h5>Follow Us</h5>
+            <div>
+              <span class="boot-icon insta-icon">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+              </span>
+              <span class="sm-vr-line"></span>
+              <span class="boot-icon you-icon">
+                <a href="#"><i class="bi bi-youtube icon-mx"></i></a>
+              </span>
             </div>
           </div>
         </div>
-      </div> -->
+      </footer>
     </section>
-
-      
-      
+  
+    <!-- .instagram{ width:100px; height:100px;
+      background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+      } -->
 
     <script src="js/jquery.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
-    <!-- swiper js code -->
     <script>
+      $(document).ready(function () {
+        // banner button animation
+        $(".banner-link").hover(function () {
+        // over
+        $(".banner-text").addClass("full-line");
+          setTimeout(function(){
+            $(".banner-link").addClass("pulsate-fwd");
+          }, 100);
+        }, function () {
+          // out
+          $(".banner-text").removeClass("full-line");
+          $(".banner-link").removeClass("pulsate-fwd");
+        });
+
+        // learn by self & book a repair slide animation on scroll position
+        $(window).scroll(function(){
+          if($(this).scrollTop()>400){
+            $(".ani-slide-left, .ani-slide-right").css("visibility", "visible");
+            $(".ani-slide-left").addClass("slide-in-left");
+            $(".ani-slide-right").addClass("slide-in-right");
+          }
+        });
+      });
+      // swiper js code 
       var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
         grabCursor: true,
@@ -331,4 +399,3 @@
   </body>
 </html> 
   
-<!-- add .slide-in-left to learn self on scroll  -->

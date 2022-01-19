@@ -1,28 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-html {
-  /* scroll-behavior: smooth; */
-  /* overflow-y: scroll; */
-  /* scroll-snap-type: proximity; */ /* for older browsers */
-  /* scroll-snap-points-y: repeat(100vh); */ /* for older browsers */
-  /* scroll-snap-type: y proximity; */
-  /* scroll-padding-top: 95px; */
-}
+
 body {
   color: #666666;
   font-size: 14px;
   line-height: 1.80857;
   font-weight: normal;
   margin: 0;
-  /* font-family: "Hammersmith One", sans-serif; */
 }
 section {
   scroll-snap-align: start;
   margin-bottom: 4rem;
 }
-/* .section-learn{
-  padding-top: 2rem;
-} */
 /* banner */
 .color {
   width: 100%;
@@ -355,6 +344,168 @@ h2 {
   color: #746e6e;
 }
 /* end -> products */
+
+/* start-> footer */
+
+footer{
+  background-image: url(../images/three-wave.png);
+  height: 500px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.achievement-con{
+}
+.achievement-con h3{
+  width: 80%;
+  height: max-content;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  background: #8d94b6;
+  border-radius: 10px;
+  margin: auto;
+  font-size: .7rem;
+}
+.achievement-con h3 a{
+  font-family: 'Poppins';
+  color: #FFF447;
+}
+.enquiry-con{
+  width: max-content;
+  height: max-content;
+  padding: 2rem 2rem 0 2rem;
+  margin: auto;
+}
+.fm-group{
+  margin-bottom: 1.5rem;
+}
+.fm-group input{
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #edf2f4;
+  color: #011627;
+}
+.fm-group textarea{
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #edf2f4;
+  color: #011627;
+}
+.fm-group1{
+  margin-bottom: 0;
+}
+#enquiry-sub-btn{
+  border: 2px solid #edf2f4;
+  width: 50%;
+  margin: auto;
+  display: block;
+}
+.fm-group input::placeholder,
+.fm-group textarea::placeholder{ /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #011627;
+  opacity: 1; /* Firefox */
+}
+
+.fm-group input:-ms-input-placeholder,
+.fm-group textarea:-ms-input-placeholder
+ { /* Internet Explorer 10-11 */
+  color: #011627;
+}
+
+.fm-group input::-ms-input-placeholder,
+.fm-group textarea::-ms-input-placeholder
+ { /* Microsoft Edge */
+  color: #011627;
+}
+.contact-con{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #d8d7d9;
+}
+.phone-num,
+.social-media{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.phone-num div{
+  display: flex;
+}
+.phone-num p{
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+.social-media{}
+.social-media h5{}
+.social-media span{}
+
+.boot-icon{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  /* width: 40px;
+  height: 40px; */
+  background: #adb5bd;
+  color: black;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.boot-icon i{
+  font-size: 1rem;
+  /* font-size: 1.5rem; */
+  padding: 0 0.45rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.tele-icon,
+.whatsapp-icon{
+  margin-right: 5px;
+}
+.sm-vr-line{
+  width: 1px;
+  background: grey;
+  margin: 0 10px;
+}
+.icon-mx{
+  margin-top: 1px;
+}
+.tele-icon:hover{
+  background: #ffb703;
+  color: white;
+}
+.whatsapp-icon:hover{
+  background: #25D366;
+  color: white;
+}
+.insta-icon:hover{
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  color: white;
+}
+.you-icon:hover{
+  background: #f1f1f1;
+}
+.insta-icon a:hover{
+  color: white;
+}
+.you-icon a:hover{
+  color: #c4302b;
+}
+/* end -> footer */
 
 /* media query */
 
