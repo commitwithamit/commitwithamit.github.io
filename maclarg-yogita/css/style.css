@@ -371,9 +371,11 @@ footer{
 }
 .enquiry-con{
   width: max-content;
-  height: max-content;
-  padding: 4rem 2rem 0 2rem;
-  margin: auto;
+    height: max-content;
+    padding: 2rem 2rem 2rem 2rem;
+    margin: auto;
+    background: linear-gradient(45deg, #a7a7bd, transparent);
+    border-radius: 10px;
 }
 .fm-group{
   margin-bottom: 1.5rem;
@@ -383,7 +385,7 @@ footer{
   background: none;
   outline: none;
   border: none;
-  border-bottom: 2px solid #edf2f4;
+  border-bottom: 2px solid #23235a;
   color: #011627;
 }
 .fm-group textarea{
@@ -391,17 +393,21 @@ footer{
   background: none;
   outline: none;
   border: none;
-  border-bottom: 2px solid #edf2f4;
+  border-bottom: 2px solid #23235a;
   color: #011627;
 }
 .fm-group1{
   margin-bottom: 0;
 }
 #enquiry-sub-btn{
-  border: 2px solid #edf2f4;
-  width: 50%;
+  border: none;
   margin: auto;
   display: block;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  background: #c9c9f1;
+  color: #011627;
+  font-weight: 600;
 }
 .fm-group input::placeholder,
 .fm-group textarea::placeholder{ /* Chrome, Firefox, Opera, Safari 10.1+ */
