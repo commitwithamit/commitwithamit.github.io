@@ -349,7 +349,7 @@ h2 {
 
 footer{
   background-image: url(../images/three-wave.png);
-  height: 500px;
+  height: 525px;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -370,12 +370,13 @@ footer{
   color: #FFF447;
 }
 .enquiry-con{
-  width: max-content;
-    height: max-content;
-    padding: 2rem 2rem 2rem 2rem;
-    margin: auto;
-    background: linear-gradient(45deg, #a7a7bd, transparent);
-    border-radius: 10px;
+  /* width: max-content; */
+  width: 85%;
+  height: max-content;
+  padding: 2rem 2rem 2rem 2rem;
+  margin: auto;
+  background: linear-gradient(45deg, #a7a7bd, transparent);
+  border-radius: 10px;
 }
 .fm-group{
   margin-bottom: 1.5rem;
