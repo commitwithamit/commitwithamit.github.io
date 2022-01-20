@@ -573,7 +573,13 @@ input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
     -webkit-text-fill-color: #011627 !important;
 }
-
+.copyright{
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+  font-size: 1rem;
+  color: #9d9696;
+}
 /* end -> footer */
 
 /* media query */
@@ -600,6 +606,9 @@ input:-webkit-autofill:active {
     height: 35px;
     right: 2%;
     top: 5%;
+  }
+  .copyright{
+    bottom: 10px;
   }
 }
 @media (min-width: 768px) {
