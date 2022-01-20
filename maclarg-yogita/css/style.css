@@ -371,13 +371,14 @@ footer{
   color: #FFF447;
 }
 .enquiry-con{
-  /* width: max-content; */
-  width: 85%;
+  max-width: 300px;
   height: max-content;
   padding: 2rem 2rem 2rem 2rem;
   margin: auto;
   background: linear-gradient(45deg, #a7a7bd, transparent);
   border-radius: 10px;
+  position: relative;
+  z-index: 99;
 }
 .fm-group{
   margin-bottom: 1.5rem;
@@ -402,16 +403,49 @@ footer{
 }
 .fm-group1{
   margin-bottom: 0;
+  display: flex;
+}
+.fm-group1 span{
+  display: inline-block;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
 }
 #enquiry-sub-btn{
+  cursor: pointer;
+  width: 60px;
+  height: 45px;
   border: none;
-  margin: auto;
-  display: block;
-  padding: 0.5rem 2rem;
   border-radius: 10px;
   background: #c9c9f1;
   color: #011627;
   font-weight: 600;
+  position: relative;
+}
+#enquiry-sub-btn>span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .3s ease-in-out;
+}
+/* boot svg icon */
+.bi-send-fill{
+  cursor: pointer;
+  position: absolute;
+  top: 160%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .3s ease-in-out;
+  font-size: 1rem;
+  color: #011627;
+}
+
+.fm-group1 span:hover .bi-send-fill{
+  top:50%;
+}
+.fm-group1 span:hover #enquiry-sub-btn>span{
+  top: -160%;
 }
 .fm-group input::placeholder,
 .fm-group textarea::placeholder{ /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -517,6 +551,32 @@ footer{
 .you-icon a:hover{
   color: #c4302b;
 }
+
+.bg-drone-icons{
+  background-image: url(../images/drone-icon.svg);
+  background-repeat: no-repeat;
+  width: 90px;
+  height: 30px;
+  background-size: contain;
+  transform: rotate(37deg);
+  position: absolute;
+  right: 1%;
+  top: 0%;
+  transition: all .3s ease-in-out;
+}
+.bg-drone-item{
+  background-image: url(../images/drone-item.svg);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 78px;
+  background-size: contain;
+  transform: rotate(349deg);
+  position: absolute;
+  left: 2%;
+  bottom: 2%;
+  transition: all .3s ease-in-out;
+}
+
 /* end -> footer */
 
 /* media query */
@@ -534,6 +594,15 @@ footer{
   .banner-text::before,
   .banner-text::after {
     width: 77px;
+  }
+  .enquiry-con{
+    max-width: 350px;
+  }
+  .bg-drone-icons {
+    width: 100px;
+    height: 35px;
+    right: 2%;
+    top: 5%;
   }
 }
 @media (min-width: 768px) {
@@ -569,6 +638,28 @@ footer{
   .product-details table {
     font-size: 15px;
   }
+  .enquiry-con {
+    min-width: 550px;
+    position: absolute;
+    top: 95px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+  }
+  .enquiry-con form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .fm-group1{
+    flex-basis: 100%;
+  }
+  .lg-flex{
+    margin-bottom: 1.7rem;
+  }
+  .boot-icon {
+    width: 35px;
+    height: 35px;
+  }
 }
 @media (min-width: 992px) {
   .swiper-button-next,
@@ -596,6 +687,13 @@ footer{
   .product-details {
     padding: 0.5rem;
   }
+  .bg-drone-icons {
+    width: 160px;
+    height: 59px;
+    right: 4%;
+    top: 10%;
+    opacity: .9;
+}
 }
 @media (min-width: 1200px) {
   .banner-text {
@@ -636,6 +734,11 @@ footer{
     font-size: 1rem;
     border-radius: 0.25rem;
   }
+  .bg-drone-icons {
+    width: 180px;
+    height: 65px;
+    transform: rotate(31deg);
+}
 }
 
 /* animations */
@@ -676,3 +779,4 @@ footer{
  * ---------------------------------------------- */
 
  @-webkit-keyframes pulsate-fwd{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(1.1);transform:scale(1.1)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes pulsate-fwd{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(1.1);transform:scale(1.1)}100%{-webkit-transform:scale(1);transform:scale(1)}}
+
