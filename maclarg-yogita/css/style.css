@@ -502,6 +502,7 @@ footer{
   border-radius: 50%;
   position: relative;
   cursor: pointer;
+  transition: all .2s ease-in;
 }
 .boot-icon i{
   font-size: 1rem;
@@ -564,18 +565,7 @@ footer{
   top: 0%;
   transition: all .3s ease-in-out;
 }
-.bg-drone-item{
-  background-image: url(../images/drone-item.svg);
-  background-repeat: no-repeat;
-  width: 100px;
-  height: 78px;
-  background-size: contain;
-  transform: rotate(349deg);
-  position: absolute;
-  left: 2%;
-  bottom: 2%;
-  transition: all .3s ease-in-out;
-}
+
 
 /* end -> footer */
 
