@@ -352,6 +352,7 @@ footer{
   height: 525px;
   background-repeat: no-repeat;
   position: relative;
+  background-size: cover;
 }
 .achievement-con{
 }
