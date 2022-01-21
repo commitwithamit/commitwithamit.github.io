@@ -353,13 +353,13 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 40px;
+  padding: 0 40px 40px 40px;
 }
 .t-card{
   position: relative;
   width: 320px;
   height: 450px;
-  margin: 30px;
+  margin: 0 30px 30px 30px;
   background: #287bff;
   border-radius: 20px;
   border-bottom-left-radius: 160px;
@@ -385,14 +385,14 @@ h2 {
   pointer-events: none;
   filter: blur(5px);
 }
-.t-card:nth-child(1){
+.tc-1 {
   background: linear-gradient(to bottom, #ff2ae0, #645bf6);
 }
-.t-card:nth-child(2){
+.tc-2{
   background: linear-gradient(to bottom, #ffec61, #f321d7);
 }
-.t-card:nth-child(3){
-  background: linear-gradient(to bottom, #24ff72, #9a40ff);
+.tc-3{
+  background: linear-gradient(to bottom, rgba(36, 255, 114), rgba(154, 64, 255));
 }
 .t-icon{
   position: relative;
