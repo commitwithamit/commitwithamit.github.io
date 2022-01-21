@@ -345,6 +345,40 @@ h2 {
 }
 /* end -> products */
 
+/* start -> achievement */
+
+.achievement-con{
+  margin-bottom: 2.2rem;
+}
+.achievement-con h3{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: max-content;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  background: #8d94b6;
+  border-radius: 10px;
+  margin: auto;
+  box-shadow: 0px 17px 24px -14px #000;
+}
+.achievement-con img{
+  position: absolute;
+  bottom: -6px;
+  left: -6px;
+  width: 30px;
+  transform: rotate(20deg);
+}
+.achievement-con h3 a{
+  font-family: 'Poppins';
+  color: #FFF447;
+  font-size: .75rem;
+}
+/* end -> achievement */
+
+
 /* start-> footer */
 
 footer{
@@ -353,22 +387,6 @@ footer{
   background-repeat: no-repeat;
   position: relative;
   background-size: cover;
-}
-.achievement-con{
-}
-.achievement-con h3{
-  width: 80%;
-  height: max-content;
-  text-align: center;
-  padding: 1rem 1.5rem;
-  background: #8d94b6;
-  border-radius: 10px;
-  margin: auto;
-  font-size: .7rem;
-}
-.achievement-con h3 a{
-  font-family: 'Poppins';
-  color: #FFF447;
 }
 .enquiry-con{
   max-width: 300px;
@@ -610,6 +628,12 @@ input:-webkit-autofill:active {
   .copyright{
     bottom: 10px;
   }
+  .achievement-con h3 a {
+    font-size: 1rem;
+  }
+  .achievement-con img {
+    width: 33px;
+  }
 }
 @media (min-width: 768px) {
   .h2,
@@ -666,6 +690,13 @@ input:-webkit-autofill:active {
     width: 35px;
     height: 35px;
   }
+  .achievement-con h3 a {
+    font-size: 1.2rem;
+  }
+  .achievement-con img {
+    bottom: -8px;
+    width: 36px;
+  }
 }
 @media (min-width: 992px) {
   .swiper-button-next,
@@ -699,7 +730,15 @@ input:-webkit-autofill:active {
     right: 4%;
     top: 10%;
     opacity: .9;
-}
+  }
+  .achievement-con h3 a {
+    font-size: 1.5rem;
+  }
+  .achievement-con img {
+    bottom: -9px;
+    left: -8px;
+    width: 40px;
+  }
 }
 @media (min-width: 1200px) {
   .banner-text {
@@ -744,7 +783,16 @@ input:-webkit-autofill:active {
     width: 180px;
     height: 65px;
     transform: rotate(31deg);
-}
+  }
+  .achievement-con h3 {
+   max-width: 1000px;
+  }
+  .achievement-con h3 a {
+    font-size: 1.75rem;
+  }
+  .achievement-con img {
+    width: 43px;
+  }
 }
 
 /* animations */
