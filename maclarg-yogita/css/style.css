@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Regular.ttf);
+}
 body {
   color: #666666;
   font-size: 14px;
@@ -345,6 +346,125 @@ h2 {
 }
 /* end -> products */
 
+/* start -> meet the team */
+
+.team-con{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+.t-card{
+  position: relative;
+  width: 320px;
+  height: 450px;
+  margin: 30px;
+  background: #287bff;
+  border-radius: 20px;
+  border-bottom-left-radius: 160px;
+  border-bottom-right-radius: 160px;
+  /* box-shadow: 0 15px 0 #fff,
+              inset 0 -15px 0 #ffffff40,
+              0 45px 0 #00000026; */
+  box-shadow: 0 15px 6px 0px #fff, inset 0 -15px 6px #ffffff40, 0px 35px 15px 0px #00000047;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.t-card::before{
+  content: "";
+  position: absolute;
+  top: -137px;
+  left: -37px;
+  width: 100%;
+  height: 120%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2));
+  transform: rotate(35deg);
+  pointer-events: none;
+  filter: blur(5px);
+}
+.t-card:nth-child(1){
+  background: linear-gradient(to bottom, #ff2ae0, #645bf6);
+}
+.t-card:nth-child(2){
+  background: linear-gradient(to bottom, #ffec61, #f321d7);
+}
+.t-card:nth-child(3){
+  background: linear-gradient(to bottom, #24ff72, #9a40ff);
+}
+.t-icon{
+  position: relative;
+  width: 140px;
+  height: 136px;
+  background: #fff;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  box-shadow: 0 10px 5px rgba(0,0,0,0.1),
+              inset 0 -8px 0 #fff;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+}
+.t-icon::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-top-right-radius: 50px;
+  box-shadow: 16px -16px 0 15px #ffffff;
+}
+.t-icon::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-top-left-radius: 50px;
+  box-shadow: -16px -16px 0 15px #ffffff;
+}
+.t-icon img{
+  position: relative;
+  z-index: 80;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+}
+.t-content{
+  position: absolute;
+  width: 100%;
+  padding: 30px;
+  padding-top: 160px;
+  text-align: center;
+  font-family: 'Poppins';
+}
+.t-content h4{
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+.t-content p{
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  font-size: .8rem;
+}
+.t-card i{
+  color: #fff;
+  font-size: 4rem;
+  opacity: .3;
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+}
+/* end -> meet the team */
+
 /* start -> achievement */
 
 .achievement-con{
@@ -505,10 +625,6 @@ footer{
   align-items: center;
   margin-bottom: 0;
 }
-.social-media{}
-.social-media h5{}
-.social-media span{}
-
 .boot-icon{
   display: inline-block;
   width: 30px;
@@ -601,7 +717,14 @@ input:-webkit-autofill:active {
 /* end -> footer */
 
 /* media query */
-
+@media (min-width:450px){
+  .t-content p {
+    line-height: 2;
+  }
+  .t-card::before {
+    left: -120px;
+  }
+}
 @media (min-width: 576px) {
   .learn p {
     font-size: 1.2rem;
@@ -634,6 +757,12 @@ input:-webkit-autofill:active {
   .achievement-con img {
     width: 33px;
   }
+  .t-content h4 {
+    font-size: 1.3rem;
+}
+  .t-content p {
+    font-size: 1rem;
+}
 }
 @media (min-width: 768px) {
   .h2,
@@ -738,6 +867,9 @@ input:-webkit-autofill:active {
     bottom: -9px;
     left: -8px;
     width: 40px;
+  }
+  .t-content h4 {
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 1200px) {
