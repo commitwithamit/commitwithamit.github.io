@@ -240,7 +240,7 @@
 
       <div class="product-con">
         <div class="product-vid">
-            <video autoplay muted loop>
+            <video autoplay muted loop controls>
                 <source src="images/product-vid-1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -311,6 +311,41 @@
           </div>
           <i class="bi bi-quote"></i>
         </div>
+      </div>
+    </section>
+
+    <!-- customer's review -->
+    <section>
+      <h2 class="text-center">Testimonials</h2>
+      <hr width="80%" class="content-hr"/>
+      <div class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="quote-text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, consequuntur unde expedita odit porro illum quas, labore repellat alias officia dolorem, atque aliquid? Nulla, non?</p>
+              <p>- Ben Dover</p>
+            </div>
+            <i class="bi bi-quote lg-quote"></i>
+            <i class="bi bi-quote sm-quote"></i>
+          </div>
+          <div class="swiper-slide">
+            <div class="quote-text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, consequuntur unde expedita odit porro illum quas, labore repellat alias officia dolorem, atque aliquid? Nulla, non?</p>
+              <p>- Mike Hunt</p>
+            </div>
+            <i class="bi bi-quote lg-quote"></i>
+            <i class="bi bi-quote sm-quote"></i>
+          </div>
+          <div class="swiper-slide">
+            <div class="quote-text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, consequuntur unde expedita odit porro illum quas, labore repellat alias officia dolorem, atque aliquid? Nulla, non?</p>
+              <p>- Anita Blackman</p>
+            </div>
+            <i class="bi bi-quote lg-quote"></i>
+            <i class="bi bi-quote sm-quote"></i>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
 
@@ -439,6 +474,19 @@
           prevEl: ".swiper-button-prev",
         },
         loop:true,
+      });
+      
+      var swiper = new Swiper(".mySwiper2", {
+        direction: "vertical",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: true,
+        },
+        loop:true
       });
     </script>
     <script src="js/bootstrap.bundle.min.js"></script>
