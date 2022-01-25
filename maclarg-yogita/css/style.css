@@ -8,6 +8,7 @@ body {
   line-height: 1.80857;
   font-weight: normal;
   margin: 0;
+  font-family: 'poppins';
 }
 section {
   scroll-snap-align: start;
@@ -178,6 +179,12 @@ h2 {
 .ani-slide-left,
 .ani-slide-right {
   visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.learn-btn-con{
+  margin: auto auto 0;
 }
 /* end -> Learn How To Repair Any Gadget */
 
@@ -575,7 +582,7 @@ h2 {
 }
 @media (min-width: 576px) {
   .learn p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .banner-text {
     height: 157px;
