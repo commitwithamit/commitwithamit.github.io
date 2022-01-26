@@ -26,7 +26,7 @@ section {
 .banner {
   width: 100%;
   height: 100vh;
-  background-image: url(../images/bann.jpg);
+  background-image: url(../images/banner.jpg);
   background-repeat: no-repeat;
   background-position: 52% !important;
   background-size: cover;
