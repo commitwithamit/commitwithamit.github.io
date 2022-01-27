@@ -200,8 +200,6 @@ h2 {
   flex-direction: column-reverse;
   justify-content: flex-end;
   align-items: center;
-  min-height: 334px;
-  position: relative;
 }
 .project-item > video{
   width: 100%;
@@ -261,8 +259,6 @@ h2 {
   color: #91cf58;
 }
 .project-1-cta{
-  position: absolute;
-  bottom: 0;
   text-align: center;
 }
 .project-1-cta > p{
