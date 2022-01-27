@@ -155,7 +155,7 @@ h2 {
   margin-bottom: 1rem;
 }
 .learn p {
-  font-size: 1rem;
+  font-size: .9rem;
   text-align: center;
 }
 .learn-links {
@@ -582,7 +582,7 @@ h2 {
 }
 @media (min-width: 576px) {
   .learn p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .banner-text {
     height: 157px;
