@@ -1,4 +1,7 @@
 # mac-note
+
+1)bgjar.com for svg for 2020 startup bg
+
 * style.css 
   :root{
   --upod-font: 6rem;

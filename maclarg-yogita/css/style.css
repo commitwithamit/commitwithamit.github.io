@@ -200,11 +200,13 @@ h2 {
   flex-direction: column-reverse;
   justify-content: flex-end;
   align-items: center;
+  margin-bottom: 1rem;
 }
-.project-item{
+.project-1 .project-item{
   margin-bottom: 0.3rem;
 }
-.project-item > video{
+.project-1 .project-item > video,
+.project-2 .project-item > video{
   width: 100%;
   border-radius: 5px;
 }
@@ -216,10 +218,7 @@ h2 {
 :root{
   --upod-font: 2.8rem;
 }
-.project-detail{
-  font-family: 'quicksand';
-  margin-bottom: 0.5rem;
-}
+
 .text-upod{
   height: 55px;
   text-align: center;
@@ -266,15 +265,63 @@ h2 {
 .project-1-cta > p{
   margin-bottom: .5rem;
 }
-.project-1-cta > a{
-  background: rgba(215, 63, 58, 1);
-  color: white;
+.upod-youtube-btn{
+  color: rgba(196, 48, 43, 1);
+  background: white;
 }
-.project-1-cta > a:hover,
+.upod-youtube-btn > span{
+  display: none;
+}
+/* .project-1-cta > a:hover,
 .project-1-cta > a:focus{
   background: rgba(196, 48, 43, 1);
   color: white;
+} */
+.project-2{
+  width: 100%;
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
 }
+.project-2 .project-detail{
+  font-family: 'quicksand';
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.led-text{
+  display: inline-block;
+  width: 320px;
+  height: 40px;
+  position: relative;
+  font-size: 1.4rem;
+}
+.led-text::before,
+.led-text::after{
+  content: "";
+  position: absolute;
+  inset: -3px;
+  filter: blur(3px);
+  background: linear-gradient(25deg, #ed1d1d, #48dd22, #2e4bdd);
+} 
+.led-text > span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: #ffeb3b;
+  color: #202020;
+  font-weight: 600;
+  z-index: 10;
+  text-align: center;
+}
+
 /* ends -> projects */
 
 
