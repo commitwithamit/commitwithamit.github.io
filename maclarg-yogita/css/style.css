@@ -188,84 +188,97 @@ h2 {
 }
 /* end -> Learn How To Repair Any Gadget */
 
-/* start -> blog cards by swiper */
-.tech-news {
-  width: 100%;
-}
-.card {
-  padding: 0.1rem;
-  box-shadow: 0px 11px 16px -12px #000;
-  background-color: rgba(211, 207, 207, 0.22);
-  border-radius: 1.25rem;
-}
-.card-title {
-  color: rgba(54, 54, 54);
-}
-.swiper.mySwiper {
-  width: 100%;
-  /* padding-top: 50px; */
-  padding-bottom: 50px;
-  height: 440px;
-}
-/* .section-tech{
-  padding-top: 2.7rem;
-} */
-.mySwiper .swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: max-content !important;
-  height: max-content !important;
-  opacity: 0.3;
-}
 
-.mySwiper .swiper-slide img {
-  display: block;
+/* start -> projects */
+.content-hr-2 {
+  margin: 1rem auto 1.7rem;
+}
+.project-1{
   width: 100%;
-  border-radius: 1.25rem 1.25rem 0 0;
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 334px;
+  position: relative;
 }
-.swiper-3d .swiper-slide-shadow,
-.swiper-3d .swiper-slide-shadow-bottom,
-.swiper-3d .swiper-slide-shadow-left,
-.swiper-3d .swiper-slide-shadow-right,
-.swiper-3d .swiper-slide-shadow-top {
-  border-radius: 1.25rem;
+.project-item > video{
+  width: 100%;
+  border-radius: 5px;
 }
-.card-body {
-  padding: 1rem;
+.project-detail{
+  
 }
-.mySwiper .swiper-link {
-  color: rgba(53, 63, 165);
-  font-weight: 600;
+@font-face {
+  font-family: quicksand;
+  src: url(../fonts/Quicksand-Medium.ttf);
 }
-.mySwiper .swiper-slide.swiper-slide-visible.swiper-slide-active {
-  opacity: 1;
+:root{
+  --upod-font: 2rem;
 }
-:root {
-  --swiper-navigation-size: 25px !important;
-  --swiper-theme-color: rgba(35, 35, 90) !important;
+.project-detail{
+  font-family: 'quicksand';
+  margin-bottom: 0.3rem;
 }
-.mySwiper .swiper-button-next,
-.mySwiper .swiper-button-prev {
-  margin-top: 0 !important;
-  top: unset !important;
-  bottom: 0px !important;
+.text-upod{
+  height: 45px;
 }
-.mySwiper .swiper-button-next,
-.mySwiper .swiper-rtl .swiper-button-prev {
-  right: 30% !important;
+.text-u{
+  font-size: var(--upod-font);
+  position: relative;
 }
-.mySwiper .swiper-button-prev,
-.mySwiper .swiper-rtl .swiper-button-next {
-  left: 30% !important;
-  /* right: auto; */
+.text-pod{
+  font-size: calc(var(--upod-font) - .5rem);
+  position: relative;
+  transform: translateY(-5px);
+  display: inline-block;
 }
-.mySwiper .swiper-horizontal > .swiper-pagination-bullets,
-.mySwiper .swiper-pagination-bullets.swiper-pagination-horizontal,
-.mySwiper .swiper-pagination-custom,
-.mySwiper .swiper-pagination-fraction {
-  bottom: 0px !important;
+.text-u::before{
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-top: 5px solid #91cf58;
+  border-radius: 10px;
+  width: 85%;
 }
-/* end -> blog cards by swiper */
+.text-pod::after{
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-top: 5px solid #91cf58;
+  border-radius: 10px;
+  width: 93%;
+}
+.text-upod-sub{
+  font-size: calc(var(--upod-font) - 1rem);
+}
+.text-upod-sub span:nth-child(1){
+  color: #91cf58;
+}
+.project-1-cta{
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+.project-1-cta > p{
+  margin-bottom: .5rem;
+}
+.project-1-cta > a{
+  background: rgba(215, 63, 58, 1);
+  color: white;
+}
+.project-1-cta > a:hover,
+.project-1-cta > a:focus{
+  background: rgba(196, 48, 43, 1);
+  color: white;
+}
+/* ends -> projects */
+
 
 /* start -> products */
 
@@ -349,6 +362,85 @@ h2 {
   color: rgba(116, 110, 110);
 }
 /* end -> products */
+
+/* start -> blog cards by swiper */
+.tech-news {
+  width: 100%;
+}
+.card {
+  padding: 0.1rem;
+  box-shadow: 0px 11px 16px -12px #000;
+  background-color: rgba(211, 207, 207, 0.22);
+  border-radius: 1.25rem;
+}
+.card-title {
+  color: rgba(54, 54, 54);
+}
+.swiper.mySwiper {
+  width: 100%;
+  /* padding-top: 50px; */
+  padding-bottom: 50px;
+  height: 440px;
+}
+/* .section-tech{
+  padding-top: 2.7rem;
+} */
+.mySwiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: max-content !important;
+  height: max-content !important;
+  opacity: 0.3;
+}
+
+.mySwiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  border-radius: 1.25rem 1.25rem 0 0;
+}
+.swiper-3d .swiper-slide-shadow,
+.swiper-3d .swiper-slide-shadow-bottom,
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-top {
+  border-radius: 1.25rem;
+}
+.card-body {
+  padding: 1rem;
+}
+.mySwiper .swiper-link {
+  color: rgba(53, 63, 165);
+  font-weight: 600;
+}
+.mySwiper .swiper-slide.swiper-slide-visible.swiper-slide-active {
+  opacity: 1;
+}
+:root {
+  --swiper-navigation-size: 25px !important;
+  --swiper-theme-color: rgba(35, 35, 90) !important;
+}
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  margin-top: 0 !important;
+  top: unset !important;
+  bottom: 0px !important;
+}
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-rtl .swiper-button-prev {
+  right: 30% !important;
+}
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-rtl .swiper-button-next {
+  left: 30% !important;
+  /* right: auto; */
+}
+.mySwiper .swiper-horizontal > .swiper-pagination-bullets,
+.mySwiper .swiper-pagination-bullets.swiper-pagination-horizontal,
+.mySwiper .swiper-pagination-custom,
+.mySwiper .swiper-pagination-fraction {
+  bottom: 0px !important;
+}
+/* end -> blog cards by swiper */
 
 /* start -> meet the team */
 
@@ -569,7 +661,7 @@ h2 {
   .t-content h4 {
     font-size: 1.5rem;
   }
-    .t-content p {
+  .t-content p {
     line-height: 2;
     font-size: 1rem;
   }

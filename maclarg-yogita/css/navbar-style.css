@@ -150,8 +150,8 @@ html {
   
   @media (max-width: 1030px) {
     .navbar-nav {
-      width: 60%;
-      padding-right: 1rem;
+      width: 100%;
+    padding-right: 0;
     }
   }
   

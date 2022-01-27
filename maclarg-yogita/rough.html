@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uPod</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        @font-face {
+            font-family: poppins;
+            src: url(fonts/Poppins-Regular.ttf);
+        }
+        @font-face {
+            font-family: quicksand;
+            src: url(fonts/Quicksand-Medium.ttf);
+        }
+        :root{
+            --upod-font: 6rem;
+        }
+        body{
+            font-family: 'quicksand';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .text-upod{
+        
+        }
+        .text-u{
+            font-size: var(--upod-font);
+            position: relative;
+        }
+        .text-pod{
+            font-size: calc(var(--upod-font) - 1rem);
+            position: relative;
+            transform: translateY(-11px);
+            display: inline-block;
+        }
+        .text-u::before{
+            content: "";
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border-top: 10px solid #91cf58;
+            border-radius: 10px;
+            width: 85%;
+        }
+        .text-pod::after{
+            content: "";
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border-top: 10px solid #91cf58;
+            border-radius: 10px;
+            width: 93%;
+        }
+        .text-upod-sub{
+            font-size: calc(var(--upod-font) - 2rem);
+        }
+        .text-upod-sub span:nth-child(1){
+            color: #91cf58;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-upod">
+        <span class="text-u">u</span>
+        <span class="text-pod">POD</span>
+    </div>
+    <div class="text-upod-sub">
+        <span>Pro</span><span>Tripod</span>
+    </div>
+</body>
+</html>
