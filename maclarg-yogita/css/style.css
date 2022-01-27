@@ -201,26 +201,28 @@ h2 {
   justify-content: flex-end;
   align-items: center;
 }
+.project-item{
+  margin-bottom: 0.3rem;
+}
 .project-item > video{
   width: 100%;
   border-radius: 5px;
 }
-.project-detail{
-  
-}
+
 @font-face {
   font-family: quicksand;
   src: url(../fonts/Quicksand-Medium.ttf);
 }
 :root{
-  --upod-font: 2rem;
+  --upod-font: 2.8rem;
 }
 .project-detail{
   font-family: 'quicksand';
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 .text-upod{
-  height: 45px;
+  height: 55px;
+  text-align: center;
 }
 .text-u{
   font-size: var(--upod-font);
@@ -235,7 +237,7 @@ h2 {
 .text-u::before{
   content: "";
   position: absolute;
-  top: 8px;
+  top: 13px;
   left: 50%;
   transform: translate(-50%, 0);
   border-top: 5px solid #91cf58;
@@ -245,7 +247,7 @@ h2 {
 .text-pod::after{
   content: "";
   position: absolute;
-  bottom: 5px;
+  bottom: 11px;
   left: 50%;
   transform: translate(-50%, 0);
   border-top: 5px solid #91cf58;
