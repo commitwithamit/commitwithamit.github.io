@@ -2,6 +2,10 @@
   font-family: Poppins;
   src: url(../fonts/Poppins-Regular.ttf);
 }
+@font-face {
+  font-family: quicksand;
+  src: url(../fonts/Quicksand-Medium.ttf);
+}
 body {
   color: rgba(102, 102, 102);
   font-size: 14px;
@@ -190,10 +194,6 @@ h2 {
 
 
 /* start -> projects */
-@font-face {
-  font-family: quicksand;
-  src: url(../fonts/Quicksand-Medium.ttf);
-}
 :root{
   --upod-font: 2.8rem;
 }
@@ -538,6 +538,27 @@ h2 {
   transform: rotate(35deg);
   pointer-events: none;
   filter: blur(5px);
+}
+.tc-1::after{
+  content: "01";
+}
+.tc-2::after{
+  content: "02";
+}
+.tc-3::after{
+  content: "03";
+}
+.tc-1::after,
+.tc-2::after,
+.tc-3::after{
+  position: absolute;
+  bottom: 15px;
+  font-family: "quicksand";
+  font-size: 3.5rem;
+  color: #fff;
+  opacity: .5;
+  font-weight: 700;
+  pointer-events: none;
 }
 .tc-2, .tc-3{
   margin-top: 30px;
