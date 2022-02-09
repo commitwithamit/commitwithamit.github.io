@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our team</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        /* @font-face {
+            font-family: 'poppins';
+            src: url(fonts/Poppins-Regular.ttf);
+        }
+        @font-face {
+            font-family: 'poppins-light';
+            src: url(fonts/Poppins-Thin.ttf);
+        } */
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #2d2d2e;
+            /* font-family: 'poppins'; */
+            font-family: 'Poppins', sans-serif;
+        }
+        .col-12{
+            background: #2d2d2e;
+        }
+        .team-card{
+            width:100%;
+            height:max-content;
+            margin: auto;
+            color: white;
+            position: relative;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            padding: .8rem;
+        }
+        .team-card::after{
+            position: absolute;
+            top: -69px;
+            right: 0;
+            color: transparent;
+            -webkit-text-stroke: 1px #545454;
+            font-size: 6rem;
+            font-weight: 900;
+        }
+        .team-con:nth-child(1) .team-card::after{
+            content: "01";
+        }
+        .team-con:nth-child(2) .team-card::after{
+            content: "02";
+        }
+        .team-con:nth-child(3) .team-card::after{
+            content: "03";
+        }
+        .team-img, 
+        .team-card > h2{
+            margin-bottom: 1.5rem;
+        }
+        .team-img{
+            width: 150px;
+        }
+        .team-img > img{
+            width: 100%;
+        }
+        .team-img > span{
+            color: transparent;
+            -webkit-text-stroke: 1px #545454;
+            font-size: 6rem;
+            font-weight: 900;
+            float: right;
+        }
+        .team-card > p {
+            visibility: hidden;
+            height: 115px;
+            border-bottom: 3px solid whitesmoke;
+        }
+        /* hover */
+        .team-con:hover .team-card > p{
+            visibility: visible;
+        }
+        .team-con:hover .team-card::after{
+            color: #d9d9d9;
+            -webkit-text-stroke: 0px #545454;
+        }
+        .team-con:hover .team-card{
+            box-shadow:0px 13px 22px 8px rgb(0 0 0 / 26%);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- Ashish -->
+          <div class="col-12 col-md-4 team-con">
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="images/ashish.jpeg">
+                </div>
+                <h2>Ashish Singh Rana</h2>
+                <p>Maker of things that go clank! Ashish is the quintessential hands on man, with an un-tiring and infectious love for mad max-ian creations.</p>
+            </div>
+          </div>
+            <!-- Lokesh -->
+          <div class="col-12 col-md-4 team-con">
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="images/lokesh.jpeg">
+                </div>
+                <h2>Lokesh Gairola</h2>
+                <p>Man knows how to connect dots, he is a mechanical engineer, and man of his words.</p>
+            </div>
+          </div>
+            <!-- Sudhanshu -->
+          <div class="col-12 col-md-4 team-con">
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="images/shudhanshu.jpeg">
+                </div>
+                <h2>Sudhanshu Mohan</h2>
+                <p>Engineer by degree, inventor by passion, may be nerd sometimes at work, other times an explorer to unknown places.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
