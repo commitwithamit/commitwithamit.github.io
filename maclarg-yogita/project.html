@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+        body{
+            margin-top: 6rem;/* don't */
+        }
+        .container{
+            max-width: 1920px;
+        }
+        .upod-vid-con{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .upod-vid{
+            max-width: 650px;
+        }
+        .upod-dot{
+            position: relative;
+        }
+        .upod-dot::before{
+            content: "";
+            background-image: url(images/black-polka.png);
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: cover;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: -30px;
+            top: -30px;
+            z-index: -1;
+        }
+        .upod-vid > video{
+            width:100%;
+            position: relative;
+        }
+        .upod-img-con{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .upod-img{
+            max-width: 450px;
+        }
+        .upod-img > img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        /* mq */
+        @media (max-width:1240px){
+            .upod-vid {
+                max-width: 550px;
+            }
+            .upod-img {
+                max-width: 330px;
+            }
+        }
+        @media (max-width:992px){
+            .project-row {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .upod-img {
+                margin-bottom: 2rem;
+            }
+            .powerbank{
+                margin-bottom: 0;
+            }
+            .pro-bg{
+                padding: 2.5rem 0;
+            }
+        }
+        @media (max-width:650px) {
+            .upod-vid {
+                max-width: 400px;
+            }
+            .upod-img {
+                max-width: 240px;
+            }
+        }
+        @media (max-width:576px) {
+            .upod-dot::before {
+                left: -30px;
+                top: -30px;
+            }
+        }
+        @media (max-width:450px) {
+            .upod-dot::before {
+                display: none;
+            }
+        }
+        /* 2nd row */
+        .pro-bg{
+            background: #1e1e1e;
+            /* background-image: url(images/curvy-polka.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; */
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+        }
+        .upod-dot-2{
+            position: relative;
+        }
+        .upod-dot-2::before{
+            content: "";
+            background-image: url(images/white-polka.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            right: -30px;
+            bottom: -26px;
+            z-index: 0;
+        }
+        .powerbank{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: max-content;
+            text-align: center;
+        }
+        .upod-img > h2{
+            font-family: 'quicksand';
+            color: ghostwhite;
+            border: 4px solid ghostwhite;
+            padding: 0.2rem 0.8rem;
+            font-size: 55px;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        .upod-img > p{
+            color: #c5c5c5;
+            font-family: 'Satisfy', cursive;
+            font-size: 40px;
+        }
+        
+        .upod-img > a{
+            text-decoration: none;
+            font-family: 'quicksand';
+            color: #1e1e1e;
+            background: #d7d7d7;
+            border-radius: 4px;
+            padding: 0.3rem 0.6rem;
+            font-weight: 700;
+        }
+        @media (max-width:1400px){
+            .upod-img > h2{
+                font-size: 40px;
+            }
+            .upod-img > p{
+                font-size: 30px;
+            }
+        }
+        @media (max-width:576px) {
+            .upod-dot-2::before {
+                left: -30px;
+                top: -30px;
+            }
+        }
+        @media (max-width:450px) {
+            .upod-dot-2::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mb-5">
+        <!-- 1st row -->
+        <div class="row project-row">
+            <div class="col-12 col-lg-8 upod-vid-con">
+                <div class="upod-vid upod-dot">
+                    <video muted loop controls>
+                        <source src="images/upod-vid.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 upod-img-con">
+                <div class="upod-img">
+                    <img src="images/upod.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pro-bg">
+        <!-- 2nd row -->
+        <div class="container">
+            <div class="row project-row-2">
+                <div class="col-12 col-lg-4 upod-img-con">
+                    <div class="upod-img powerbank">
+                        <h2>Cool Powerbank</h2>
+                        <p>~ with advance led system ~</p>
+                        <!-- <p>watch this diy video on Youtube</p> -->
+                        <!-- <a href="#">Watch Now</a> -->
+                    </div>
+                </div>
+                <div class="col-12 col-lg-8 upod-vid-con">
+                    <div class="upod-vid upod-dot-2">
+                        <video muted loop controls>
+                            <source src="images/powebank-vid.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
