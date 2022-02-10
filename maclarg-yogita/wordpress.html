@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        body{
+            margin-top: 6rem;/* don't */
+        }
+        .upod-vid-con{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .upod-vid{
+            max-width: 650px;
+            position: relative;
+        }
+        .upod-vid::before{
+            content: "";
+            background-image: url(https://designstudioconsultancy.com/maclarg/wp-content/uploads/2022/02/dots-purple.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: -65px;
+            top: -65px;
+            z-index: -1;
+        }
+        .upod-vid > video{
+            width:100%;
+        }
+
+        .upod-img-con{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .upod-img{
+            max-width: 450px;
+        }
+        .upod-img > img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        /* mq */
+        @media (max-width:1240px){
+            .upod-vid {
+                max-width: 550px;
+            }
+            .upod-img {
+                max-width: 330px;
+            }
+        }
+        @media (max-width:992px){
+            .project-row {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .upod-img {
+                margin-bottom: 2rem;
+            }
+        }
+        @media (max-width:650px) {
+            .upod-vid {
+                max-width: 400px;
+            }
+            .upod-img {
+                max-width: 240px;
+            }
+        }
+        @media (max-width:576px) {
+            .upod-vid::before {
+                left: -30px;
+                top: -30px;
+            }
+        }
+        @media (max-width:450px) {
+            .upod-vid::before {
+                display: none;
+            }
+        }
+        /* 2nd row */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row project-row">
+            <div class="col-12 col-lg-8 upod-vid-con">
+                <div class="upod-vid">
+                    <video autoplay muted loop>
+                        <source src="https://designstudioconsultancy.com/maclarg/wp-content/uploads/2022/02/project1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 upod-img-con">
+                <div class="upod-img">
+                    <img src="https://designstudioconsultancy.com/maclarg/wp-content/uploads/2022/02/upod-300x271.png" alt="upod tripod">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
+
+<!-- https://designstudioconsultancy.com/maclarg/wp-content/uploads/2022/02/upod-300x271.png -->
+<!-- https://designstudioconsultancy.com/maclarg/wp-content/uploads/2022/02/project1.mp4?_=1 -->
+<!-- https://designstudioconsultancy.com/maclarg/wp-content/uploads/2022/02/dots-purple.svg -->
