@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-style-css-links.css" />
+    <link rel="stylesheet" href="css/maclarg.css" />
+    <title>snap</title>
+    <style>
+      /* section headings */
+
+      .section-head {
+        padding: 4.375rem 0px;
+      }
+      .section-title-area .section-title {
+        font-family: "Abril Fatface", cursive;
+        margin: auto;
+        width: fit-content;
+      }
+      .section-title {
+        position: relative;
+      }
+      .section-title::before,
+      .section-title::after {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 2px;
+        background: #333333;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      .section-title::before {
+        left: -125px;
+      }
+      .section-title::after {
+        right: -125px;
+      }
+
+      /* section paddings & spacing */
+      .section-about .row > div {
+        margin-top: 0;
+      }
+      .panel-grid.panel-no-style {
+        margin-bottom: 0 !important;
+      }
+      .section-about .section-title-area {
+        margin-bottom: 60px;
+      }
+      .sec-team,
+      .team-con {
+        padding-bottom: 0;
+      }
+      /* start -> store */
+      .storesection {
+        background: #f8f9f9;
+      }
+      .product-con {
+        background: #f8f9f9;
+        font-family: "Poppins", sans-serif;
+        max-width: 1920px;
+        padding: 0 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        transition: all 0.5s ease-in-out;
+      }
+      .product-row {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-column-gap: 5%;
+      }
+      .product-card {
+        width: 100%;
+        position: relative;
+        /* padding: 1rem; */
+        color: #c9c9c9;
+        display: flex;
+        flex-direction: column;
+      }
+      .pro-media {
+        width: 100%;
+      }
+      .pro-media > img,
+      .pro-media > video {
+        width: 100%;
+      }
+      /* col-1 settigs */
+      .product-card small {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: #686868;
+      }
+      .product-card h2 {
+        font-size: 4.5rem;
+        font-family: "Abril Fatface", cursive;
+        color: #1e1e1e;
+      }
+      .d-box div:last-child {
+        margin-top: auto;
+      }
+      .middle-card > .pro-media,
+      .middle-card > h5,
+      .middle-card > table {
+        margin-bottom: 1rem;
+        font-family: poppins;
+      }
+      .middle-card > h5 {
+        text-align: center;
+        font-size: 1.7rem;
+      }
+      .middle-card > table {
+        margin: 0 auto 1rem;
+        width: 80%;
+        font-size: 1.3rem;
+        color: #1e1e1e;
+        border: none;
+      }
+      table > thead > tr > th,
+      table > tbody > tr > th,
+      table > tfoot > tr > th,
+      table > thead > tr > td,
+      table > tbody > tr > td,
+      table > tfoot > tr > td {
+        border: none;
+      }
+      .middle-card > h5,
+      .middle-card > table,
+      .buy-btn-con {
+        margin-top: auto;
+        color: #1e1e1e;
+      }
+      .buy-btn {
+        color: #2d2d2e;
+        border: 1px solid #2d2d2e;
+        position: relative;
+        overflow: hidden;
+        width: 155px;
+        height: 55px;
+        padding: 0;
+        text-transform: capitalize;
+      }
+      .buy-btn > span,
+      .buy-btn > i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transition: all 0.4s ease-in-out;
+      }
+      .buy-btn > i {
+        transform: translate(-50%, 400%);
+        font-size: 2rem;
+      }
+      .buy-btn > span {
+        transform: translate(-50%, -50%);
+        font-size: 1.5rem;
+      }
+      .buy-btn:hover {
+        color: #2d2d2e;
+      }
+      .buy-btn:hover span {
+        display: inline-block;
+        transform: translate(-50%, -400%);
+      }
+      .buy-btn:hover i {
+        transform: translate(-50%, -50%);
+      }
+      .prev-next-con {
+        display: flex;
+      }
+      .prev-next-con > .left,
+      .prev-next-con > .right {
+        font-size: 3.5rem;
+        padding: 0rem 0.8rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        color: #1e1e1e;
+      }
+
+      .prev-next-con > .left:hover {
+        transform: translateX(-5px);
+      }
+      .prev-next-con > .right:hover {
+        transform: translateX(5px);
+      }
+      .disable-np.left,
+      .disable-np.right {
+        opacity: 0.4;
+        cursor: default;
+      }
+      .disable-np.left:hover,
+      .disable-np.right:hover {
+        transform: translateX(0px);
+      }
+      /* mq */
+      @media (max-width: 1600px) {
+        .prev-next-con > .left,
+        .prev-next-con > .right {
+          font-size: 3rem;
+        }
+      }
+
+      @media (max-width: 1390px) {
+        .product-card small {
+          font-size: 15px;
+        }
+        .product-card h2 {
+          font-size: 4rem;
+        }
+        .middle-card > h5 {
+          font-size: 1.25rem;
+        }
+        .middle-card > table {
+          font-size: 1rem;
+        }
+        .buy-btn {
+          height: 47px;
+        }
+      }
+      @media (max-width: 1300px) {
+        .buy-btn {
+          width: 100px;
+          height: 40px;
+        }
+        .buy-btn span {
+          font-size: 1rem;
+        }
+        .buy-btn > i {
+          font-size: 1.5rem;
+        }
+        .prev-next-con > .left,
+        .prev-next-con > .right {
+          font-size: 2.5rem;
+        }
+      }
+      @media (max-width: 1199px) {
+        .d-box h2 {
+          font-size: 3.5rem;
+        }
+        .middle-card > table {
+          width: 95%;
+        }
+      }
+      @media (max-width: 991px) {
+        .product-con {
+          padding: 0 7%;
+        }
+        .product-row {
+          display: block;
+          max-width: 530px;
+        }
+        .product-card {
+          margin-bottom: 2rem;
+        }
+        .middle-card > table {
+          max-width: 320px;
+        }
+        .prev-next-con {
+          width: 100%;
+          justify-content: space-evenly;
+          margin-bottom: 1rem;
+        }
+      }
+      .product-main {
+        overflow: hidden;
+        position: relative;
+      }
+      .product-con {
+        position: absolute;
+        top: 0;
+      }
+      .prod-ram {
+        left: 100%;
+      }
+
+      /* end -> store */
+    </style>
+  </head>
+  <body>
+    <section id="store" class="section-head storesection">
+      <div class="section-title-area">
+        <h2 class="section-title">STORE</h2>
+      </div>
+
+      <div class="product-main">
+        <div class="product-con prod-ked" id="pro-ked">
+          <div class="product-row">
+            <div class="product-card d-box">
+              <small>OUR PRODUCTS</small>
+              <h2>Kedarnath Temple 3D Miniature</h2>
+              <div class="pro-media">
+                <img
+                  src="/wp-content/uploads/2022/02/ked-img-side.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div class="product-card middle-card">
+              <div class="pro-media">
+                <video muted loop>
+                  <source
+                    src="/wp-content/uploads/2022/02/vid-kedarnath.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <h5>Kedarnath temple in wood 3D miniature model</h5>
+              <table>
+                <tr>
+                  <td>Colour</td>
+                  <td>Birch Brown</td>
+                </tr>
+                <tr>
+                  <td>Material</td>
+                  <td>Wood</td>
+                </tr>
+                <tr>
+                  <td>Dimensions LxWxH</td>
+                  <td>14 x 8 x 12 cm</td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td>300 Grams</td>
+                </tr>
+                <tr>
+                  <td>Made in India</td>
+                </tr>
+              </table>
+              <div class="buy-btn-con d-flex justify-content-center">
+                <a href="#" class="btn buy-btn text-center">
+                  <span>Buy Now</span>
+                  <i class="fa-brands fa-amazon"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="product-card d-flex align-items-end">
+              <div class="prev-next-con">
+                <div class="disable-np left">
+                  <i class="bi bi-arrow-left"></i>
+                </div>
+                <div class="right" id="next">
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+              </div>
+              <div class="pro-media mt-auto">
+                <img
+                  src="wp-content/uploads/2022/02/ked-img-front.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-con prod-ram" id="pro-ram">
+          <div class="product-row">
+            <div class="product-card d-box">
+              <small>OUR PRODUCTS</small>
+              <h2>Ram Mandir Ayodhya 3D Miniature</h2>
+              <div class="pro-media">
+                <img
+                  src="/wp-content/uploads/2022/02/ram-temple-dig.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div class="product-card middle-card">
+              <div class="pro-media">
+                <img
+                  src="/wp-content/uploads/2022/02/ram-temple-side.jpg"
+                  alt=""
+                />
+              </div>
+              <h5>Ram Mandir Ayodhya Model Wooden 3D Temple</h5>
+              <table>
+                <tr>
+                  <td>Colour</td>
+                  <td>Birch Brown</td>
+                </tr>
+                <tr>
+                  <td>Material</td>
+                  <td>Wood</td>
+                </tr>
+                <tr>
+                  <td>Dimensions LxWxH</td>
+                  <td>16 x 10.5 x 16 cm</td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td>400 Grams</td>
+                </tr>
+                <tr>
+                  <td>Made in India</td>
+                </tr>
+              </table>
+              <div class="buy-btn-con d-flex justify-content-center">
+                <a href="#" class="btn buy-btn text-center">
+                  <span>Buy Now</span>
+                  <i class="fa-brands fa-amazon"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="product-card d-flex align-items-end">
+              <div class="prev-next-con">
+                <div class="left" id="prev">
+                  <i class="bi bi-arrow-left"></i>
+                </div>
+                <div class="disable-np right">
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+              </div>
+              <div class="pro-media mt-auto">
+                <img
+                  src="/wp-content/uploads/2022/02/ram-temple-front.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

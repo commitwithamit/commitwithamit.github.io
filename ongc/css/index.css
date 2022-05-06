@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=poppins:wght@500;600;700');
+@font-face{
+    font-family: "poppins";
+    src: url(../fonts/Poppins-Regular.ttf);
+}
 body{
     font-family: "poppins", sans-serif, Arial, Helvetica;
 }
@@ -61,6 +64,7 @@ background: #fff !important; */
     background: var(--card-clr);
     box-shadow: 13px 13px 20px var(--box-shd-down), -13px -13px 20px var(--box-shd-up);
     border-radius: 7px;
+    width: 100%;
     max-width: 350px;
     height: max-content;
     padding: 2rem 0;
@@ -131,7 +135,7 @@ h5{
 }
 
 .dark-light{
-    position: fixed;
+    position: absolute;
     left: 20px;
     bottom: 10px;
     width: 40px;
@@ -208,3 +212,96 @@ span{
         justify-content: center;
     }
 }
+/* profile setup page */
+.modal-pro-pic-con {
+    margin: 0 auto 1rem auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+  }
+  .modal-pro-pic-con img {
+    width: 100%;
+    /* height: 100%; */
+    /* object-fit: fill; */
+    /* border-radius: 3px; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .btn-con{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .btn-con span{
+    display:block;
+    font-weight: 100;
+    color: white;
+  }
+  #inp-img{
+    /* to hide input:file, input:file not working when given d:none */
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    position: absolute;
+  }
+  #modal-sub-btn {
+    margin: auto;
+    display: block;
+  }
+  input,
+  textarea {
+    background: transparent;
+  }
+  .form-group {
+    width: 90%;
+    margin: 0 auto 1.8rem auto;
+  }
+  .form-group-1 {
+    width: 100px;
+    margin: 0 auto;
+}
+  .form-group-1 > span{
+    display: none;
+}
+.imp{
+    color:#dc3545;
+    display: inline;
+}
+  .form-group label,
+  .form-group-1 label{
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--form-focus-border);
+  }
+  
+  .form-group-1 {
+    width: 90%;
+    height:100px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .form-group-1 .btn-con {
+    display: flex;
+    justify-content: center;
+  }
+  @media (min-width:768px){
+    .user-box{
+        max-width: 600px;
+    }
+    .md-exp{
+        width: 453px;
+        display: grid;
+        grid-template-columns: auto auto;
+        margin: auto;
+        grid-column-gap: 10px;
+    }
+    .md-exp .form-group,
+    .md-exp .form-group-1{
+        margin: 0 0 1.8rem 0;
+        width: 100%;
+    }
+  }

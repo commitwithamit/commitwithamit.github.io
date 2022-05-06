@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap-icons-1.7.0/bootstrap-icons.css" />
+    <script
+      src="https://kit.fontawesome.com/7dfd87261b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+      /* @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap'); */
+      @import url("https://fonts.googleapis.com/css2?family=Marck+Script&family=Tangerine:wght@700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Marck+Script&display=swap");
+
+      /* css */
+      .product-con {
+        padding: 0 6%;
+      }
+      .product-row {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-column-gap: 5%;
+      }
+      .product-card {
+        width: 100%;
+        position: relative;
+        color: #c9c9c9;
+        display: flex;
+        flex-direction: column;
+      }
+      .pro-media {
+        width: 100%;
+      }
+      .pro-media > img,
+      .pro-media > video {
+        width: 100%;
+      }
+      /* col-1 settigs */
+      .product-card small {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: #686868;
+      }
+      .product-card h2 {
+        font-size: 4.5rem;
+        font-family: "Abril Fatface", cursive;
+        color: #f1f1f1;
+      }
+      .d-box div:last-child {
+        margin-top: auto;
+      }
+      .middle-card > .pro-media,
+      .middle-card > h5,
+      .middle-card > table {
+        margin-bottom: 1rem;
+      }
+      .middle-card > h5 {
+        text-align: center;
+        font-size: 1.7rem;
+      }
+      .middle-card > table {
+        margin: 0 auto 1rem;
+        width: 80%;
+        font-size: 1.3rem;
+      }
+      .middle-card > h5,
+      .middle-card > table,
+      .buy-btn-con {
+        margin-top: auto;
+      }
+      .buy-btn {
+        color: #f1f1f1;
+        border: 1px solid #f1f1f1;
+        position: relative;
+        overflow: hidden;
+        width: 155px;
+        height: 55px;
+        padding: 0;
+      }
+      .buy-btn > span,
+      .buy-btn > i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transition: all 0.4s ease-in-out;
+      }
+      .buy-btn > i {
+        transform: translate(-50%, 400%);
+        font-size: 2rem;
+      }
+      .buy-btn > span {
+        transform: translate(-50%, -50%);
+        font-size: 1.5rem;
+      }
+      .buy-btn:hover {
+        color: #f1f1f1;
+      }
+      .buy-btn:hover span {
+        display: inline-block;
+        transform: translate(-50%, -400%);
+      }
+      .buy-btn:hover i {
+        transform: translate(-50%, -50%);
+      }
+      .seemore-con{
+        margin: auto 10px 0 0;
+      }
+      .seemore-con > a{
+        color: #c9c9c9;
+        text-decoration: none;
+        display: flex;
+      }
+      .seemore-con > a i{
+        display: block;
+        transition: all .3s ease;
+        transform: translate(1px);
+      }
+      .seemore-con > a:hover i{
+        transform: translate(7px);
+      }
+      /* mq */
+      @media (max-width: 1390px) {
+        .product-card small {
+          font-size: 15px;
+        }
+        .product-card h2 {
+          font-size: 4rem;
+        }
+        .middle-card > h5 {
+          font-size: 1.25rem;
+        }
+        .middle-card > table {
+          font-size: 1rem;
+        }
+      }
+      @media (max-width: 1300px) {
+        .buy-btn {
+          width: 100px;
+          height: 40px;
+        }
+        .buy-btn span {
+          font-size: 1rem;
+        }
+        .buy-btn > i {
+          font-size: 1.5rem;
+        }
+      }
+      @media (max-width: 1199px) {
+        .d-box h2 {
+          font-size: 3.5rem;
+        }
+        .middle-card > table {
+          width: 95%;
+        }
+      }
+      @media (max-width: 991px) {
+        .product-con {
+          padding: 0 7%;
+        }
+        .product-row {
+          display: block;
+          max-width: 530px;
+        }
+        .product-card {
+          margin-bottom: 2rem;
+        }
+        .middle-card > table {
+          max-width: 320px;
+        }
+      }
+      /* swiper carousel */
+      .swiper {
+        width: 100%;
+        height: 100%;
+        background: #2d2d2e;
+      }
+      .swiper-wrapper{
+        align-items: center;
+      }
+      .swiper-slide {
+        font-size: 18px;
+        background: #2d2d2e;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .swiper-button-next, .swiper-button-prev {
+        color: #f1f1f1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- kedarnath -->
+          <div class="swiper-slide">
+            <div class="product-con prod-ked" id="pro-ked">
+              <div class="product-row">
+                <div class="product-card d-box">
+                  <small>OUR PRODUCTS</small>
+                  <h2>Kedarnath Temple 3D Miniature</h2>
+                  <div class="pro-media">
+                    <img src="/wp-content/uploads/2022/02/ked-img-side.jpg" alt="" />
+                  </div>
+                </div>
+      
+                <div class="product-card middle-card">
+                  <div class="pro-media">
+                    <video muted loop>
+                      <source src="/wp-content/uploads/2022/02/vid-kedarnath.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <h5>Kedarnath temple in wood 3D miniature model</h5>
+                  <table>
+                    <tr>
+                      <td>Colour</td>
+                      <td>Birch Brown</td>
+                    </tr>
+                    <tr>
+                      <td>Material</td>
+                      <td>Wood</td>
+                    </tr>
+                    <tr>
+                      <td>Dimensions LxWxH</td>
+                      <td>14 x 8 x 12 cm</td>
+                    </tr>
+                    <tr>
+                      <td>Weight</td>
+                      <td>300 Grams</td>
+                    </tr>
+                    <tr>
+                      <td>Made in India</td>
+                    </tr>
+                  </table>
+                  <div class="buy-btn-con d-flex justify-content-center">
+                    <a href="#" class="btn buy-btn text-center">
+                      <span>Buy Now</span>
+                      <i class="fa-brands fa-amazon"></i>
+                    </a>
+                  </div>
+                </div>
+      
+                <div class="product-card d-flex align-items-end">
+                  <div class="pro-media">
+                    <img src="wp-content/uploads/2022/02/ked-img-front.jpg" alt="" />
+                  </div>
+                  <div class="seemore-con">
+                    <a href="#">See more <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ram mandir -->
+          <div class="swiper-slide">
+            <div class="product-con prod-ram" id="pro-ram">
+              <div class="product-row">
+                <div class="product-card d-box">
+                  <small>OUR PRODUCTS</small>
+                  <h2>Ram Mandir Ayodhya 3D Miniature</h2>
+                  <div class="pro-media">
+                    <img src="/wp-content/uploads/2022/02/ram-temple-dig.jpg" alt="" />
+                  </div>
+                </div>
+      
+                <div class="product-card middle-card">
+                  <div class="pro-media">
+                    <img src="/wp-content/uploads/2022/02/ram-temple-side.jpg" alt="" />
+                  </div>
+                  <h5>Ram Mandir Ayodhya Model Wooden 3D Temple</h5>
+                  <table>
+                    <tr>
+                      <td>Colour</td>
+                      <td>Birch Brown</td>
+                    </tr>
+                    <tr>
+                      <td>Material</td>
+                      <td>Wood</td>
+                    </tr>
+                    <tr>
+                      <td>Dimensions LxWxH</td>
+                      <td>16 x 10.5 x 16 cm</td>
+                    </tr>
+                    <tr>
+                      <td>Weight</td>
+                      <td>400 Grams</td>
+                    </tr>
+                    <tr>
+                      <td>Made in India</td>
+                    </tr>
+                  </table>
+                  <div class="buy-btn-con d-flex justify-content-center">
+                    <a href="#" class="btn buy-btn text-center">
+                      <span>Buy Now</span>
+                      <i class="fa-brands fa-amazon"></i>
+                    </a>
+                  </div>
+                </div>
+      
+                <div class="product-card d-flex align-items-end">
+                  <div class="pro-media">
+                    <img src="/wp-content/uploads/2022/02/ram-temple-front.jpg" alt="" />
+                  </div>
+                  <div class="seemore-con">
+                    <a href="#">See more <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+  
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+  </body>
+</html>

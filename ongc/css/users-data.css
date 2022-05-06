@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+.form-con{
+  max-width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+}
+#search{
+  grid-area: search;
+}
+.form-con > form > span{
+  grid-area: select;
+}
+.btn-search{
+  grid-area: sbtn;
+}
+.btn-all{
+  grid-area: abtn;
+}
+.form-con > form{
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: auto 100px 90px 90px;
+  grid-template-areas: "search select sbtn abtn";
+  border-radius: 5px;
+  border: 2px solid #a51e24;
+}
+.form-con form input,
+.form-con form select,
+.form-con form a{
+  padding: 0.3rem;
+  background: none;
+  border: none;
+}
+.form-con > form > #search{
+  width: 100%;
+  border-radius: 5px 0 0 5px;
+  padding: 0.3rem 0.7rem;
+}
+.form-con > form > span{
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+}
+.form-con > form > span,
+.form-con > form > span > select{
+  background: #f75700;
+  color: #fff;
+  cursor: pointer;
+}
+.form-con > form > span::after {
+  content: "▼";
+  font-size: .7rem;
+  top: 55%;
+  right: 12px;
+  position: absolute;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.form-con > form > span > select{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+}
+.form-con form .btn-search{
+  background: #4b9635;
+  margin-left: 0.5rem;
+  color: #fff;
+}
+.form-con form .btn-all{
+  background: #e08f00;
+  color: #fff;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+}
+.result_count{
+  margin: 1rem 0;
+  color: #80868d;
+  font-weight: 400;
+}
+.result_count > span{
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  background: #484444;
+  padding: 0.1rem 0.3rem;
+  border-radius: 5px;
+  min-width: 25px;
+  display: inline-block;
+}
+.table-con{
+  max-width: 90%;
+  margin: auto;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 11px 0px #0000007a;
+  overflow: hidden;
+}
+
+
+.table{
+  margin-bottom: 0;
+}
+thead{
+  background: #a51e24;
+  color: #ffff;
+}
+td{
+  vertical-align: middle;
+  font-weight: 500;
+}
+.user-td{
+  display: grid;
+  grid-template-columns: 35px max-content;
+  align-items: center;
+}
+.tb-btn-con{
+  display: flex;
+  align-items: center;
+}
+.col-name{
+  display: flex;
+}
+.order-btn{
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;
+  background: #fff;
+  border-radius: 50%;
+  /* padding: 0.1rem; */
+  text-decoration: none;
+  /* white-space: nowrap; */
+  display: flex;
+  width: 25px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.order-btn:nth-child(1){
+  margin-right: .5rem;
+}
+.order-btn:nth-child(3){
+  margin-left: .5rem;
+}
+.order-btn:hover{
+  color: black;
+  background: #ffd531;
+}
+.tip{
+  margin-bottom: 0;
+  background: #ffd531;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.3rem 0.5rem;
+  width: max-content;
+  border-radius: 5px;
+  position: absolute;
+  left: 30px;
+  z-index: 2;
+  display: none;
+}
+.tip > i{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -10px;
+  color: #ffd531;;
+}
+.pro_pic{
+  max-width: 35px;
+  max-height: 35px;
+  display: inline-block;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 8px;
+}
+.pro_pic > img{
+  width: 100%;
+}
+.btn-view-post span{
+  display: none;
+  /* inp:file */
+}
+.btn-view-post{
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+}
+.btn-view-post i {
+  padding: 3px 9px 5px 9px;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-view-post span{
+  padding: 3px 8px 3px 8px;
+  border-radius: 0 3px 3px 0;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+}
+.btn-view-post{
+  background: #4253ce;
+}
+.btn-view-post i{
+  background: #1528ac;
+}
+.btn-view-post span{
+  background: transparent;
+}
+.btn-view-post span::before{
+  background-color: #1528ac;
+}
+.btn-view-post span::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0px 3px 3px 0px;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms linear;
+}
+.btn-view-post:hover span::before,
+.btn-view-post:focus span::before{
+  transform: scaleX(1);
+}
+.btn-view-post span{
+  position: relative;
+  z-index: 2;
+}
+.st_act,
+.st_pen{
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+}
+.st_act{
+  background: #00c200;
+  border: 1px solid #006600;
+}
+.st_pen{
+  background: #d83232;
+  border: 1px solid #a30000;
+}
+@media screen and (min-width: 576px){
+    .btn-view-post i {
+        font-size: 14px;
+        padding: 6px 9px 5px 9px;
+        border-radius: 3px 0px 0px 3px;
+    }
+}
+@media screen and (min-width: 992px){
+  .user-td {
+    grid-template-columns: 45px max-content;
+  }
+  .btn-view-post span {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 576px){
+  .form-con > form {
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 40px;
+    grid-template-areas: "search search search search"
+                        ". select sbtn abtn";
+  }
+  .form-con > form > span,
+  .form-con > form > input,
+  .form-con > form > a{
+    width: 90px;
+  }
+  .form-con > form > span > select{
+    border-radius: 5px;
+  }
+}
+@media screen and (max-width: 350px){
+  .form-con > form > span,
+  .form-con > form > input,
+  .form-con > form > a {
+    width: 80px;
+    height: 35px;
+    font-size: .9rem;
+  }
+}
+
+/* ////////// moderators css \\\\\\\\\\ */
+.main-con{
+  max-width: 1000px;
+  margin: 2rem auto; 
+  display: flex;
+}
+.col-half{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.all-user-con,
+.all-mod-con{
+  flex-wrap: wrap;
+  background: #f1f1f1;
+  width: 450px;
+  height: max-content;
+  border-radius: 0px 0px 3px 3px;
+  overflow: hidden;
+}
+.all-user-con h4,
+.all-mod-con h4{
+  flex-basis: 100%;
+  text-align: center;
+  background: #a51e24;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0px 7px 14px -8px #000;
+}
+.all-user-con h4{
+  background: #1ea565;
+}
+.all-user-con ul,
+.all-mod-con ul{
+  margin: 1.4rem 0;
+  padding: 0px 1.4rem;
+}
+.all-user-con ul li,
+.all-mod-con ul li{
+  margin: 1rem 0;
+  padding: 0.5rem;
+  list-style: none;
+  display: flex;
+  width: 100%;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 9px 26px -20px #000;
+  /* margin: 0;
+  padding: 0;
+  list-style:none;
+  display: grid;
+  grid-template-columns: 50px 300px 40px; */
+}
+.all-user-con ul li > a,
+.all-mod-con ul li > a{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.li-item a img{
+  width: 100%;
+}
+.sp-name{
+  flex: 1;
+}
+.sp-name > a{
+  text-decoration: none;
+  color: #000;
+}
+.sp-name p{
+  margin-bottom: 0;
+}
+.sp-name p:first-child{
+  font-weight: 500;
+}
+.sp-name:nth-child(2){
+  color: gray;
+}
+.sp-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sp-btn > a{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: #67d179;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+  transition: all .3s ease;
+}
+.sp-btn > a:hover,
+.sp-btn > a:focus{
+  font-size: 25px;
+  background: #ececec;
+}
+.all-mod-con .sp-btn > a{
+  color:#e3714c;
+}
+span > p{
+  margin-bottom: 0;
+}
+@media screen and (max-width:992px){
+  .main-con {
+    flex-direction: column;
+    align-items: center;
+  }
+  .col-half {
+    width: 100%;
+  }
+  .col-half:nth-child(1) {
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (max-width:576px){
+  .main-con {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}

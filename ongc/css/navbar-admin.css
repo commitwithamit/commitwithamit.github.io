@@ -1,0 +1,17 @@
+@media screen and (min-width: 992px){
+    .navbar {
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+    }
+}
+@media screen and (min-width: 1110px){
+    .collapse-menu {
+        width: 60%;
+    }
+}
+@media screen and (min-width: 1200px){
+    .navbar {
+        padding-left: 3.7rem;
+        padding-right: 3.7rem;
+    }
+}

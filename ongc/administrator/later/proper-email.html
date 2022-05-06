@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
+    <style>
+        .div{
+            width: 400px;
+            height: 400px;
+            background: yellow;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="specific">
+        <h2 style='text-align:center;color:#a51e24;font-family:arial;'>Your post goes against our community guidlines.</h2>
+    <p style='text-align:center;color:#a51e24;font-family:arial;'>We have removed your following post from our platform</p>
+    <div style='font-family:arial;padding:1rem;margin:1.5rem auto;border:1px solid #a51e24;border-radius:3px;max-width:600px;'>
+        <div style='overflow: hidden;'>
+            <div style='display: grid;grid-template-columns: 50px auto 35px;grid-column-gap: 10px;'>
+                <span style='width: 50px;height: 50px;border-radius: 3px;overflow: hidden;position: relative;border: 1px solid #bf676b;'>
+                    <img src='../user-images/9T7K0P2N1X.jpeg' style='width: 100%;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);'>
+                </span>
+                <span style='display: flex;flex-flow: column;overflow: hidden;line-height: 1;'>
+                    <div style='font-size: 1.2rem;font-weight: 600;padding-bottom: 15px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;'>
+                        Amit Kumar
+                    </div>
+                    <div style='color: #504a4a;font-size: 0.76rem;'>
+                        2022-04-13 20:46:48
+                    </div>
+                </span>
+            </div>
+            <hr class='post-br-line'>
+            <div class='post-main'>
+                    <img src='../user-images/6A7R2S6W0F.jpg' style='width:100%;'>
+                <div class='caption'>
+                    <p style='cursor: default;margin-bottom: 0.6rem;'>
+                        hello world!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> 
+    </div>
+    <button type="button" class="btn btn-default">Take a Screenshot!</button>
+    <script>
+        document.querySelector('button').addEventListener('click', function() {
+        html2canvas(document.querySelector('.specific'), {
+            onrendered: function(canvas) {
+                // document.body.appendChild(canvas);
+              return Canvas2Image.saveAsPNG(canvas);
+            }
+        });
+    });
+    </script>
+</body>
+</html>
