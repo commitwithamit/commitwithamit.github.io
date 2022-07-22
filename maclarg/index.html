@@ -1,63 +1,543 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- custom css -->
-    <link rel="stylesheet" href="css/style.css">
-    <title>Maclarg | Homepage</title>
-</head>
-<body>
-    <!-- header -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Maclarg</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- navbar css -->
+    <link rel="stylesheet" href="css/navbar-style.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- footer css -->
+    <link rel="stylesheet" href="css/footer-style.css">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="bootstrap-icons-1.7.0/bootstrap-icons.css">
+    <!-- swiper css for card sliders -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon-16x16.png" type="image/x-icon">
+  </head>
+
+  <body>
     <header>
-      <div class="color"></div>
-      <!-- header inner -->
-      <div class="header">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">
-                <img src="images/maclarg-logo-5.png" alt="#">
-              </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Repair & Services
+    <!-- <div class="color"></div> -->
+    <div class="header">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <img src="images/maclarg-logo.png" alt="#" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle drop-link"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Repair & Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <b>Repair Guides</b>
+                      <p>
+                        Learn how to fix any gadgets with our step by step
+                        guide.
+                      </p>
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
                   </li>
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">Projects</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Store</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Tech News</a>
-                </li>
-              </ul>
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <b>Fix From Us</b>
+                      <p>
+                        We also provide Tech help, you can send us your
+                        product.
+                      </p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item drop-hide">
+                <a href="#" class="nav-link" aria-current="page">Projects</a>
+              </li>
+              <li class="nav-item drop-hide">
+                <a href="#" class="nav-link">Store</a>
+              </li>
+              <li class="nav-item drop-hide">
+                <a href="#" class="nav-link">Tech News</a>
+              </li>
+            </ul>
+            <form class="d-flex mee-2">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search Here"
+                aria-label="Search"
+              />
+              <button class="btn search" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    </header>
+
+    <!-- banner -->
+    <section>
+      <div class="banner">
+        <div class="color"></div>
+        <div class="banner-text-con">
+          <div class="banner-text backdrop-blur">
+            <div class="banner-heading">
+              <h1>
+                <b>India's Most Trusted Tech <br />
+                  Solution Providers</b>
+              </h1>
+              <div class="banner-link">
+                <a href="#" class="btn banner-btn">Learn More</a>
+              </div>
             </div>
           </div>
-        </nav>
-      </div>        
-     </header>
+        </div>
+      </div>
+    </section>
 
-     <script src="js/bootstrap.bundle.min.js"></script>
-     <script src="js/jquery.js"></script>
-</body>
-</html>
+    <!-- learn yourself/need our help -->
+    <section> 
+      <div class="learn">
+        <h2 class="text-center">Learn How To Repair Any Gadget</h2>
+        <hr width="80%" class="content-hr"/>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 learn-margin ani-slide">
+              <div class="ani-slide-left">
+                <div class="learn-img-con">
+                  <img src="images/learn-by-self-2.svg">
+                </div>
+                <div class="learn-text">
+                  <p class="mb-0">
+                    Now you can repair your gadgets with the help of our learn by yourself guides. Where we provide easy step by step guide on how you can repair any electronic device at home.
+                  </p>
+                </div>
+                <div class="learn-btn-con">
+                  <a href="learn-yourself.html" class="btn learn-btn"> Learn by Yourself </a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12 col-md-6 ani-slide">
+              <div class="ani-slide-right">
+                <div class="learn-img-con">
+                  <img src="images/book-a-repair-2.svg">
+                </div>            
+                <div class="learn-text">
+                  <p class="mb-0">
+                    Are you looking for someone to fix your gadgets? Well, our team of expert technicians with years of experience will fix it for you. Just click the link below to book a repair.
+                  </p>
+                </div>
+                <div class="learn-btn-con">
+                  <a href="#" class="btn learn-btn"> Need our help? </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- projects -->
+    <section>
+      <h2 class="text-center">Projects</h2>
+      <hr width="80%" class="content-hr"/>
+
+      <div class="project-con">
+        <!-- upod -->
+        <div class="project-1">
+          <div class="project-item">
+            <video autoplay muted loop>
+              <source src="images/upod-vid.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="project-detail">
+            <div>
+              <div class="text-upod">
+                <span class="text-u">u</span>
+                <span class="text-pod">POD</span>
+              </div>
+              <div class="text-upod-sub">
+                  <span>Pro</span><span>Tripod</span>
+              </div>
+            </div>
+            <img src="images/blob.svg" class="bg-svg">
+          </div>
+        </div>
+
+        <div class="project-2">
+          <div class="project-detail">
+            <div class="led-text">
+              <span>Powerbank With Led Lights</span>
+            </div>
+          </div>
+          <div class="project-item">
+            <video autoplay muted loop>
+              <source src="images/powebank-vid.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- store / products -->
+    <section>
+      <h2 class="text-center">Store</h2>
+      <hr width="80%" class="content-hr"/>
+
+      <div class="product-con">
+        <div class="product-vid">
+            <video autoplay muted loop>
+                <source src="images/product-vid-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="product-details-con">
+          <div class="product-details">
+            <h6 class="product-name">Kedarnath Temple Wood's 3D Model</h6>
+          <table>
+            <tr>
+              <td>Color</td>
+              <td>Golden Oak</td>
+            </tr>
+            <tr>
+              <td>Material</td>
+              <td>Wood</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td><span class="tiny-text">LxWxH</span>	14x8x12 Cm</td>
+            </tr>
+            <tr>
+              <td>Made in India</td>
+            </tr>
+          </table>
+          <div class="product-buy-seemore">
+            <div class="product-price">Rs. 750/-</div>
+            <a href="#" class="btn product-btn btn-sm">Buy Now</a>
+          </div>
+          </div>          
+        </div>
+      </div>
+    </section>
+
+    <!-- tech news -->
+    <section>
+      <div class="tech-news">
+        <h2 class="text-center">Tech News</h2>
+        <hr width="80%" class="content-hr"/>
+    
+        <!-- blog cards by swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+    
+            <div class="swiper-slide">
+              <div class="card" style="width: 18rem;">
+                <img src="images/swiper-1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="swiper-link">Read more.</a>
+                </div>
+              </div>
+            </div>
+    
+            <div class="swiper-slide">
+              <div class="card" style="width: 18rem;">
+                <img src="images/swiper-2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="swiper-link">Read more.</a>
+                </div>
+              </div>
+            </div>
+    
+            <div class="swiper-slide">
+              <div class="card" style="width: 18rem;">
+                <img src="images/swiper-4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="swiper-link">Read more.</a>
+                </div>
+              </div>
+            </div>
+    
+            <div class="swiper-slide">
+              <div class="card" style="width: 18rem;">
+                <img src="images/swiper-5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="swiper-link">Read more.</a>
+                </div>
+              </div>
+            </div>
+    
+            <div class="swiper-slide">
+              <div class="card" style="width: 18rem;">
+                <img src="images/swiper-6.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="swiper-link">Read more.</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- meet the team -->
+    <section>
+      <h2 class="text-center">Meet Our Team</h2>
+      <hr width="80%" class="content-hr"/>
+      <div class="team-con">
+        <div class="t-card tc-1">
+          <div class="t-icon">
+            <img src="images/ashish.jpeg" alt="">
+          </div>
+          <div class="t-content">
+            <h4>Ashish Singh Rana</h4>
+            <p>Maker of things that go clank! Ashish is the quintessential hands on man, with an un-tiring and infectious love for mad max-ian creations.</p>
+          </div>
+        </div>
+
+        <div class="t-card tc-2">
+          <div class="t-icon">
+            <img src="images/lokesh.jpeg" alt="">
+          </div>
+          <div class="t-content">
+            <h4>Lokesh Gairola</h4>
+            <p>Man knows how to connect dots, he is a mechanical engineer, and man of his words.</p>
+          </div>
+        </div>
+
+        <div class="t-card tc-3">
+          <div class="t-icon">
+            <img src="images/shudhanshu.jpeg" alt="">
+          </div>
+          <div class="t-content">
+            <h4>Sudhanshu Mohan</h4>
+            <p>Engineer by degree, inventor by passion, may be nerd sometimes at work, other times an explorer to unknown places.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- customer's review -->
+    <section>
+      <h2 class="text-center">Testimonials</h2>
+      <hr width="80%" class="content-hr"/>
+      <div class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="quote-text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, consequuntur unde expedita odit porro illum quas, labore repellat alias officia dolorem, atque aliquid? Nulla, non?</p>
+              <p>- Jone Doe</p>
+            </div>
+            <i class="bi bi-quote lg-quote"></i>
+            <i class="bi bi-quote sm-quote"></i>
+          </div>
+          <div class="swiper-slide">
+            <div class="quote-text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, consequuntur unde expedita odit porro illum quas, labore repellat alias officia dolorem, atque aliquid? Nulla, non?</p>
+              <p>- Jane Doe</p>
+            </div>
+            <i class="bi bi-quote lg-quote"></i>
+            <i class="bi bi-quote sm-quote"></i>
+          </div>
+          <div class="swiper-slide">
+            <div class="quote-text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, consequuntur unde expedita odit porro illum quas, labore repellat alias officia dolorem, atque aliquid? Nulla, non?</p>
+              <p>- Yogami Atteria</p>
+            </div>
+            <i class="bi bi-quote lg-quote"></i>
+            <i class="bi bi-quote sm-quote"></i>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- achievement -->
+    <div class="achievement-con">
+      <div class="achiev-bg">
+        <h3>
+          <!-- <img src="images/first-place.png"> -->
+          <a href="#">2020 Startup Grand Challenge Winner of UK india <i class="bi bi-arrow-right"></i></a>
+        </h3>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <section class="mb-0">
+      <footer>
+        <!-- enquiry form -->
+        <div class="enquiry-con">
+          <form action="#" method="post">
+            <div>
+              <div class="fm-group lg-flex">
+                <input type="text" name="name" placeholder="Name">
+              </div>
+              <div class="fm-group">
+                <input type="email" name="email" placeholder="Email">
+              </div>
+            </div>
+            <div class="fm-group">
+              <textarea name="message" cols="30" rows="3" placeholder="Message"></textarea>
+            </div>
+            <div class="fm-group1">
+              <span>
+                <button type="submit" id="enquiry-sub-btn">
+                  <span>Send</span>
+                </button>
+                <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89.471-1.178-1.178.471L5.93 9.363l.338.215a.5.5 0 0 1 .154.154l.215.338 7.494-7.494Z"/>
+                </svg>
+              </span>
+            </div>
+          </form>
+        </div>
+    
+        <div class="contact-con">
+          <!-- phone numbers -->
+          <div class="phone-num">
+            <h5>Contacts</h5>
+            <div>
+              <p class="tele-p">
+                <span class="boot-icon tele-icon"><i class="bi bi-telephone"></i></span> 8979403038
+              </p>
+              <span class="sm-vr-line"></span>
+              <p class="whapp-p">
+                <span class="boot-icon whatsapp-icon"><i class="bi bi-whatsapp"></i></span> 9412739971
+              </p>
+            </div>
+          </div>
+          <!-- social media -->
+          <div class="social-media">
+            <h5>Follow Us</h5>
+            <div>
+              <span class="boot-icon insta-icon">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+              </span>
+              <span class="sm-vr-line"></span>
+              <span class="boot-icon you-icon">
+                <a href="#"><i class="bi bi-youtube icon-mx"></i></a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <small>&copy; Copyright 2022, Maclarg</small>
+        </div>
+        <div class="bg-drone-icons"></div>
+      </footer>
+    </section>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // banner button animation
+        $(".banner-link").hover(function () {
+        // over
+        $(".banner-text").addClass("full-line");
+          setTimeout(function(){
+            $(".banner-link").addClass("pulsate-fwd");
+          }, 100);
+        }, function () {
+          // out
+          $(".banner-text").removeClass("full-line");
+          $(".banner-link").removeClass("pulsate-fwd");
+        });
+
+        // learn by self & book a repair slide animation on scroll position
+        $(window).scroll(function(){
+          if($(this).scrollTop()>400){
+            $(".ani-slide-left, .ani-slide-right").css("visibility", "visible");
+            $(".ani-slide-left").addClass("slide-in-left");
+            $(".ani-slide-right").addClass("slide-in-right");
+          }
+        });
+      });
+      // swiper js code 
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: true,
+        },
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        loop:true,
+      });
+      
+      var swiper = new Swiper(".mySwiper2", {
+        direction: "vertical",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: true,
+        },
+        loop:true
+      });
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="//code.tidio.co/gv17dpsuowrgr1xmigwpzepbinrzxfef.js" async></script> -->
+  </body>
+</html> 
+  
