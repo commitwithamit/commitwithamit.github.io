@@ -1,0 +1,30 @@
+<div class="add-post-block">
+  <form action="add-post-handler.php" method="post" enctype="multipart/form-data">
+
+    <!-- caption input -->
+    <textarea name="caption" id="inp-caption" cols="30" rows="1" placeholder="Write something here..." class="mb-3"></textarea>
+    <!-- <input type="text" name="caption" id="inp-caption" placeholder="Write something here..." autocomplete="off" class="mb-3"> -->
+
+    <!-- displaying img/vid to user before uploading -->
+    <div class="display-img-vid-con">
+      <img src="" id="preview-img">
+      <video controls id="preview-vid">
+        <source src="" id="video_here">
+          Your browser does not support HTML5 video.
+      </video>
+      <button type="button" id="add-post-close-btn">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <!-- add img/vid button -->
+    <label for="inp-img-vid" class="btn-img-vid">
+      <i class="bi bi-file-earmark-plus"></i><span> Photos/Videos</span><input type="file" accept="image/*, video/*" name="img-vid" id="inp-img-vid">
+    </label>
+
+    <!-- submit post button -->
+    <label for="inp-sub-post" class="btn-sub-post">
+      <i class="bi bi-send"></i><span>Post</span><input type="submit" value="Post" id="inp-sub-post">
+    </label>
+  </form>
+</div>

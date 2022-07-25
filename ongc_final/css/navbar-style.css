@@ -1,0 +1,285 @@
+:root{
+    --bg-clr: #ecf0f3;
+    --card-clr : #ecf0f3;
+    --inp-clr: #fff;
+    --box-shd-up: #fff;
+    --box-shd-down: #cbced1;
+    --inp-border: #ced4da;
+    --inp-text: #000;
+    --form-focus-bx-sd: #00000000;
+    --form-focus-border: #000;
+    --btn-clr: #f8f9fa ;
+    --btn-bg: #8c000c;
+    --btn-bg-hov: #6d040d;
+    --dl-mode: #2b2a33;
+    --dl-mode-2: #fff;
+    --link: #0d6efd;
+    --error: red;
+    --search-bar:#a51e24;
+    /* --bg-clr: #2b2a33;
+    --card-clr : #42414d;
+    --inp-clr: #38383d; */
+}
+.dark{
+    --bg-clr: #2b2a33;
+    --card-clr : #42414d;
+    --inp-clr: #38383d;
+    --box-shd-up: rgba(255,255,255,0.05);
+    --box-shd-down: rgba(0,0,0,0.5);
+    --inp-border: #636364;
+    --inp-text: #fff;
+    --form-focus-bx-sd: #ffffff00;
+    --form-focus-border: #fff;
+    --btn-clr: #2f2f2f;
+    --btn-bg: #fff;
+    --btn-bg-hov: #dddddd ;
+    --dl-mode: #fff;
+    --dl-mode-2: #2b2a33;
+    --link: #25d2ee;
+    --error: #f03838;
+    /* color: #2f2f2f !important;
+background: #fff !important; */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+*:focus{
+    outline:none;
+    box-shadow: 0 0 0 0!important;
+}
+
+/* navbar */
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1035;
+    transition: all .3s ease;
+}
+.nav-scroll{
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+}
+.nav-scroll > .container-fluid > a > img{
+    width: 45px;
+}
+/* logo */
+.navbar-brand img{
+    width: 45px;
+    transition: all .3s ease;
+}
+
+/* search bar */
+.nav-search .search-bar-form{
+    border: 2px solid var(--search-bar);
+    border-radius: 3px;
+    padding: 2px;
+    display: flex;
+    width: 100%;
+    margin-left: auto;
+}
+.search-bar-form{
+    border: 2px solid var(--search-bar);
+    border-radius: 3px;
+    padding: 2px;
+    display: flex;
+    width: 235px;
+    margin-left: auto;
+    position: relative;
+}
+.search-bar-form input{
+    border: none;
+    background: none;
+    width: 100%;
+}
+.search-bar-form input:focus{
+    border: none;
+    background: none;
+}
+.search-bar-form button{
+    border: none;
+    background: var(--search-bar);
+    border-radius: 3px;
+    width: 45px;
+    height: 36px;
+    color: white;
+}   
+
+.nav-search{
+    display: none; /* search-bar for desktop d-none for mob view */
+}
+
+.display-result{
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    display: none;
+    background: rgba( 171, 171, 171, 0.3 );
+    box-shadow: 0 2px 5px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur( 16.5px );
+    -webkit-backdrop-filter: blur( 16.5px );
+    border-radius: 3px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.user-td a{
+    display: grid;
+    grid-template-columns: 40px max-content;
+    grid-gap: 10px;
+    align-items: center;
+    margin: 0.5rem;
+    text-decoration:none;
+    color: black;
+    font-weight: 500;
+  }
+@media screen and (min-width: 992px){
+    .user-td {
+      grid-template-columns: 45px max-content;
+    }
+}
+.pro_pic{
+    float: left;
+    width:  40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .pro_pic > img{
+    width: 100%;
+  }
+/* menu-button */
+.navbar-toggler {
+    border: none;
+    padding: 15px 2px;
+}
+.navbar-toggler:focus{
+    outline:none;
+    box-shadow: 0 0 0 0;
+}
+.menu-icon{
+    width: 40px;
+    height: 3px;
+    border-radius: 10%;
+    background: var(--btn-bg);
+    display: block;
+    position: relative;
+    transition: all .3s ease;
+}
+.menu-icon::before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    width: 40px;
+    height: 3px;
+    border-radius: 10%;
+    background: var(--btn-bg);
+    display: block;
+    transition: all .3s ease;
+}
+.menu-icon::after{
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 40px;
+    height: 3px;
+    border-radius: 10%;
+    background: var(--btn-bg);
+    display: block;
+    transition: all .3s ease;
+} 
+.navbar-toggler.active .menu-icon {
+    background: transparent;
+}
+.navbar-toggler.active .menu-icon::before {
+    transform: rotate(45deg);
+    top: 0px;
+}
+.navbar-toggler.active .menu-icon::after {
+    transform: rotate(-45deg);
+    top: 0px;
+}
+.nav-item:hover .nav-link,
+.link-active{
+    color: #a51e24!important;
+    font-weight: 500;
+}
+/* .navbar-nav .nav-item .nav-link::before{
+    display: block;
+    content: attr(data-text);
+    font-weight: 500;
+    font-size: 1.2rem;
+    height: 0;
+    padding: 0rem 1rem;
+    overflow: hidden;
+    visibility: hidden;
+} */
+/* collapsing menu */
+.collapse-menu{
+    flex-basis: 100%;
+    display: none;
+}
+.navbar-nav li{
+    margin-left: auto;
+}
+
+
+/* Media Queries */
+@media screen and (min-width:576px) {
+    .navbar{
+        padding-left: .8rem;
+        padding-right: .8rem;
+    }
+    .nav-ham-search{
+        display: none;
+    }
+    .nav-search {
+        display: block;
+        flex-grow: .2;
+    }
+}
+@media screen and (min-width:768px){
+    .navbar{
+        padding-left: 1.7rem;
+        padding-right: 1.7rem;
+    }
+    .navbar-brand img{
+        width: 55px;
+    }
+    
+}
+@media screen and (min-width:992px){
+    .navbar{
+        padding-left: 4.7rem;
+        padding-right: 4.7rem;
+    }
+    .collapse-menu {
+        display: flex!important;
+        flex-basis: auto;
+        font-size:1.2rem;
+    }
+    .navbar-expand-lg .navbar-nav {
+        justify-content: space-evenly;
+        display: flex;
+        width: 100%;
+    }
+    .navbar-toggler{
+        display: none;
+    }    
+    .navbar-light .navbar-nav .nav-link {
+        font-weight: 500;
+    }
+}
+@media screen and (min-width:1110px){
+    .collapse-menu {
+        width: 46%;
+    }
+    .navbar-nav li:nth-of-type(2){
+        margin-left: 0;
+    }
+} 
+
+.rotate-center{-webkit-animation:rotate-center .6s ease-in-out both;animation:rotate-center .6s ease-in-out both}
+ @-webkit-keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
